@@ -1,0 +1,108 @@
+.modal-product__details-content {
+	padding-left: 25px;
+	@media #{$xs,$sm,$md}{
+		padding-left: 0;
+	}
+}
+.product__modal-close {
+	color: var(--clr-common-white);
+	display: block;
+	line-height: 36px;
+	text-align: center;
+	background: var(--clr-theme-1);
+	width: 38px;
+	height: 38px;
+	@include border-radius(50%);
+	outline: none;
+	position: absolute;
+	z-index: 5;
+	right: -13px;
+	top: -13px;
+}
+// product modal
+.product__modal.product__modal {
+	.modal-dialog {
+		max-width: 900px;
+	}
+}
+.modal-dialog.modal-dialog-centered {
+	max-width: 1200px;
+}
+.product__modal-wrapper {
+	padding: 20px;
+}
+
+
+// modal offcanvas
+.body-overlay{
+
+    @media #{$xs}{
+        width: 290px;
+    }
+
+    & .modal.show .modal-dialog{
+        transform: none !important;
+    }
+    & .modal.fade .modal-dialog{
+        transition:transform .3s ease-out;
+        transform:translate(100px,0px);
+    }
+    & .modal-dialog{
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 450px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: var(--clr-common-white);
+    }
+    & .modal-content{
+        border: 0;
+        border-radius: 0;
+    }
+
+       &__wrapper{
+        position: relative;
+        padding: 0px;
+        @media #{$xs}{
+           padding: 0px;
+        }
+    }
+    &__close{
+        &-btn{
+            display: inline-block;
+            font-size: 16px;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            background: #fff;
+            color: #000;
+            @include border-radius(50%);
+            i {
+                color: #fff;
+            }
+            &:hover{
+                background: #fafafa
+            }
+        }
+    }
+}
+.product__modal-close {
+    color: var(--clr-common-white);
+    color: #141212;
+    display: block;
+    line-height: 36px;
+    text-align: center;
+    background: var(--clr-theme-1);
+    background: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    outline: none;
+    position: absolute;
+    z-index: 5;
+    right: -13px;
+    top: -13px;
+    border: 1px solid #cfc9c9;
+}
