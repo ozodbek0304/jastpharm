@@ -10,18 +10,16 @@ import HomeBlogs from "./HomeBlogs";
 import SubscribeArea from "./SubscribeArea";
 import bgImg from "../../../public/assets/images/bg/purchased-item-bg.jpg";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
+import ContactContent from "../contact/ContactContent";
+import ContactMap from "../contact/ContactMap";
 const AboutMain = () => {
   return (
     <>
-      <Breadcrumb pageTitle='Kompaniya haqida' />
+      <Breadcrumb pageTitle='Bizning tariximiz' />
       <CategoryLineUp />
-      <HomeOneBanner />
-      <HomeProductArea />
       <HomeOfferProductSlider />
-      <MostPurchased bgImg={bgImg} />
-      <BrandLogos />
-      <HomeBlogs />
-      <SubscribeArea />
+      <ContactMap />
+      <ContactContent />
     </>
   );
 };

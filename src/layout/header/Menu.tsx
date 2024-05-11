@@ -1,8 +1,11 @@
 import navMenuData from "@/data/headernav/nav-menus";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Menu = () => {
+  const pathName = usePathname();
+
   return (
     <>
       <ul className="d-block d-flex justify-content-between">
@@ -10,10 +13,11 @@ const Menu = () => {
           <li key={item?.id}>
             <Link
               className={`${item?.hasDropdown
-                  ? `dp-menu ${item?.id === 1 ? "active" : ""}`
-                  : `${item?.lastItem ? "mr-0" : ""}`
+                ? `dp-menu ${item?.id === 1 ? "active" : ""}`
+                : `${item?.lastItem ? "mr-0" : ""}`
                 }`}
               href={item?.link}
+              style={pathName?.split('/')?.[1] === item.link.replace('/', '') ? { color: '#4c80fa' } : {}}
             >
               {item?.label}
             </Link>

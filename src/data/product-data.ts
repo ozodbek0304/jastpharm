@@ -30,7 +30,7 @@ export const productData: ProductType[] = [
   {
     id: 1,
     discount: 20,
-    img: imgOne,
+    img: imgThree,
     largeImg:imgOneLarge,
     ratting: 5,
     title: "Face Disinfection",
@@ -62,7 +62,7 @@ export const productData: ProductType[] = [
   {
     id: 3,
     discount: false,
-    img: imgTwo,
+    img: imgThree,
     largeImg:imgTwoLarge,
     ratting: 4.5,
     title: "Bifunctional Scale X200",
@@ -78,7 +78,7 @@ export const productData: ProductType[] = [
   {
     id: 4,
     discount: false,
-    img: imgFive,
+    img: imgThree,
     largeImg:imgFiveLarge,
     ratting: 4.5,
     title: "Blood Pressure Monitor",
@@ -95,7 +95,7 @@ export const productData: ProductType[] = [
     id: 5,
     discount: false,
     status: "new",
-    img: imgFour,
+    img: imgThree,
     largeImg:imgFourLarge,
     ratting: 3.5,
     title: "Nursing Care Protection",
@@ -112,7 +112,7 @@ export const productData: ProductType[] = [
   {
     id: 6,
     discount: 15,
-    img: imgSix,
+    img: imgThree,
     largeImg:imgSixLarge,
     ratting: 5,
     title: "Nursing Care Protection",
@@ -130,7 +130,7 @@ export const productData: ProductType[] = [
   {
     id: 7,
     discount: false,
-    img: imgTwo,
+    img: imgThree,
     largeImg:imgTwoLarge,
     status: "new",
     ratting: 4.5,
@@ -148,7 +148,7 @@ export const productData: ProductType[] = [
   {
     id: 8,
     discount: 22,
-    img: imgSix,
+    img: imgThree,
     largeImg:imgSixLarge,
     ratting: 3.5,
     title: "Nursing Care Protection",
@@ -165,7 +165,7 @@ export const productData: ProductType[] = [
   {
     id: 9,
     discount: 20,
-    img: imgOne,
+    img: imgThree,
     largeImg:imgOneLarge,
     ratting: 5,
     title: "Face Disinfection",
@@ -182,7 +182,7 @@ export const productData: ProductType[] = [
     id: 10,
     discount: false,
     status: "new",
-    img: imgFive,
+    img: imgThree,
     largeImg:imgFiveLarge,
     ratting: 2.5,
     title: "Blood Pressure Monitor",
@@ -214,7 +214,7 @@ export const productData: ProductType[] = [
   {
     id: 12,
     discount: 20,
-    img: imgOne,
+    img: imgThree,
     largeImg:imgOneLarge,
     ratting: 4,
     title: "Face Disinfection",
@@ -230,7 +230,7 @@ export const productData: ProductType[] = [
   {
     id: 13,
     discount: false,
-    img: imgFive,
+    img: imgThree,
     largeImg:imgFiveLarge,
     ratting: 4.5,
     title: "Blood Pressure Monitor",
@@ -247,7 +247,7 @@ export const productData: ProductType[] = [
   {
     id: 14,
     discount: false,
-    img: imgTwo,
+    img: imgThree,
     largeImg:imgTwoLarge,
     ratting: 5,
     title: "Bifunctional Scale X200",

@@ -84,7 +84,7 @@ const GridProductView = ({ start, end }: propsType) => {
             </div>
 
 
-            {/* <div className="single-product-info position-absolute mt-25 text-center transition-3">
+            <div className="single-product-info position-absolute mt-25 text-center transition-3">
               {item.offer === true && (
                 <>
                   {" "}
@@ -116,7 +116,7 @@ const GridProductView = ({ start, end }: propsType) => {
                   </span>
                 </li>
               </ul>
-            </div> */}
+            </div>
           </div>
         </div>
       ))}

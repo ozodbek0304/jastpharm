@@ -62,7 +62,7 @@ const ShopArea = () => {
               <div className="col-xl-9  col-lg-8  col-md-12  col-sm-12 col-12">
                 <div className="row">
                   <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
-                    <div className="shop-header pt-70 mb-20">
+                    <div className="shop-header pt-20 mb-20">
                       <div className="row align-items-center position-relative s-top-nv">
                         <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pb-15 position-static pl-xl-0">
                           <div className="shop-header-right d-flex align-items-center justify-content-between">

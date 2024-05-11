@@ -1,82 +1,50 @@
 import Link from "next/link";
 import React from "react";
 import LineUpLinks from "../Home-three/LineUpLinks";
+import Image from "next/image";
+import BrandLogos from "./BrandLogos";
 
 const CategoryLineUp = () => {
- 
+
   return (
     <>
-      <div className="category-lineup-area pb-30">
+      <div className="category-lineup-area">
         <div className="container">
-          <div className="row"> 
-            <div className="col-xxl-12 col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
-              <div className="category-lineup">
-                <h2>Category Lineup</h2>
+          <div className="row">
+            <Image src={"https://medol.uz//data/uploads/module/pages/144/original/63baf330b6056.jpg"} width={1200} height={300} alt="product" />
+            <div className="category-wrapper category-wrapper1 mt-15">
+              Наша история началась в 2011 году, когда возникали большие трудности в ведении бизнеса с иностранными партнерами. Несмотря на все преграды, компания уверенными шагами внедряла новые технологии и обучала врачей Узбекистана. Оглядываясь назад, и, смотря на сегодняшние достижения врачей, мы с гордостью говорим, что мы не зря старались и верили в их результат.
+              Сегодня врачи в области кардиохирургии делают операции по установки стентов, и людям не приходиться выезжать в соседние страны для получения медицинского обслуживания. В Узбекистане растет и развивается сеть лабораторий VITROS, где функционирует наше оборудование от Johnson & Johnson, и мы рады, что население Узбекистана могут пройти диагностику на мировом оборудовании и получить точный и достоверный результат.
+              Еще одним нашим достижением является внедрение и бесперебойные поставки шовного хирургического материала ETHICON, мы гордимся, что наши хирурги, как хирурги других стран, пользуются и работают самыми популярными и качественными нитями. К 2022 году мы выросли по количеству компаний, входящих в состав группы компании MEDOL. На сегодняшний день успешно функционирует 4 организации, имеющих свою миссию, цель и сферу деятельности.
+              Сегодня MEDOL продолжает расти и развиваться. Мы гордимся пройденным путем и достигнутыми результатами, и, в то же время, четко видим новые цели и направления движения. Наша сила и наша обязанность – в создании эффективной команды, дистрибуции, обеспечивающей новыми технологиями в сфере медицины и возможностью лечения и получения качественной медицинской помощи в Узбекистане.
+            </div>
+
+            <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pt-15">
+              <div className="section-title text-center">
+                <h3 className="font-pt light-black-color2 pt-1">
+                  Vazifa va qadriyatlarimiz
+                </h3>
               </div>
             </div>
+
             <div className="category-wrapper category-wrapper1 mt-15">
-              <div className="row">
-                <div className="col-xxl-2 col-xl-2  col-lg-2  col-md-4  col-sm-4 col-12">
-                  <div className="category-widget mb-50">
-                    <h5 className="title position-relative d-inline-block hvr mb-25">
-                      WOUND CARE
-                    </h5>
-                    <ul>
-                        <LineUpLinks start={0} end={7}/>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-xxl-2 col-xl-2  col-lg-2  col-md-4  col-sm-4 col-12">
-                  <div className="category-widget mb-50">
-                    <h5 className="title position-relative d-inline-block hvr mb-25">
-                      HIGIENE
-                    </h5>
-                    <ul>
-                    <LineUpLinks start={8} end={14}/>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-xxl-2 col-xl-2  col-lg-2  col-md-4  col-sm-4 col-12">
-                  <div className="category-widget mb-50">
-                    <h5 className="title position-relative d-inline-block hvr mb-25">
-                      LABORATORY
-                    </h5>
-                    <ul>
-                    <LineUpLinks start={15} end={21}/>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-xxl-2 col-xl-2  col-lg-2  col-md-4  col-sm-4 col-12">
-                  <div className="category-widget mb-50">
-                    <h5 className="title position-relative d-inline-block hvr mb-25">
-                      TOOLS
-                    </h5>
-                    <ul>
-                    <LineUpLinks start={22} end={28}/>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-xxl-2 col-xl-2  col-lg-2  col-md-4  col-sm-4 col-12">
-                  <div className="category-widget mb-50">
-                    <h5 className="title position-relative d-inline-block hvr mb-25">
-                      DIAGNOSIS
-                    </h5>
-                    <ul>
-                    <LineUpLinks start={29} end={35}/>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-xxl-2 col-xl-2  col-lg-2  col-md-4  col-sm-4 col-12">
-                  <div className="category-widget mb-50">
-                    <h5 className="title position-relative d-inline-block hvr mb-25">
-                      EQUIPMENT
-                    </h5>
-                    <ul>
-                    <LineUpLinks start={36} end={42}/>
-                    </ul>
-                  </div>
-                </div>
+              Наша история началась в 2011 году, когда возникали большие трудности в ведении бизнеса с иностранными партнерами. Несмотря на все преграды, компания уверенными шагами внедряла новые технологии и обучала врачей Узбекистана. Оглядываясь назад, и, смотря на сегодняшние достижения врачей, мы с гордостью говорим, что мы не зря старались и верили в их результат.
+              Сегодня врачи в области кардиохирургии делают операции по установки стентов, и людям не приходиться выезжать в соседние страны для получения медицинского обслуживания. В Узбекистане растет и развивается сеть лабораторий VITROS, где функционирует наше оборудование от Johnson & Johnson, и мы рады, что население Узбекистана могут пройти диагностику на мировом оборудовании и получить точный и достоверный результат.
+              Еще одним нашим достижением является внедрение и бесперебойные поставки шовного хирургического материала ETHICON, мы гордимся, что наши хирурги, как хирурги других стран, пользуются и работают самыми популярными и качественными нитями. К 2022 году мы выросли по количеству компаний, входящих в состав группы компании MEDOL. На сегодняшний день успешно функционирует 4 организации, имеющих свою миссию, цель и сферу деятельности.
+              Сегодня MEDOL продолжает расти и развиваться. Мы гордимся пройденным путем и достигнутыми результатами, и, в то же время, четко видим новые цели и направления движения. Наша сила и наша обязанность – в создании эффективной команды, дистрибуции, обеспечивающей новыми технологиями в сфере медицины и возможностью лечения и получения качественной медицинской помощи в Узбекистане.
+            </div>
+
+
+            <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pt-15">
+              <div className="section-title text-center">
+                <h3 className="font-pt light-black-color2 pt-1">
+                  Hamkorlarimiz
+                </h3>
               </div>
+            </div>
+
+            <div className="category-wrapper category-wrapper1 mt-15">
+              <BrandLogos />
             </div>
           </div>
         </div>

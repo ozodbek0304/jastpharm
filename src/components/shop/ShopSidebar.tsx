@@ -12,7 +12,7 @@ const ShopSidebar = () => {
   };
   return (
     <>
-      <div className="shop-sidebar-area pt-80">
+      <div className="shop-sidebar-area pt-20">
         <div className="row">
           <div className="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
             <div className="row">
@@ -168,138 +168,9 @@ const ShopSidebar = () => {
                   </ul>
                 </div>
               </div>
-              <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
-                <div className="sidebar-widget mb-35">
-                  <h6 className="mb-25 title font600 sidebar-title d-inline-block position-relative pb-1">
-                    Filter By Price
-                  </h6>
-                  <div id="slider-range"></div>
-                  <div className="price-slider mt-20">
-                    <   div>
-                      <form action="#">
-                        <div className="prc-slider-content mb-15">
-                          <div className="prc-amount d-sm-flex">
-                            <label htmlFor="amount" className="mb-0 mr-1">
-                              Price : {0} - {sliderValues}
-                            </label>
-                            
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <RangeComp values={sliderValues} min={15} max={500} step={1} onChange={handleSliderChange} />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-          <div className="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
-            <div className="sidebar-widget">
-              <h6 className="mb-25 title font600 sidebar-title d-inline-block position-relative pb-1">
-                Color
-              </h6>
-              <ul className="shop-color">
-                <li className="pb-10 font13">
-                  <Link href="#">Blue (2)</Link>
-                </li>
 
-                <li className="pb-10 font13">
-                  <Link href="#">Green (2)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">White (53)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Yellow (53)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Pink (20)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Red (20)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Brown (16)</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
-            <div className="sidebar-widget mt-25">
-              <h6 className="mb-15 title font600 sidebar-title d-inline-block position-relative pb-1">
-                Size
-              </h6>
-              <ul className="shop-color">
-                <li className="pb-10 font13">
-                  <Link href="#">Small (2)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Extra Small (2)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Extra Large (16)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Huge (53)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Large (53)</Link>
-                </li>
-
-                <li className="pb-10 font13">
-                  <Link href="#">Medium (20)</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
-            <div className="sidebar-widget mt-25">
-              <h6 className="mb-20 title font600 sidebar-title d-inline-block position-relative pb-1">
-                Popular tags
-              </h6>
-              <ul className="shop-tag">
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Small</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Fashion</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Magenta</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Grey</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Clothing</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Grey</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Small</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">large</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Yellows</Link>
-                </li>
-                <li className="pb-10 font13 d-inline-block">
-                  <Link href="#">Magenta</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
           <div className="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
             <div className="sidebar-widget mt-25">
               <h6 className="title font600 sidebar-title d-inline-block position-relative mb-20 pb-1">
