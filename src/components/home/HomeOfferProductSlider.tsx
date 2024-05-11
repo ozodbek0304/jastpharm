@@ -30,7 +30,7 @@ const HomeOfferProductSlider = () => {
                   Bizning statistiklarimiz
                 </h3>
                 <p className="light-black-color7 font300">
-                  Barcha ma'lumotlarimiz raqamlarda aks etgan
+                  Barcha ma{"'"}lumotlarimiz raqamlarda aks etgan
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@ const HomeOfferProductSlider = () => {
               // }}
               >
                 {productData?.slice(15, 19)?.map((item) => (
-                  <div className="single-handpick-item d-flex align-items-center mb-20 mt-20 mx-auto">
+                  <div key={item.id} className="single-handpick-item d-flex align-items-center mb-20 mt-20 mx-auto">
                     <div className="single-product-info transition-3 text-center">
                       <h5 className="light-black-color2 mb-2ht">
                         <Link href={`shop-details/${item?.id}`}>
