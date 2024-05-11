@@ -6,9 +6,9 @@ import ContactContent from './ContactContent';
 const ContactMain = () => {
     return (
         <>
-            <Breadcrumb pageTitle='Contact'/>
-            <ContactMap/>
-            <ContactContent/>
+            <Breadcrumb pageTitle='Kontakt' />
+            <ContactMap />
+            <ContactContent />
         </>
     );
 };

@@ -50,16 +50,6 @@ const BrandLogos = () => {
     <>
       <div className="brand-logo-area bg-white over-hidden">
         <div className="container border-t-gray pt-55 pb-55">
-          <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pb-15">
-            <div className="section-title text-center">
-              <h3 className="font-pt light-black-color2 pb-1">
-                Xamkorlarimiz
-              </h3>
-              <p className="light-black-color7 font300">
-                Sed ut perspiciatis undeous omniiste natusing error
-              </p>
-            </div>
-          </div>
           <div className="mlr--55">
             <div className="row brand-active d-flex align-items-center ">
               <Swiper
@@ -97,7 +87,7 @@ const BrandLogos = () => {
                             src={item.img}
                             alt="brand-img"
                             style={{ width: "auto", height: "auto" }}
-
+                            
                           />
                         </Link>
                       </div>

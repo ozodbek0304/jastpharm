@@ -32,46 +32,46 @@ export interface idType {
 // slider one type
 
 export interface sliderOnetype {
-    id:number;
-    heading:string;
-    afterBr:string;
-    title:string;
-    titleBr:string;
-    img:StaticImageData
+  id: number;
+  heading: string;
+  afterBr: string;
+  title: string;
+  titleBr: string;
+  img: string
 
 }
 
 export interface ProductType {
-  id:number;
-  discount:number | boolean;
-  img:StaticImageData;
-  largeImg?:StaticImageData;
-  ratting:number;
-  title:string;
-  details:string;
-  price:number;
-  oldPrice:number | boolean;
-  offer:boolean;
-  day:number;
-  min:number;
-  review:number;
-  status?:string;
-  totalCard?:number | undefined;
+  id: number;
+  discount: number | boolean;
+  img: StaticImageData;
+  largeImg?: StaticImageData;
+  ratting: number;
+  title: string;
+  details: string;
+  price: number;
+  oldPrice: number | boolean;
+  offer: boolean;
+  day: number;
+  min: number;
+  review: number;
+  status?: string;
+  totalCard?: number | undefined;
 }
 
 export interface blogDataType {
-  id:number;
-  date:number;
-  img:StaticImageData;
-  month:string;
-  year:number;
-  title:string;
-  details:string;
+  id: number;
+  date: number;
+  img: StaticImageData;
+  month: string;
+  year: number;
+  title: string;
+  details: string;
 }
 
 
 
 
 
- 
+
 

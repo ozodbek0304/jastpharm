@@ -17,21 +17,10 @@ const navMenuData: MenuItem[] = [
   {
     id: 2,
     label: "Kompaniya haqida",
-    link: "#",
+    link: "/about",
   },
   { id: 3, hasDropdown: false, label: "Mahsulotlar", link: "/shop" },
-
-  // {
-  //   id: 4,
-  //   label: "Mahsulotlar",
-  //   link: "#",
-  //   hasDropdown: true,
-  //   subMenu: [
-  //     { id: 16, label: "Blog page", link: "/blog" },
-  //     { id: 17, label: "blog-details", link: "/blog-details" },
-  //   ],
-  // },
-  { id: 5, hasDropdown: false, lastItem: "mr-0", label: "Xizmatlar", link: "/contact" },
+  { id: 5, hasDropdown: false, lastItem: "mr-0", label: "Xizmatlar", link: "/services" },
   { id: 6, hasDropdown: false, lastItem: "mr-0", label: "Kontakt", link: "/contact" },
 
 ];

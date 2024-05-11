@@ -40,22 +40,6 @@ const GridProductView = ({ start, end }: propsType) => {
       {productData.slice(start, end).map((item) => (
         <div key={item.id} className={`single-product mb-30`}>
           <div className="single-product-img position-relative over-hidden">
-            {item.discount === false || (
-              <div className="single-product-label position-absolute theme-bg text-center  transition-3 z-index1">
-                <span className="white text-uppercase d-block font500">
-                  -{item.discount}%{" "}
-                </span>
-              </div>
-            )}
-
-            {item?.status === "new" && (
-              <div className="single-product-label text-label position-absolute theme-bg text-center  transition-3 z-index1">
-                <span className="white d-block font500">New</span>
-              </div>
-            )}
- 
-
-
             <div className="position-relative d-block">
               <Image src={item.img} className="w-100" alt="product" />
               <div className=" d-flex align-items-center mb-25 add-cart-div">
@@ -72,7 +56,7 @@ const GridProductView = ({ start, end }: propsType) => {
                 </div>
                 <div className="pro-wishlist d-inline-block ml-10 common-icon">
                   <button
-                     
+
                     data-toggle="tooltip"
                     data-placement="top"
                     title="Quick View"
@@ -86,7 +70,7 @@ const GridProductView = ({ start, end }: propsType) => {
                   </button>
                 </div>
                 <div className="pro-wishlist d-inline-block ml-10 common-icon">
-                  <button 
+                  <button
                     className="wishlist-btn"
                     data-toggle="tooltip"
                     data-placement="top"
@@ -100,7 +84,7 @@ const GridProductView = ({ start, end }: propsType) => {
             </div>
 
 
-            <div className="single-product-info position-absolute mt-25 text-center transition-3">
+            {/* <div className="single-product-info position-absolute mt-25 text-center transition-3">
               {item.offer === true && (
                 <>
                   {" "}
@@ -132,14 +116,12 @@ const GridProductView = ({ start, end }: propsType) => {
                   </span>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       ))}
 
-      <ProductModal/>
-
-      
+      <ProductModal />
     </>
   );
 };

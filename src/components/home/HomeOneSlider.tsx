@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Scrollbar, A11y, Autoplay,EffectFade } from "swiper";
+import { Scrollbar, A11y, Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
@@ -12,7 +12,7 @@ const HomeOneSlider = () => {
       <div className="slider-area over-hidden slider1">
         <div className="slider-active">
           <Swiper
-            modules={[Scrollbar, A11y, Autoplay,EffectFade]}
+            modules={[Scrollbar, A11y, Autoplay, EffectFade]}
             spaceBetween={0}
             loop={true}
             observeParents={true}
@@ -29,7 +29,7 @@ const HomeOneSlider = () => {
               <SwiperSlide key={item.id}>
                 <div
                   className="single-slider slider-height d-flex align-items-center"
-                  style={{ backgroundImage: `url(${item.img.src})` }}
+                  style={{ backgroundImage: `url(${item.img})` }}
                   data-overlay="6"
                 >
                   <div className="container">

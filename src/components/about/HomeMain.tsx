@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
-import HomeOneSlider from "./HomeOneSlider";
 import CategoryLineUp from "./CategoryLineUp";
+import HomeOneBanner from "./HomeOneBanner";
 import HomeProductArea from "./HomeProductArea";
 import HomeOfferProductSlider from "./HomeOfferProductSlider";
 import MostPurchased from "./MostPurchased";
@@ -9,21 +9,21 @@ import BrandLogos from "./BrandLogos";
 import HomeBlogs from "./HomeBlogs";
 import SubscribeArea from "./SubscribeArea";
 import bgImg from "../../../public/assets/images/bg/purchased-item-bg.jpg";
-import HomeCategrorSlider from "./HomeCategorySlider";
-const HomeMain = () => {
+import Breadcrumb from "@/sheardComponent/Breadcrumb";
+const AboutMain = () => {
   return (
     <>
-      <HomeOneSlider />
-      <HomeOfferProductSlider />
-      {/* <CategoryLineUp /> */}
-      <HomeCategrorSlider />
-      <BrandLogos />
+      <Breadcrumb pageTitle='Kompaniya haqida' />
+      <CategoryLineUp />
+      <HomeOneBanner />
       <HomeProductArea />
-      {/* <MostPurchased bgImg={bgImg} /> */}
-      {/* <HomeBlogs /> */}
-      {/* <SubscribeArea /> */}
+      <HomeOfferProductSlider />
+      <MostPurchased bgImg={bgImg} />
+      <BrandLogos />
+      <HomeBlogs />
+      <SubscribeArea />
     </>
   );
 };
 
-export default HomeMain;
+export default AboutMain;

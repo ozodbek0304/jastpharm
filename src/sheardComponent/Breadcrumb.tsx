@@ -9,8 +9,8 @@ const Breadcrumb = ({ pageTitle }: propsType) => {
   return (
     <div className="slider-area over-hidden">
       <div
-        className="single-slider page-height3 d-flex align-items-center"
-        style={{ backgroundImage: `url(${bannerImg.src})` }}
+        className="d-flex align-items-center"
+      // style={{ backgroundImage: `url(${bannerImg.src})` }}
       >
         <div className="container">
           <div className="row">
@@ -21,7 +21,7 @@ const Breadcrumb = ({ pageTitle }: propsType) => {
                   <ol className="breadcrumb justify-content-center bg-transparent">
                     <li className="breadcrumb-item">
                       <Link className="primary-color" href="/">
-                        Home
+                        Asosiy sahifa
                       </Link>
                     </li>
                     <li

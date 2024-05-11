@@ -1,8 +1,11 @@
 
 module.exports = {
-    images: {
-      domains: ['i.ibb.co'],
-    },
-  };
-  
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: "*" },
+      { protocol: 'http', hostname: "*" },
+    ]
+  },
+};
+
 
