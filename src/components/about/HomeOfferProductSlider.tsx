@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
-import { A11y, Autoplay, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import Image from "next/image";
-import GetRatting from "@/hooks/GetRatting";
 import { productData } from "@/data/product-data";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
