@@ -3,15 +3,18 @@ import React from "react";
 import LineUpLinks from "../Home-three/LineUpLinks";
 import Image from "next/image";
 import BrandLogos from "./BrandLogos";
+import useResponsive from "@/hooks/use-responsive";
 
 const CategoryLineUp = () => {
+
+  const { isMobile } = useResponsive()
 
   return (
     <>
       <div className="category-lineup-area">
         <div className="container">
           <div className="row">
-            <Image src={"https://medol.uz//data/uploads/module/pages/144/original/63baf330b6056.jpg"} width={1200} height={300} alt="product" />
+            <Image src={"https://medol.uz//data/uploads/module/pages/144/original/63baf330b6056.jpg"} width={1200} height={isMobile ? 200 : 300} alt="product" style={{ objectFit: 'cover' }} />
             <div className="category-wrapper category-wrapper1 mt-15">
               Наша история началась в 2011 году, когда возникали большие трудности в ведении бизнеса с иностранными партнерами. Несмотря на все преграды, компания уверенными шагами внедряла новые технологии и обучала врачей Узбекистана. Оглядываясь назад, и, смотря на сегодняшние достижения врачей, мы с гордостью говорим, что мы не зря старались и верили в их результат.
               Сегодня врачи в области кардиохирургии делают операции по установки стентов, и людям не приходиться выезжать в соседние страны для получения медицинского обслуживания. В Узбекистане растет и развивается сеть лабораторий VITROS, где функционирует наше оборудование от Johnson & Johnson, и мы рады, что население Узбекистана могут пройти диагностику на мировом оборудовании и получить точный и достоверный результат.

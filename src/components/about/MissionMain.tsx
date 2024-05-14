@@ -1,11 +1,12 @@
-import Link from "next/link";
+"use client"
 import React from "react";
-import LineUpLinks from "../Home-three/LineUpLinks";
 import Image from "next/image";
-import BrandLogos from "./BrandLogos";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
+import useResponsive from "@/hooks/use-responsive";
 
 const MissionMain = () => {
+
+  const { isMobile } = useResponsive()
 
   return (
     <>
@@ -13,8 +14,8 @@ const MissionMain = () => {
         <div className="container">
           <div className="row">
             <Breadcrumb pageTitle='Vazifa va qadriyatlarimiz' />
-            
-            <Image src={"https://medol.uz//data/uploads/module/pages/144/original/63baf330b6056.jpg"} width={1200} height={300} alt="product" />
+
+            <Image src={"https://medol.uz//data/uploads/module/pages/144/original/63baf330b6056.jpg"} width={1200} height={isMobile ? 200 : 300} style={{ objectFit: 'cover' }} alt="product" />
 
             <div className="category-wrapper category-wrapper1 mt-15">
               Наша история началась в 2011 году, когда возникали большие трудности в ведении бизнеса с иностранными партнерами. Несмотря на все преграды, компания уверенными шагами внедряла новые технологии и обучала врачей Узбекистана. Оглядываясь назад, и, смотря на сегодняшние достижения врачей, мы с гордостью говорим, что мы не зря старались и верили в их результат.

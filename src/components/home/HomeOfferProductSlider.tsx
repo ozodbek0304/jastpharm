@@ -1,10 +1,6 @@
 "use client";
 import React from "react";
-import { A11y, Autoplay, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import Image from "next/image";
-import GetRatting from "@/hooks/GetRatting";
 import { productData } from "@/data/product-data";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
@@ -38,27 +34,7 @@ const HomeOfferProductSlider = () => {
           <div className="row handpick-items-active theme-border2 mb-5">
             <div className="swiper-wrappers">
               <div
-                className="d-flex justify-content-between"
-              // breakpoints={{
-              //   0: {
-              //     slidesPerView: 1,
-              //   },
-              //   500: {
-              //     slidesPerView: 1,
-              //   },
-              //   768: {
-              //     slidesPerView: 2,
-              //   },
-              //   992: {
-              //     slidesPerView: 2,
-              //   },
-              //   1200: {
-              //     slidesPerView: 3,
-              //   },
-              //   1400: {
-              //     slidesPerView: 3,
-              //   },
-              // }}
+                className="d-flex justify-content-between flex-column flex-md-row"
               >
                 {productData?.slice(15, 19)?.map((item) => (
                   <div key={item.id} className="single-handpick-item d-flex align-items-center mb-20 mt-20 mx-auto">
