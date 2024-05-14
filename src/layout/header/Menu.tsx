@@ -18,14 +18,17 @@ const Menu = () => {
                 }`}
               href={item?.link}
               style={pathName?.split('/')?.[1] === item.link.replace('/', '') ? { color: '#4c80fa' } : {}}
+              legacyBehavior
             >
-              {item?.label}
+              <a>{item?.label}</a>
             </Link>
             {item.hasDropdown === true && (
               <ul className="mega-menu box-shadow-gray pt-25 pb-20 pl-30 pr-30">
                 {item?.subMenu?.map((itm) => (
                   <li key={itm.id}>
-                    <Link href={itm.link}> {itm.label} </Link>
+                    <Link href={itm.link} legacyBehavior>
+                      <a>{itm?.label}</a>
+                    </Link>
                   </li>
                 ))}
               </ul>
