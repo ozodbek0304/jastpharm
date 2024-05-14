@@ -6,14 +6,8 @@ import img3 from "../../../public/assets/images/product/rc-img3.jpg";
 import Image from "next/image";
 import { ProductType, idType } from "@/interFace/interFace";
 import { productData } from "@/data/product-data";
-import GetRatting from "@/hooks/GetRatting";
 import ProductDescription from "./ProductDescription";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { RootState } from "@/redux/store";
-import { cart_product, decrease_quantity } from "@/redux/slices/cartSlice";
-import { wishlist_product } from "@/redux/slices/wishlistSlice";
 import { StaticImageData } from "next/image";
 
 // interface for selectImg
@@ -29,23 +23,7 @@ const ShopDetailsContent = ({ id }: idType) => {
   );
   const previewImg = fileterData?.largeImg ? fileterData?.largeImg : img1;
   const [selectImg, setselectImg] = useState(previewImg);
-  const dispatch = useDispatch();
-  const cartProducts = useSelector(
-    (state: RootState) => state.cart.cartProducts
-  );
 
-  const cartItem = cartProducts.find((item) => item.id == id);
-
-  const handleAddToCart = (product: ProductType) => {
-    dispatch(cart_product(product));
-  };
-  const handleWishlist = (product: ProductType) => {
-    dispatch(wishlist_product(product));
-  };
-
-  const handDecressCart = (product: ProductType) => {
-    dispatch(decrease_quantity(product));
-  };
 
   const myProduct: imgType[] = [
     {
@@ -61,13 +39,13 @@ const ShopDetailsContent = ({ id }: idType) => {
       img: img3,
     },
   ];
-  const handleChange = (e: any) => {};
+  const handleChange = (e: any) => { };
   const handleSelectImg = (item: imgType) => {
     setselectImg(item.img);
   };
   return (
     <>
-       <div className="product-details-area pro-top-thamb pro-bottom-thamb pt-80">
+      <div className="product-details-area pro-top-thamb pro-bottom-thamb pt-80">
         <div className="container">
           <div className="product-details-content">
             <div
@@ -125,18 +103,6 @@ const ShopDetailsContent = ({ id }: idType) => {
                   <div className="product-view-info mt-30">
                     <div className="product-left-img-info">
                       <h3 className="mb-20"> {fileterData?.title} </h3>
-                      <div className="rating rating-shop d-flex">
-                        <ul className="d-flex mr-1">
-                          <GetRatting averageRating={fileterData?.ratting} />
-                        </ul>
-                        <span className="gray-color2 mt-1">
-                          (
-                          {fileterData?.review > 9
-                            ? `${fileterData?.review}`
-                            : `0${fileterData?.review}`}
-                          )
-                        </span>
-                      </div>
                       <div className="price pb-18 pt-3">
                         <span className="rc-price font700">
                           ${fileterData?.price}.00
@@ -157,60 +123,19 @@ const ShopDetailsContent = ({ id }: idType) => {
                         </p>
                       </div>
                       <div className="all-info d-sm-flex align-items-center mt-35">
-                        <div className="quick-add-to-cart d-sm-flex align-items-center mb-15 mr-10">
-                          <div className="quantity-field position-relative d-inline-block mr-3">
-                            <span
-                              onClick={() =>
-                                handleAddToCart(fileterData && fileterData)
-                              }
-                              className="custom-prev cursor-pinter"
-                            >
-                              <i className="icon-plus"></i>
-                            </span>
-                            <input
-                              type="text"
-                              name="select1"
-                              onChange={handleChange}
-                              value={
-                                cartItem?.totalCard ? cartItem?.totalCard : 0
-                              }
-                              className="quantity-input-arrow quantity-input text-center border-gray"
-                            />
-
-                            <span
-                              onClick={() =>
-                                handDecressCart(fileterData && fileterData)
-                              }
-                              className="custom-next cursor-pinter"
-                            >
-                              <i className="icon-minus"></i>
-                            </span>
-                          </div>
-                        </div>
                         <div className="pro-list-btn d-inline-block mr-10 mb-15">
                           <Link
                             href="/shopping-cart"
                             className="web-btn h2-theme-border1 d-inline-block rounded-0 text-capitalize white h2-theme-bg position-relative over-hidden pl-35 pr-35 ptb-17"
                           >
-                            View Cart
-                          </Link>
-                        </div>
-                        <div className="pro-wishlist d-inline-block mb-15">
-                          <Link
-                            href=""
-                            onClick={() =>
-                              handleWishlist(fileterData && fileterData)
-                            }
-                            className="web-btn h2-theme-border1 d-inline-block rounded-0 text-capitalize white h2-theme-bg position-relative over-hidden plr-16 ptb-15"
-                          >
-                            <span className="icon-heart"></span>
+                            {"To'liq malumot olish"}
                           </Link>
                         </div>
                       </div>
                       <ul className="review-cat d-sm-flex align-items-center pt-20 pb-15">
                         <li className="mb-1 mb-2 mr-6 d-inline-block">
                           <span className="cat-title dark-black-color font600">
-                            Categories :
+                            Ketegoriyasi :
                           </span>
                         </li>
                         <li className="mr-6 mb-2 d-inline-block position-relative">
@@ -301,22 +226,6 @@ const ShopDetailsContent = ({ id }: idType) => {
                           >
                             <span className="d-inline-block text-center">
                               <i className="fab fa-linkedin-in"></i>
-                            </span>
-                          </Link>
-                        </li>
-                        <li
-                          className="d-inline-block"
-                          data-toggle="tooltip"
-                          data-selector="true"
-                          data-placement="bottom"
-                          title="Google plus"
-                        >
-                          <Link
-                            className="d-inline-block font13 text-uppercase transition-3 mb-20"
-                            href="https://www.behance.net/"
-                          >
-                            <span className="d-inline-block text-center">
-                              <i className="fab fa-behance"></i>
                             </span>
                           </Link>
                         </li>

@@ -10,6 +10,7 @@ const ShopSidebar = () => {
   const handleSliderChange = (newValues: number[]) => {
     setSliderValues(newValues);
   };
+
   return (
     <>
       <div className="shop-sidebar-area pt-20">
@@ -19,7 +20,7 @@ const ShopSidebar = () => {
               <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
                 <div className="sidebar-widget mb-20">
                   <h6 className="mb-15 title font600 sidebar-title d-inline-block position-relative pb-1">
-                    Product Categories
+                    Barcha kategoriyalar
                   </h6>
                   <ul>
                     <li className="pb-15 d-block">
@@ -174,7 +175,7 @@ const ShopSidebar = () => {
           <div className="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
             <div className="sidebar-widget mt-25">
               <h6 className="title font600 sidebar-title d-inline-block position-relative mb-20 pb-1">
-                Recent Product
+                Ommabop mahsulotlar
               </h6>
               <div className="side-product mb-50">
                 {productData?.slice(6, 10)?.map((item) => (

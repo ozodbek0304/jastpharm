@@ -5,15 +5,13 @@ import HomeOfferProductSlider from "./HomeOfferProductSlider";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
 import ContactContent from "../contact/ContactContent";
 import ContactMap from "../contact/ContactMap";
-const AboutMain = () => {
+const HistoryMain = () => {
   return (
     <>
-      <Breadcrumb pageTitle="Jamoamiz a'zolari" />
-      <HomeOfferProductSlider />
-      <ContactMap />
-      <ContactContent />
+      <Breadcrumb pageTitle='Bizning tariximiz' />
+      <CategoryLineUp />
     </>
   );
 };
 
-export default AboutMain;
+export default HistoryMain;

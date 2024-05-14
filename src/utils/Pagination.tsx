@@ -7,8 +7,8 @@ const Pagination = () => {
       <ul className="pagination align-items-center justify-content-center">
         <li className="page-item">
           <Link className="page-link prev" href="#">
-            <i className="fas fa-angle-left"></i>
-            Prev
+            <i className="fas fa-angle-left"></i> 
+            {" "}Oldingi
           </Link>
         </li>
         <li className="page-item">
@@ -33,7 +33,7 @@ const Pagination = () => {
         </li>
         <li className="page-item">
           <Link className="page-link next" href="#">
-            Next <i className="fas fa-angle-right"></i>
+            Keyingi <i className="fas fa-angle-right"></i>
           </Link>
         </li>
       </ul>

@@ -10,30 +10,14 @@ const ProductDescription = () => {
     {
       id: 1,
       title: "Description",
-    },
-    {
-      id: 2,
-      title: "Additional information",
-    },
-    {
-      id: 3,
-      title: "Reviews (2)",
-    },
+    }
   ];
 
   const tabContent = [
     {
       id: 1,
       content: <Description />,
-    },
-    {
-      id: 2,
-      content: <Additionalinfo />,
-    },
-    {
-      id: 3,
-      content: <Reviews />,
-    },
+    }
   ];
 
   return (
@@ -45,9 +29,8 @@ const ProductDescription = () => {
               {tabs?.map((item) => (
                 <li key={item?.id} className="nav-item" role="presentation">
                   <button
-                    className={`nav-link  bg-transparent pl-0 title position-relative hvr2 font600 ${
-                      activeTab === item?.id ? "active" : ""
-                    }`}
+                    className={`nav-link  bg-transparent pl-0 title position-relative hvr2 font600 ${activeTab === item?.id ? "active" : ""
+                      }`}
                     onClick={() => setactiveTab(item?.id)}
                     id="pills-home-tab"
                     data-bs-toggle="pill"
@@ -66,7 +49,7 @@ const ProductDescription = () => {
               {tabContent?.map((item) => (
                 <div
                   key={item?.id}
-                  className={`tab-pane fade ${activeTab === item?.id ?  "show active" : ""}`}
+                  className={`tab-pane fade ${activeTab === item?.id ? "show active" : ""}`}
                   id="pills-home"
                   role="tabpanel"
                   aria-labelledby="pills-home-tab"

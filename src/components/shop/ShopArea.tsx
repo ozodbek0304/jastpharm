@@ -4,7 +4,6 @@ import ShopSidebar from "./ShopSidebar";
 import ShopGridView from "./ShopGridView";
 import ShopListView from "./ShopListView";
 import Pagination from "@/utils/Pagination";
-import NiceSelect from "@/elements/NiceSelect";
 
 const ShopArea = () => {
   const [activeTab, setactiveTab] = useState<number>(1);
@@ -17,33 +16,6 @@ const ShopArea = () => {
     {
       id: 2,
       icon: "fas fa-bars",
-    },
-  ];
-
-  const sortBY = [
-    {
-      id: 1,
-      option: "Sort By New",
-    },
-    {
-      id: 2,
-      option: "Popularity",
-    },
-    {
-      id: 3,
-      option: "Average Rating",
-    },
-    {
-      id: 4,
-      option: "latest",
-    },
-    {
-      id: 5,
-      option: "low to high",
-    },
-    {
-      id: 6,
-      option: "high to low",
     },
   ];
 
@@ -102,19 +74,8 @@ const ShopArea = () => {
                               <li>
                                 <div className="shop-h-title border-r-gray1 pr-20">
                                   <h6 className="primary-color2 mb-0 font13">
-                                    Showing 1–12 of 38 results
+                                    Ko'rsatilmoqda 12 ta, 38 ta natijadan
                                   </h6>
-                                </div>
-                              </li>
-                              <li>
-                                <div className="product-selection position-relative pl-25">
-                                  <NiceSelect
-                                    options={sortBY}
-                                    defaultCurrent={0}
-                                    onChange={selectHandler}
-                                    name="select"
-                                    className="border-0 py-0 pl-0"
-                                  />
                                 </div>
                               </li>
                             </ul>

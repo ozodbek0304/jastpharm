@@ -3,15 +3,19 @@ import React from "react";
 import LineUpLinks from "../Home-three/LineUpLinks";
 import Image from "next/image";
 import BrandLogos from "./BrandLogos";
+import Breadcrumb from "@/sheardComponent/Breadcrumb";
 
-const CategoryLineUp = () => {
+const MissionMain = () => {
 
   return (
     <>
       <div className="category-lineup-area">
         <div className="container">
           <div className="row">
+            <Breadcrumb pageTitle='Vazifa va qadriyatlarimiz' />
+            
             <Image src={"https://medol.uz//data/uploads/module/pages/144/original/63baf330b6056.jpg"} width={1200} height={300} alt="product" />
+
             <div className="category-wrapper category-wrapper1 mt-15">
               Наша история началась в 2011 году, когда возникали большие трудности в ведении бизнеса с иностранными партнерами. Несмотря на все преграды, компания уверенными шагами внедряла новые технологии и обучала врачей Узбекистана. Оглядываясь назад, и, смотря на сегодняшние достижения врачей, мы с гордостью говорим, что мы не зря старались и верили в их результат.
               Сегодня врачи в области кардиохирургии делают операции по установки стентов, и людям не приходиться выезжать в соседние страны для получения медицинского обслуживания. В Узбекистане растет и развивается сеть лабораторий VITROS, где функционирует наше оборудование от Johnson & Johnson, и мы рады, что население Узбекистана могут пройти диагностику на мировом оборудовании и получить точный и достоверный результат.
@@ -19,9 +23,6 @@ const CategoryLineUp = () => {
               Сегодня MEDOL продолжает расти и развиваться. Мы гордимся пройденным путем и достигнутыми результатами, и, в то же время, четко видим новые цели и направления движения. Наша сила и наша обязанность – в создании эффективной команды, дистрибуции, обеспечивающей новыми технологиями в сфере медицины и возможностью лечения и получения качественной медицинской помощи в Узбекистане.
             </div>
 
-            <div className="category-wrapper category-wrapper1 mt-15">
-              <BrandLogos />
-            </div>
           </div>
         </div>
       </div>
@@ -30,4 +31,4 @@ const CategoryLineUp = () => {
   );
 };
 
-export default CategoryLineUp;
+export default MissionMain;

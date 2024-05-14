@@ -19,18 +19,6 @@ const ResponsiveMenu = () => {
           </Link>
         </div>
 
-        <div className="header-search-content position-relative d-block d-xl-none mt-20">
-          <form action="#" className="position-relative">
-            <input
-              className="form-control rounded-0 h5-theme-color px-0"
-              type="text"
-              placeholder="Enter Keyword..."
-            />
-            <Link className="position-absolute primary-color d-block" href="#">
-              <span className="icon-search"></span>
-            </Link>
-          </form>
-        </div>
         <div className="mobile-menu mt-10 mean-container">
           {/* mobile menu */}
           <div className="mean-bar">
@@ -38,30 +26,7 @@ const ResponsiveMenu = () => {
             <nav className="mean-nav">
                <MobileMenu/>
             </nav>
-            
           </div>
-        </div>
-        <div className="menu-login pt-10 d-block d-md-none">
-          <ul className="header-login d-flex justify-content-between mobile-border-b ">
-            <li>
-              <Link href="/login">My Account</Link>
-            </li>
-            <li>
-              <Link href="/login">
-                <i className="fal fa-user-circle"></i>
-              </Link>
-            </li>
-          </ul>
-          <ul className="header-heart d-flex justify-content-between mobile-border-b">
-            <li>
-              <Link href="/wishlist">Wishlist</Link>
-            </li>
-            <li>
-              <Link href="/wishlist">
-                <span className="icon-heart"></span>
-              </Link>
-            </li>
-          </ul>
         </div>
 
         <h6 className="light-black-color2 font600 mt-30 pb-1 border-primary-b d-inline-block">

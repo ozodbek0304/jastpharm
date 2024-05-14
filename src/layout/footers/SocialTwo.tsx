@@ -32,14 +32,6 @@ const SocialTwo = () => {
         <li className="d-inline-block">
           <Link
             className=" primary-color text-center pr-0 d-inline-block transition-3"
-            href="https://www.behance.net/"
-          >
-            <i className="fab fa-behance"></i>
-          </Link>
-        </li>
-        <li className="d-inline-block">
-          <Link
-            className=" primary-color text-center pr-0 d-inline-block transition-3"
             href="https://www.youtube.com/"
           >
             <i className="fab fa-youtube"></i>

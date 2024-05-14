@@ -7,7 +7,7 @@ import ShopDetailsContent from './ShopDetailsContent';
 const ShopDetailsMain = ({id}:idType) => {
     return (
         <>
-            <Breadcrumb pageTitle='Shop Details'/>
+            <Breadcrumb pageTitle='Mahsulot nomi'/>
             <ShopDetailsContent id={id}/>
         </>
     );
