@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import logoImg from "../../../public/assets/images/logo/logo-white.png";
+import logoImg from "../../../public/assets/images/logo/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -57,7 +57,7 @@ const HeaderThree = () => {
                           data-placement="bottom"
                           title="stepmeds"
                         >
-                          <Image src={logoImg} alt="stepmeds" />
+                          <Image src={logoImg} alt="stepmeds" height={40} />
                         </Link>
                       </div>
                     </div>

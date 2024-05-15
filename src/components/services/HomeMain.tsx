@@ -1,6 +1,5 @@
 "use client"
 import React from "react";
-import CategoryLineUp from "./CategoryLineUp";
 import HomeOneBanner from "./HomeOneBanner";
 import HomeProductArea from "./HomeProductArea";
 import HomeOfferProductSlider from "./HomeOfferProductSlider";
@@ -15,7 +14,6 @@ const ServicesMain = () => {
   return (
     <>
       <Breadcrumb pageTitle='Xizmatlar' />
-      <CategoryLineUp />
       <HomeOneBanner />
       <HomeProductArea />
       <HomeOfferProductSlider />

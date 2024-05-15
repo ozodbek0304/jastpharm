@@ -1,6 +1,6 @@
 "use client";
 import React,{useEffect} from "react";
-import logoOne from "../../../public/assets/images/logo/logo-theme.png";
+import logoOne from "../../../public/assets/images/logo/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import bgImage from "../../../public/assets/images/banner/home2/top-banner.jpg";
@@ -75,7 +75,7 @@ const HeaderTwo = () => {
                           data-placement="bottom"
                           title="stepmeds"
                         >
-                          <Image src={logoOne} alt="stepmeds" />
+                          <Image src={logoOne} alt="stepmeds" height={40} />
                         </Link>
                       </div>
                     </div>
@@ -223,7 +223,7 @@ const HeaderTwo = () => {
                         data-placement="bottom"
                         title="stepmeds"
                       >
-                        <Image src={logoOne} alt="stepmeds" />
+                        <Image src={logoOne} alt="stepmeds" height={40} />
                       </Link>
                     </div>
 

@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import React,{useEffect} from "react";
-import logo from "../../../public/assets/images/logo/logo-theme.png";
+import logo from "../../../public/assets/images/logo/logo.png";
 import Link from "next/link";
 import {
   useUniqueProductCount,
@@ -59,7 +59,7 @@ const HeaderFour = () => {
                           data-placement="bottom"
                           title="stepmeds"
                         >
-                          <Image src={logo} alt="stepmeds" />
+                          <Image src={logo} alt="stepmeds" height={40} />
                         </Link>
                       </div>
                     </div>

@@ -6,41 +6,42 @@ import BrandLogos from "./BrandLogos";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
 import brandOne from "../../../public/assets/images/brand/brand1.png";
 
+export const brandData = [
+  {
+    id: 1,
+    img: brandOne,
+  },
+  {
+    id: 2,
+    img: brandOne,
+  },
+  {
+    id: 3,
+    img: brandOne,
+  },
+  {
+    id: 4,
+    img: brandOne,
+  },
+  {
+    id: 5,
+    img: brandOne,
+  },
+  {
+    id: 6,
+    img: brandOne,
+  },
+  {
+    id: 7,
+    img: brandOne,
+  },
+  {
+    id: 8,
+    img: brandOne,
+  },
+];
+
 const PartnersMain = () => {
-  const brandData = [
-    {
-      id: 1,
-      img: brandOne,
-    },
-    {
-      id: 2,
-      img: brandOne,
-    },
-    {
-      id: 3,
-      img: brandOne,
-    },
-    {
-      id: 4,
-      img: brandOne,
-    },
-    {
-      id: 5,
-      img: brandOne,
-    },
-    {
-      id: 6,
-      img: brandOne,
-    },
-    {
-      id: 7,
-      img: brandOne,
-    },
-    {
-      id: 8,
-      img: brandOne,
-    },
-  ];
 
   return (
     <>
@@ -63,7 +64,6 @@ const PartnersMain = () => {
                   </div>
                 </div>
               ))}
-
             </div>
           </div>
         </div>

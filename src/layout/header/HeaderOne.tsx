@@ -42,7 +42,7 @@ const HeaderOne = () => {
   return (
     <>
       <header id="header-sticky" className="d-none d-lg-block">
-        <div className="header-top" id="header-top" style={{ backgroundColor: '#c3cccc' }}>
+        <div className="header-top" id="header-top" style={{ backgroundColor: '#222', color: 'white' }}>
           <div className="header-top-inner d-flex justify-content-between container mx-auto py-2">
             <ul className="d-flex align-items-center">
               <li className="d-flex align-items-center gap-2 border-r-gray1 px-4">
@@ -87,7 +87,7 @@ const HeaderOne = () => {
                         data-placement="bottom"
                         title="stepmeds"
                       >
-                        <Image src={logoImg} alt="stepmeds" />
+                        <Image src={logoImg} alt="stepmeds" height={40} />
                       </Link>
                     </div>
                   </div>

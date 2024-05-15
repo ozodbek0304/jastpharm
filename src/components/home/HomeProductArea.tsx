@@ -7,7 +7,7 @@ const HomeProductArea = () => {
     <>
       <div className="product-area">
         <div className="container">
-          <div className="product-content single-product-tab-content">
+          <div className="product-content single-product-tab-content pt-25">
             <div className="row">
               <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pb-15">
                 <div className="section-title text-center">

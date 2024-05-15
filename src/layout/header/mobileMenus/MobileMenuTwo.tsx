@@ -1,5 +1,5 @@
 import React from "react";
-import logoThumb from "../../../../public/assets/images/logo/logo-theme.png";
+import logoThumb from "../../../../public/assets/images/logo/logo.png";
 import Image from "next/image";
 import useGlobalContext from "@/hooks/use-context";
 import Link from "next/link";
@@ -13,7 +13,7 @@ const MobileMenuTwo = () => {
             <div className="col-6">
               <Link href="/home-two">
                 <div className="logo">
-                  <Image src={logoThumb} alt="" />
+                  <Image src={logoThumb} alt="" height={40} />
                 </div>
               </Link>
             </div>

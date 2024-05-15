@@ -1,6 +1,6 @@
 "use client";
 import React,{useEffect} from "react";
-import logoImg from "../../../public/assets/images/logo/logo-theme.png";
+import logoImg from "../../../public/assets/images/logo/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import useGlobalContext from "@/hooks/use-context";
@@ -33,7 +33,7 @@ const SidebarMenu = () => {
             <div className="col-6">
               <Link href="/home-two">
                 <div className="logo">
-                  <Image src={logoImg} alt="logo-img" />
+                  <Image src={logoImg} alt="logo-img" height={40} />
                 </div>
               </Link>
             </div>

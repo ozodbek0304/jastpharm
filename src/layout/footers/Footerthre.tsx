@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import logoImg from '../../../public/assets/images/logo/logo-white.png'
+import logoImg from '../../../public/assets/images/logo/logo.png'
 import paymentImg from '../../../public/assets/images/footer/payment.png'
 import footerPtrn from '../../../public/assets/images/bg/footer-ptrn.png'
 import pattern1 from '../../../public/assets/images/bg/Pattern1.png'
@@ -17,7 +17,7 @@ const Footerthre = () => {
                             <div className="row d-flex">
                                 <div className="col-xxl-3 col-xl-3  col-lg-3  col-md-4  col-sm-6 col-12 footer-r-border">
                                     <div className="footer-widget f-adress pb-90 pt-80 pr-100">
-                                        <Image src={logoImg} alt="logo-img"/>
+                                        <Image src={logoImg} alt="logo-img" height={40}/>
                                         <p className="pt-18 font13 text-uppercase mt-25">PO Box 16122 Collins Street
                                             Victoria 8007 Australia</p>
                                         <div className="f-adress-text mt-25">

@@ -22,7 +22,7 @@ const HomeProductArea = () => {
             </div>
             <div className="product-wrapper mt-1">
               <div className="row">
-                <div className="col-xl-9  col-lg-8  col-md-12  col-sm-12 col-12">
+                <div className="col-xl-9  col-lg-8  col-md-12  col-sm-12 col-12 mx-auto">
                   <div className="popular-product">
                     <div className="row product-active">
                       <div className="col-xl-4 col-lg-6  col-md-6 col-sm-6 col-12 plr-14">
@@ -40,7 +40,6 @@ const HomeProductArea = () => {
                     </div>
                   </div> 
                 </div>
-                 <SidebarCategory/>
               </div>
             </div>
           </div>

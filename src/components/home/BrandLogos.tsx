@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { A11y, Autoplay } from "swiper";
+import { A11y, Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import brandOne from "../../../public/assets/images/brand/brand1.png";
@@ -63,9 +63,13 @@ const BrandLogos = () => {
           <div className="mlr--55">
             <div className="row brand-active d-flex align-items-center ">
               <Swiper
-                modules={[A11y, Autoplay]}
+                modules={[A11y, Autoplay, Pagination]}
                 spaceBetween={30}
                 loop={true}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: true,
+                }}
                 breakpoints={{
                   0: {
                     slidesPerView: 1,
@@ -96,8 +100,6 @@ const BrandLogos = () => {
                             className="d-inline-block brand-img"
                             src={item.img}
                             alt="brand-img"
-                            style={{ width: "auto", height: "auto" }}
-
                           />
                         </Link>
                       </div>
