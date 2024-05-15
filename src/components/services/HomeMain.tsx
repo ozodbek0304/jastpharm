@@ -15,12 +15,10 @@ const ServicesMain = () => {
     <>
       <Breadcrumb pageTitle='Xizmatlar' />
       <HomeOneBanner />
-      <HomeProductArea />
       <HomeOfferProductSlider />
+      <HomeProductArea />
       <MostPurchased bgImg={bgImg} />
-      <BrandLogos />
       <HomeBlogs />
-      <SubscribeArea />
     </>
   );
 };

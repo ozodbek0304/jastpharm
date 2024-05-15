@@ -32,7 +32,7 @@ const HomeOneSlider = () => {
                   style={{ backgroundImage: `url(${item.img})` }}
                   data-overlay="6"
                 >
-                  <div className="container">
+                  <div className="container mx-auto">
                     <div className="row">
                       <div className="col-xl-12  col-lg-12  col-md-12  col-sm-10 col-12 d-flex align-items-center">
                         <div className="slider-content z-index1 position-absolute mt--12">

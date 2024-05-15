@@ -6,39 +6,26 @@ const FooterLinks = () => {
   return (
     <>
       <li>
-        <Link href="/login" className="position-relative d-inline-block">
-          My Account
+        <Link href="/" className="position-relative d-inline-block">
+          Asosiy sahifa
         </Link>
       </li>
       <li>
         <Link
-          href="/shopping-cart"
+          href="/shop"
           className="position-relative d-inline-block"
         >
-          Order Status
+          Mahsulotlar
         </Link>
       </li>
       <li>
-        <Link href="/shop" className="position-relative d-inline-block">
-          Shipping
+        <Link href="/history" className="position-relative d-inline-block">
+          Kompniya tarixi
         </Link>
       </li>
       <li>
-        <Link href="/checkout" className="position-relative d-inline-block">
-          Billing
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/terms-and-condition"
-          className="position-relative d-inline-block"
-        >
-          Terms & Condition
-        </Link>
-      </li>
-      <li>
-        <Link href="/shop" className="position-relative d-inline-block">
-          International Shipments
+        <Link href="/mission" className="position-relative d-inline-block">
+          Vazifa va qadriyatlar
         </Link>
       </li>
     </>

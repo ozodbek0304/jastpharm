@@ -5,18 +5,18 @@ const FooterLinksTwo = () => {
   return (
     <>
       <li>
-        <Link href="/contact" className="position-relative d-inline-block">
-          Customer Service
+        <Link href="/services" className="position-relative d-inline-block">
+          Xizmatlar
         </Link>
       </li>
       <li>
         <Link href="/contact" className="position-relative d-inline-block">
-          Contact Us
+          Jamoa
         </Link>
       </li>
       <li>
         <Link href="/shop" className="position-relative d-inline-block">
-          Accessibility
+          Aloqa
         </Link>
       </li>
     </>

@@ -23,7 +23,7 @@ const navMenuData: MenuItem[] = [
     subMenu: [
       { id: 6, hasDropdown: false, label: "Tariximiz", link: "/history" },
       { id: 7, hasDropdown: false, label: "Vazifamiz", link: "/mission" },
-      { id: 8, hasDropdown: false, label: "Hamkorlarimiz", link: "/partners" },
+      // { id: 8, hasDropdown: false, label: "Hamkorlarimiz", link: "/partners" },
       { id: 9, hasDropdown: false, label: "Jamoamiz", link: "/about" },
     ]
   },
