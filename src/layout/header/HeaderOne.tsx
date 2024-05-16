@@ -9,17 +9,22 @@ import Menu from "./Menu";
 import SidebarMenu from "./SidebarMenu";
 import OverlyDiv from "@/utils/OverlyDiv";
 import { useTranslation } from "react-i18next";
+import { usePathname, useRouter } from "next/navigation";
 
 const HeaderOne = () => {
 
   const { i18n } = useTranslation()
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const { changeLanguage, language } = i18n
 
   const handleChangeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng)
+    if (language !== lng) {
+      changeLanguage(lng)
+      router.push(`${pathname}${window.location.search}`)
+    }
   }
-
-  console.log(i18n.language, i18n.languages);
-
 
   useEffect(() => {
     window.addEventListener("scroll", sticky);
@@ -70,13 +75,13 @@ const HeaderOne = () => {
             </ul>
 
             <ul className="d-flex align-items-center gap-4">
-              <li onClick={() => handleChangeLanguage('ru')}>
+              <li onClick={() => handleChangeLanguage('ru')} style={{ borderBottom: language === 'ru' ? '1px solid white' : '1px solid transparent', cursor: 'pointer' }}>
                 RU
               </li>
-              <li onClick={() => handleChangeLanguage('en')}>
+              <li onClick={() => handleChangeLanguage('en')} style={{ borderBottom: language === 'en' ? '1px solid white' : '1px solid transparent', cursor: 'pointer' }}>
                 EN
               </li>
-              <li onClick={() => handleChangeLanguage('uz')}>
+              <li onClick={() => handleChangeLanguage('uz')} style={{ borderBottom: language === 'uz' ? '1px solid white' : '1px solid transparent', cursor: 'pointer' }}>
                 UZ
               </li>
             </ul>
