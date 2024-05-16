@@ -7,7 +7,11 @@ import "swiper/css/effect-fade";
 import { sliderOneData } from "@/data/headernav/slider-one-data";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 const HomeCategrorSlider = () => {
+
+    const { t } = useTranslation()
+
     return (
         <>
             <div className="slider-area over-hidden slider1 mt-3">
@@ -15,7 +19,7 @@ const HomeCategrorSlider = () => {
                     <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pb-15">
                         <div className="section-title text-center">
                             <h3 className="font-pt light-black-color2 pb-1">
-                                Mavjud sohalar
+                                {t("Mavjud sohalar")}
                             </h3>
                         </div>
                     </div>

@@ -4,7 +4,11 @@ import { useFormik } from "formik";
 import React from "react";
 import { toast } from "react-toastify";
 import ErrorMsgTwo from "./ErrorMsgTwo";
+import { useTranslation } from "react-i18next";
 const ContactForm = () => {
+
+  const { t } = useTranslation()
+
   const {
     handleSubmit,
     handleBlur,
@@ -24,7 +28,7 @@ const ContactForm = () => {
       try {
         toast.success("Message Send Successfully");
         resetForm();
-      } catch (error) {}
+      } catch (error) { }
     },
   });
   return (
@@ -32,7 +36,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="contact-form">
           <div className="position-relative">
-            <label>Name</label>
+            <label>{t("Ism")}</label>
             <div className="name">
               <input
                 type="text"
@@ -49,7 +53,7 @@ const ContactForm = () => {
           </div>
 
           <div className="position-relative">
-            <label className="mt-25">Email</label>
+            <label className="mt-25">{t("Telefon")}</label>
             <div className="email">
               <input
                 type="email"
@@ -65,7 +69,7 @@ const ContactForm = () => {
             {touched.email && <ErrorMsgTwo errors={errors.email} />}
           </div>
           <div className="position-relative">
-            <label className="mt-25">Your Message</label>
+            <label className="mt-25">{t("Xabaringiz")}</label>
             <textarea
               name="message"
               className="form-control primary-bg2 border-0 mt-2 pt-30 pb-30"
@@ -79,7 +83,7 @@ const ContactForm = () => {
           </div>
         </div>
         <button className="web-btn h2-theme-border1 d-inline-block text-capitalize white mt-40 rounded-0 h2-theme-color h2-theme-bg position-relative over-hidden pl-60 pr-60 ptb-17">
-          send message
+          {t("Yuborish")}
         </button>
       </form>
     </>

@@ -12,41 +12,11 @@ import brandSix from "../../../public/assets/images/brand/brand6.png";
 import Image from "next/image";
 import Link from "next/link";
 import { sliderOneData } from "@/data/headernav/slider-one-data";
+import { useTranslation } from "react-i18next";
 const BrandLogos = () => {
-  const brandData = [
-    {
-      id: 1,
-      img: brandOne,
-    },
-    {
-      id: 2,
-      img: brandTwo,
-    },
-    {
-      id: 3,
-      img: brandThree,
-    },
-    {
-      id: 4,
-      img: brandFour,
-    },
-    {
-      id: 5,
-      img: brandTwo,
-    },
-    {
-      id: 6,
-      img: brandSix,
-    },
-    {
-      id: 7,
-      img: brandThree,
-    },
-    {
-      id: 8,
-      img: brandFour,
-    },
-  ];
+  
+  const { t } = useTranslation()
+
   return (
     <>
       <div className="brand-logo-area bg-white over-hidden">
@@ -54,7 +24,7 @@ const BrandLogos = () => {
           <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pb-15">
             <div className="section-title text-center">
               <h3 className="font-pt light-black-color2 pb-1">
-                Xamkorlarimiz
+                {t("Xamkorlarimiz")}
               </h3>
             </div>
           </div>

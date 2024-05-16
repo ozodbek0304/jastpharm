@@ -1,11 +1,15 @@
 import React from "react";
-import footerImg from "../../../public/assets/images/footer/payment.png";
-import Image from "next/image";
 import Socials from "./Socials";
 import Link from "next/link";
 import FooterLinks from "./components/FooterLinks";
 import FooterLinksTwo from "./components/FooterLinksTwo";
+import { useTranslation } from "react-i18next";
+
+
 const FooterTwo = () => {
+
+  const { t } = useTranslation()
+
   return (
     <>
       <footer>
@@ -18,14 +22,14 @@ const FooterTwo = () => {
                     <div className="col-xl-6  col-lg-6  col-md-6 col-sm-6 col-12 ">
                       <div className="footer-widget pb-30">
                         <ul className="footer-account ml-footer">
-                           <FooterLinks/>
+                          <FooterLinks />
                         </ul>
                       </div>
                     </div>
                     <div className="col-xl-6  col-lg-6  col-md-6  col-sm-6 col-12 pl-xl-0">
                       <div className="footer-widget pb-30">
                         <ul className="footer-account ml-footer">
-                           <FooterLinksTwo/>
+                          <FooterLinksTwo />
                         </ul>
                       </div>
                     </div>
@@ -67,7 +71,7 @@ const FooterTwo = () => {
                     <div className="col-xl-6  col-lg-6  col-md-6  col-sm-6 col-12 pl-xl-0">
                       <div className="footer-widget pb-30 f-link ml--3">
                         <p className="font500">
-                          Tashkent, Tashkent st. <br />
+                          {t('header_address')} <br />
                         </p>
                         <Socials />
                         <div className="copyright-text d-sm-flex justify-content-center align-items-center mt-50">
@@ -89,7 +93,7 @@ const FooterTwo = () => {
           <div className="footer-bottom pt-25">
             <div className="container">
               <div className="row align-items-center justify-content-center">
-                
+
               </div>
             </div>
           </div>

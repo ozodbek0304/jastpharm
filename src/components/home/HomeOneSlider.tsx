@@ -24,10 +24,10 @@ const HomeOneSlider = () => {
             observer={true}
             centeredSlides={true}
             slidesPerView={1}
-            // autoplay={{
-            //   delay: 4000,
-            //   disableOnInteraction: true,
-            // }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: true,
+            }}
             effect={"fade"}
           >
             {sliderOneData.map((item, i) => (

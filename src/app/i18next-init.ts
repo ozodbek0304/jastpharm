@@ -14,7 +14,7 @@ const initI18next = () => {
             supportedLngs: ['ru', 'en', 'uz'],
             backend: {
                 // Fayllarni qayerdan olishni belgilash
-                loadPath: '/locales/{{lng}}/{{ns}}.json',
+                loadPath: '/locales/{{lng}}.json',
                 // Fayllarni yuklashda qo'lini tiklash
                 allowMultiLoading: false,
             },

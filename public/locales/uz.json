@@ -1,3 +1,20 @@
 {
-    "welcome": "Xush kelibsiz"
+    "header_address": "Toshkent sh, A.Temur ko'chasi 17a",
+    "main": "Asosiy",
+    "catalog": "Katalog",
+    "ourAbout": "Biz haqimizda",
+    "ourHistory": "Tarix",
+    "ourMission": "Vazifalarimiz",
+    "ourTeam": "Jamoa",
+    "services": "Xizmatlar",
+    "contact": "Aloqa",
+    "our_products": "Mahsulotlarimiz",
+    "our_stats": "Biz raqamlardamiz",
+    "tajriba": "tajriba",
+    "doimiy mijozlar": "doimiy mijozlar",
+    "global ishlab chiqaruvchilar": "global ishlab chiqaruvchilar",
+    "Mavjud sohalar": "Mavjud sohalar",
+    "Xamkorlarimiz": "Xamkorlarimiz",
+    "Kontakt ma'lumotlari": "Kontakt ma'lumotlari",
+    "Xabar qoldirish": "Xabar qoldirish"
 }

@@ -13,7 +13,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 const HeaderOne = () => {
 
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const router = useRouter()
   const pathname = usePathname()
 
@@ -70,7 +70,7 @@ const HeaderOne = () => {
               </li>
               <li className="d-flex align-items-center gap-2 px-4">
                 <i className="fa-solid fa-location-dot"></i>
-                <a href="https://kun.uz">г. Ташкент, ул. А.Темура-2</a>
+                <a href="https://kun.uz">{t("header_address")}</a>
               </li>
             </ul>
 

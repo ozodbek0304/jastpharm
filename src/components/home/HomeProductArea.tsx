@@ -1,7 +1,11 @@
 import GridProductView from "@/sheardComponent/GridProductView";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const HomeProductArea = () => {
+
+  const { t } = useTranslation()
+
   return (
     <>
       <div className="product-area">
@@ -11,7 +15,7 @@ const HomeProductArea = () => {
               <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pb-15">
                 <div className="section-title text-center">
                   <h3 className="font-pt light-black-color2 pb-1">
-                    Mahsulotlarimiz
+                    {t("our_products")}
                   </h3>
                 </div>
               </div>
