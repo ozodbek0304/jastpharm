@@ -1,6 +1,5 @@
 import GridProductView from "@/sheardComponent/GridProductView";
 import React from "react";
-import SidebarCategory from "./SidebarCategory";
 
 const HomeProductArea = () => {
   return (
@@ -14,9 +13,6 @@ const HomeProductArea = () => {
                   <h3 className="font-pt light-black-color2 pb-1">
                     Mahsulotlarimiz
                   </h3>
-                  <p className="light-black-color7 font300">
-                    Sed ut perspiciatis undeous omniiste natusing error
-                  </p>
                 </div>
               </div>
             </div>

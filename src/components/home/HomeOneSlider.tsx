@@ -6,7 +6,11 @@ import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 import { sliderOneData } from "@/data/headernav/slider-one-data";
 import Link from "next/link";
+import useResponsive from "@/hooks/use-responsive";
 const HomeOneSlider = () => {
+
+  const { isDesktop } = useResponsive()
+
   return (
     <>
       <div className="slider-area over-hidden slider1">
@@ -19,10 +23,10 @@ const HomeOneSlider = () => {
             observer={true}
             centeredSlides={true}
             slidesPerView={1}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: true,
-            }}
+            // autoplay={{
+            //   delay: 4000,
+            //   disableOnInteraction: true,
+            // }}
             effect={"fade"}
           >
             {sliderOneData.map((item) => (
@@ -32,37 +36,31 @@ const HomeOneSlider = () => {
                   style={{ backgroundImage: `url(${item.img})` }}
                   data-overlay="6"
                 >
-                  <div className="container mx-auto">
-                    <div className="row">
-                      <div className="col-xl-12  col-lg-12  col-md-12  col-sm-10 col-12 d-flex align-items-center">
-                        <div className="slider-content z-index1 position-absolute mt--12">
-                          <h2
-                            data-animation="fadeInLeft"
-                            data-delay="1s"
-                            className="light-black-color2 mb-1 text-capitalize pb-25 font500 font-pt"
-                          >
-                            {item.heading} <br /> {item.afterBr}
-                          </h2>
-                          <p
-                            className="light-black-color2 font300 pb-25"
-                            data-animation="fadeInLeft"
-                            data-delay="1.5s"
-                          >
-                            {item.title}
-                            <br />
-                            <span className="font500">{item.titleBr}</span>
-                          </p>
-                          <Link
-                            data-animation="fadeInUp"
-                            data-delay="1.7s"
-                            href="/shop"
-                            className="web-btn  d-inline-block text-uppercase white theme-bg position-relative over-hidden pl-30 pr-30 ptb-17"
-                          >
-                            Shop Collection
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
+                  <div className="slider-content z-index1 position-absolute mt--12 container" style={isDesktop ? { transform: 'translateX(-50%)', left: '50%' } : {}}>
+                    <h2
+                      data-animation="fadeInLeft"
+                      data-delay="1s"
+                      className="light-black-color2 mb-1 text-capitalize pb-25 font500 font-pt"
+                    >
+                      {item.heading} <br /> {item.afterBr}
+                    </h2>
+                    <p
+                      className="light-black-color2 font300 pb-25"
+                      data-animation="fadeInLeft"
+                      data-delay="1.5s"
+                    >
+                      {item.title}
+                      <br />
+                      <span className="font500">{item.titleBr}</span>
+                    </p>
+                    <Link
+                      data-animation="fadeInUp"
+                      data-delay="1.7s"
+                      href="/shop"
+                      className="web-btn  d-inline-block text-uppercase white theme-bg position-relative over-hidden pl-30 pr-30 ptb-17"
+                    >
+                      Shop Collection
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>

@@ -14,10 +14,10 @@ const navMenuData: MenuItem[] = [
     label: "Asosiy",
     link: "/",
   },
-  { id: 2, hasDropdown: false, label: "Mahsulotlar", link: "/shop" },
+  { id: 2, hasDropdown: false, label: "Katalog", link: "/shop" },
   {
     id: 3,
-    label: "Kompaniya haqida",
+    label: "Biz haqimizda",
     link: "#",
     hasDropdown: true,
     subMenu: [
@@ -28,7 +28,7 @@ const navMenuData: MenuItem[] = [
     ]
   },
   { id: 5, hasDropdown: false, lastItem: "mr-0", label: "Xizmatlar", link: "/services" },
-  { id: 6, hasDropdown: false, lastItem: "mr-0", label: "Kontakt", link: "/contact" },
+  { id: 6, hasDropdown: false, lastItem: "mr-0", label: "Aloqa", link: "/contact" },
 
 ];
 

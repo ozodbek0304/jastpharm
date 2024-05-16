@@ -5,7 +5,8 @@ import HomeProductArea from "./HomeProductArea";
 import HomeOfferProductSlider from "./HomeOfferProductSlider";
 import BrandLogos from "./BrandLogos";
 import HomeCategrorSlider from "./HomeCategorySlider";
-import ContactContent from "../contact/ContactContent";
+import HomeContact from "./HomeContact";
+
 const HomeMain = () => {
   return (
     <>
@@ -14,7 +15,7 @@ const HomeMain = () => {
       <HomeOfferProductSlider />
       <HomeCategrorSlider />
       <BrandLogos />
-      <ContactContent />
+      <HomeContact />
     </>
   );
 };

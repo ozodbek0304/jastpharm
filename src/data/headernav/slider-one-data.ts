@@ -51,4 +51,20 @@ export const sliderOneData: sliderOnetype[] = [
         titleBr: "Try our new green, eco-friendly masks!",
         img: 'https://medol.uz//data/uploads/module/pages/152/original/642075f5ce1f9.jpg'
     },
+    {
+        id: 7,
+        heading: "Electronical",
+        afterBr: "Brushes 50% Off",
+        title: "Tired of seeing disposable mask discarded on the floor?",
+        titleBr: "Try our new green, eco-friendly masks!",
+        img: 'https://mvi-mc.com/wp-content/uploads/2018/08/check-up-3.jpg'
+    },
+    {
+        id: 7,
+        heading: "Antibacterial",
+        afterBr: "Mask & Sanitizer",
+        title: "Tired of seeing disposable mask discarded on the floor?",
+        titleBr: "Try our new green, eco-friendly masks!",
+        img: 'https://medol.uz//data/uploads/module/pages/152/original/642075f5ce1f9.jpg'
+    },
 ]

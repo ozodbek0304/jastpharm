@@ -15,7 +15,7 @@ const SignUpForm = () => {
   };
   const {
     handleSubmit,
-    handleBlur, 
+    handleBlur,
     handleChange,
     errors,
     touched,
@@ -34,7 +34,7 @@ const SignUpForm = () => {
         resetForm();
         toast.success("Sign Up Successfully");
         router.push("/");
-      } catch (error) {}
+      } catch (error) { }
     },
   });
 
@@ -85,7 +85,7 @@ const SignUpForm = () => {
             />
             <label htmlFor="remember">Remember me!</label>
           </span>
-         
+
         </div>
         <button disabled={!isBtnDisable} className={isBtnDisable === false ? "bt-btn bt-btn-black w-100" : "bt-btn theme-btn-2 w-100"} >Login Now</button>
         <div className="or-divide">

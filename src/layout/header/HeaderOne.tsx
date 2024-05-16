@@ -78,7 +78,7 @@ const HeaderOne = () => {
               <div className="row align-items-center justify-content-between">
                 <div className="col-xxl-1 col-xl-1 col-xl-1  col-lg-2  col-md-2  col-sm-12 col-12 pr-md-0">
                   <div className="logo-area">
-                    <div className="logo white-bg z-index1 position-relative">
+                    <div className="logo z-index1 position-relative">
                       <Link
                         href="/"
                         className="d-block"
@@ -113,6 +113,7 @@ const HeaderOne = () => {
           </div>
         </div>
       </header>
+      <div className="header-blur"></div>
       {/* mobile menu */}
 
       <SidebarMenu />
