@@ -50,8 +50,8 @@ const HomeCategrorSlider = () => {
                             },
                         }}
                     >
-                        {sliderOneData.map((item) => (
-                            <SwiperSlide key={item.id}>
+                        {sliderOneData.map((item, i) => (
+                            <SwiperSlide key={i}>
                                 <div className="banner mb-30 transition-3 position-relative over-hidden ">
                                     <Link href="/shop" className="d-block">
                                         <Image height={220} width={250} style={{ width: "100%", height: '350px', objectFit: 'cover' }} className="img-zoom transition-3 width100" src={item.img} alt="banner-img" />

@@ -94,12 +94,12 @@ const BrandLogos = () => {
               //   },
               // }}
               >
-                {sliderOneData?.map((item) => (
-                  <SwiperSlide key={item?.id}>
+                {sliderOneData?.map((item, i) => (
+                  <SwiperSlide key={i}>
                     <div className="row">
                       {
-                        sliderOneData?.slice(0, 6)?.map((el, i) => (
-                          <div className={`text-center brand-img-div col-md-4 p-0 ${(i + 1) % 3 === 0 ? 'border-start' : 'border-end'} ${(i >= 0 && i < 3) ? 'border-bottom' : ''}`}>
+                        sliderOneData?.slice(0, 6)?.map((el, j) => (
+                          <div key={j} className={`text-center brand-img-div col-md-4 p-0 ${(i + 1) % 3 === 0 ? 'border-start' : 'border-end'} ${(i >= 0 && i < 3) ? 'border-bottom' : ''}`}>
                             <div className="p-5">
                               <Link href="#" className="d-block">
                                 <Image

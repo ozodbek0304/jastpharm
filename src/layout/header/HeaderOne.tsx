@@ -8,8 +8,18 @@ import DropdownMenu from "./DropdownMenu";
 import Menu from "./Menu";
 import SidebarMenu from "./SidebarMenu";
 import OverlyDiv from "@/utils/OverlyDiv";
+import { useTranslation } from "react-i18next";
 
 const HeaderOne = () => {
+
+  const { i18n } = useTranslation()
+
+  const handleChangeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng)
+  }
+
+  console.log(i18n.language, i18n.languages);
+
 
   useEffect(() => {
     window.addEventListener("scroll", sticky);
@@ -60,13 +70,13 @@ const HeaderOne = () => {
             </ul>
 
             <ul className="d-flex align-items-center gap-4">
-              <li>
+              <li onClick={() => handleChangeLanguage('ru')}>
                 RU
               </li>
-              <li>
+              <li onClick={() => handleChangeLanguage('en')}>
                 EN
               </li>
-              <li>
+              <li onClick={() => handleChangeLanguage('uz')}>
                 UZ
               </li>
             </ul>

@@ -30,8 +30,8 @@ const HomeOneSlider = () => {
             // }}
             effect={"fade"}
           >
-            {sliderOneData.map((item) => (
-              <SwiperSlide key={item.id}>
+            {sliderOneData.map((item, i) => (
+              <SwiperSlide key={i}>
                 <div
                   className="single-slider slider-height d-flex align-items-center"
                   style={{ backgroundImage: `url(${item.img})` }}
