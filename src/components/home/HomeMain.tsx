@@ -8,6 +8,7 @@ import HomeCategrorSlider from "./HomeCategorySlider";
 import HomeContact from "./HomeContact";
 
 const HomeMain = () => {
+
   return (
     <>
       <HomeOneSlider />

@@ -7,13 +7,18 @@ import "swiper/css/effect-fade";
 import { sliderOneData } from "@/data/headernav/slider-one-data";
 import Link from "next/link";
 import useResponsive from "@/hooks/use-responsive";
+import { useTranslation } from "react-i18next";
 const HomeOneSlider = () => {
 
   const { isDesktop } = useResponsive()
+  const { t } = useTranslation()
 
   return (
     <>
       <div className="slider-area over-hidden slider1">
+        <p>
+          {t("welcome")}
+        </p>
         <div className="slider-active">
           <Swiper
             modules={[Scrollbar, A11y, Autoplay, EffectFade]}
