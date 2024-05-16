@@ -5,7 +5,7 @@ import ShopArea from './ShopArea';
 const ShopMain = () => {
     return (
         <>
-            <Breadcrumb pageTitle='Mahsulotlarimiz' />
+            <Breadcrumb pageTitle='our_products' />
             <ShopArea />
         </>
     );

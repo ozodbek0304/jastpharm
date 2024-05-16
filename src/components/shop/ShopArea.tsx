@@ -70,15 +70,6 @@ const ShopArea = () => {
                                 </div>
                               </li>
                             </ul>
-                            <ul className="shop-right d-flex align-items-center">
-                              <li>
-                                <div className="shop-h-title border-r-gray1 pr-20">
-                                  <h6 className="primary-color2 mb-0 font13">
-                                    {"Ko'rsatilmoqda 12 ta, 38 ta natijadan"}
-                                  </h6>
-                                </div>
-                              </li>
-                            </ul>
                           </div>
                         </div>
                       </div>

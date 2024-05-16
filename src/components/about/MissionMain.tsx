@@ -13,7 +13,7 @@ const MissionMain = () => {
       <div className="category-lineup-area">
         <div className="container">
           <div className="row">
-            <Breadcrumb pageTitle='Vazifa va qadriyatlarimiz' />
+            <Breadcrumb pageTitle='ourMission' />
 
             <Image src={"https://medol.uz//data/uploads/module/pages/144/original/63baf330b6056.jpg"} width={1200} height={isMobile ? 200 : 300} style={{ objectFit: 'cover' }} alt="product" />
 

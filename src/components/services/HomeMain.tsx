@@ -13,7 +13,7 @@ import Breadcrumb from "@/sheardComponent/Breadcrumb";
 const ServicesMain = () => {
   return (
     <>
-      <Breadcrumb pageTitle='Xizmatlar' />
+      <Breadcrumb pageTitle='services' />
       <HomeOneBanner />
       <HomeOfferProductSlider />
       <HomeProductArea />

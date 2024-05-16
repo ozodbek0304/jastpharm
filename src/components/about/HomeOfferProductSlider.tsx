@@ -13,7 +13,7 @@ const HomeOfferProductSlider = () => {
         data-wow-duration="1s"
       >
         <div className="container">
-          <div className="row handpick-items-active theme-border2 pt-30 pl-20 mlr-1">
+          <div className="row handpick-items-active pt-30 pl-20 mlr-1">
             {productData?.slice(15, 23)?.map((item) => (
               <div key={item?.id} className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
                 <div className="single-handpick-item d-flex align-items-center mb-35 d-flex flex-column">

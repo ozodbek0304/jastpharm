@@ -1,19 +1,16 @@
 "use client"
 import React from "react";
-import CategoryLineUp from "./CategoryLineUp";
 import HomeOfferProductSlider from "./HomeOfferProductSlider";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
-import ContactContent from "../contact/ContactContent";
-import ContactMap from "../contact/ContactMap";
 import TeamHero from "./TeamHero";
+import HomeContact from "../home/HomeContact";
 const AboutMain = () => {
   return (
     <>
-      <Breadcrumb pageTitle="Jamoamiz a'zolari" />
-      <TeamHero/>
+      <Breadcrumb pageTitle="ourTeam" />
+      <TeamHero />
       <HomeOfferProductSlider />
-      <ContactMap />
-      <ContactContent />
+      <HomeContact />
     </>
   );
 };

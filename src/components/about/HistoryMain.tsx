@@ -8,7 +8,7 @@ import ContactMap from "../contact/ContactMap";
 const HistoryMain = () => {
   return (
     <>
-      <Breadcrumb pageTitle='Bizning tariximiz' />
+      <Breadcrumb pageTitle='ourHistory' />
       <CategoryLineUp />
     </>
   );
