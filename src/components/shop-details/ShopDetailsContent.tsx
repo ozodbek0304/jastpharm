@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../../../public/assets/images/product/rc-img1.jpg";
 import img2 from "../../../public/assets/images/product/rc-img2.jpg";
 import img3 from "../../../public/assets/images/product/rc-img3.jpg";
@@ -9,6 +9,8 @@ import { productData } from "@/data/product-data";
 import ProductDescription from "./ProductDescription";
 import Link from "next/link";
 import { StaticImageData } from "next/image";
+import parse from 'html-react-parser';
+
 
 // interface for selectImg
 
@@ -17,35 +19,26 @@ interface imgType {
   img: StaticImageData;
 }
 
-const ShopDetailsContent = ({ id }: idType) => {
-  const fileterData: ProductType | any = productData.find(
-    (item) => item.id == id
-  );
-  const previewImg = fileterData?.largeImg ? fileterData?.largeImg : img1;
+const ShopDetailsContent = ({ data }: any) => {
+
+  const fileterData: ProductType | any = data
+  const previewImg = ''
   const [selectImg, setselectImg] = useState(previewImg);
 
 
-  const myProduct: imgType[] = [
-    {
-      id: 1,
-      img: previewImg,
-    },
-    {
-      id: 2,
-      img: img2,
-    },
-    {
-      id: 3,
-      img: img3,
-    },
-  ];
-  const handleChange = (e: any) => { };
-  const handleSelectImg = (item: imgType) => {
+  const myProduct: imgType[] = data?.id ? data.product_gallery.map((el: any, i: number) => ({ img: el.image, id: i + 1 })) : []
+
+  const handleSelectImg = (item: any) => {
     setselectImg(item.img);
   };
+
+  useEffect(() => {
+    setselectImg(data?.product_gallery?.[0].image)
+  }, [data])
+
   return (
     <>
-      <div className="product-details-area pro-top-thamb pro-bottom-thamb pt-80">
+      {data && <div className="product-details-area pro-top-thamb pro-bottom-thamb pt-80">
         <div className="container">
           <div className="product-details-content">
             <div
@@ -53,7 +46,7 @@ const ShopDetailsContent = ({ id }: idType) => {
               id="myTabContent2"
             >
               <div className="row">
-                <div className="col-xxl-7 col-xl-7 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                   <div className="product-left-img-tab mt-20">
                     <div className="d-flex align-items-start img-preview-box">
                       <div
@@ -69,6 +62,8 @@ const ShopDetailsContent = ({ id }: idType) => {
                             onClick={() => handleSelectImg(item)}
                           >
                             <Image
+                              width={200}
+                              height={200}
                               style={{ width: "100%", height: "auto" }}
                               className="product-thumbnail w-100 border-gray2"
                               src={item.img}
@@ -78,7 +73,7 @@ const ShopDetailsContent = ({ id }: idType) => {
                         ))}
                       </div>
 
-                      <div className="tab-content" id="v-pills-tabContent">
+                      <div className="tab-content" id="v-pills-tabContent" style={{ flexGrow: 1 }}>
                         <div
                           className="tab-pane fade show active position-relative"
                           id="v-pills-home"
@@ -87,9 +82,9 @@ const ShopDetailsContent = ({ id }: idType) => {
                         >
                           <div className="product-img border-gray2">
                             <Image
-                              style={{ width: "100%", height: "auto" }}
-                              width={500}
-                              height={500}
+                              style={{ width: "100%", height: "100%" }}
+                              width={700}
+                              height={700}
                               src={selectImg}
                               alt="product"
                             />
@@ -103,23 +98,9 @@ const ShopDetailsContent = ({ id }: idType) => {
                   <div className="product-view-info mt-30">
                     <div className="product-left-img-info">
                       <h3 className="mb-20"> {fileterData?.title} </h3>
-                      <div className="price pb-18 pt-3">
-                        <span className="rc-price font700">
-                          ${fileterData?.price}.00
-                        </span>
-                      </div>
                       <div className="p-info-text pr-55">
                         <p className="gray-color2">
-                          On the other hand, we denounce with righteous
-                          indignation and dislike men who are so beguiled and
-                          demoralized by the charms we denounce with righteous
-                          indignation and dislike men who are so beguiled with
-                          righteous
-                        </p>
-                        <p className="gray-color2">
-                          But I must explain to you how all this mistaken idea
-                          of denouncing pleasure men who are so beguiled and
-                          demoralized
+                          {data?.body && parse(data?.body)}
                         </p>
                       </div>
                       <div className="all-info d-sm-flex align-items-center mt-35">
@@ -139,23 +120,8 @@ const ShopDetailsContent = ({ id }: idType) => {
                           </span>
                         </li>
                         <li className="mr-6 mb-2 d-inline-block position-relative">
-                          <Link href="/shop" className="gray-color2 font600">
-                            Mask,
-                          </Link>
-                        </li>
-                        <li className="mr-6 mb-2 d-inline-block position-relative">
-                          <Link href="/shop" className="gray-color2 font600">
-                            Covid -19,
-                          </Link>
-                        </li>
-                        <li className="mr-6 mb-2 d-inline-block position-relative">
-                          <Link href="/shop" className="gray-color2 font600">
-                            Sanitizer,
-                          </Link>
-                        </li>
-                        <li className="mr-6 mb-2 d-inline-block position-relative">
-                          <Link href="/shop" className="gray-color2 font600">
-                            Facemask
+                          <Link href="#" className="gray-color2 font600">
+                            {data?.category_name}
                           </Link>
                         </li>
                       </ul>
@@ -235,10 +201,10 @@ const ShopDetailsContent = ({ id }: idType) => {
                 </div>
               </div>
             </div>
-            <ProductDescription />
+            <ProductDescription data={data} />
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 };

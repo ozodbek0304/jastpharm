@@ -9,20 +9,17 @@ import Menu from "./Menu";
 import SidebarMenu from "./SidebarMenu";
 import OverlyDiv from "@/utils/OverlyDiv";
 import { useTranslation } from "react-i18next";
-import { usePathname, useRouter } from "next/navigation";
 
 const HeaderOne = () => {
 
   const { i18n, t } = useTranslation()
-  const router = useRouter()
-  const pathname = usePathname()
 
   const { changeLanguage, language } = i18n
 
   const handleChangeLanguage = (lng: string) => {
     if (language !== lng) {
       changeLanguage(lng)
-      router.push(`${pathname}${window.location.search}`)
+      window.location.reload()
     }
   }
 

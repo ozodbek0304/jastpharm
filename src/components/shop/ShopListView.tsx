@@ -8,9 +8,10 @@ import Link from "next/link";
 import React from "react";
 import { useDispatch } from "react-redux";
 interface propsType {
-  activeTab:number
+  activeTab: number
+  data: any[]
 }
-const ShopListView = ({activeTab}:propsType) => {
+const ShopListView = ({ activeTab, data }: propsType) => {
 
   const dispatch = useDispatch();
   const handleAddToCart = (product: ProductType) => {
@@ -29,25 +30,21 @@ const ShopListView = ({activeTab}:propsType) => {
         role="tabpanel"
         aria-labelledby="profile-tab"
       >
-        {productData?.slice(19, 23)?.map((item) => (
+        {data.map((item) => (
           <div key={item.id} className="row">
             <div className="single-pro-list d-sm-flex p-0 px-0">
-              <div className="col-xl-5 col-lg-5  col-md-5  col-sm-5 col-12 plr-14">
+              <div className="col-xl-3 col-lg-3  col-md-3  col-sm-3 col-2 plr-14">
                 <div className="single-product mb-40">
                   <div className="single-product-img position-relative over-hidden">
-                    <div className="single-product-label position-absolute theme-bg text-center  transition-3 z-index1">
-                      <span className="white text-uppercase d-block font500">
-                        -20%
-                      </span>
-                    </div>
-                    {/* <!-- /product-label --> */}
                     <Link
                       className="position-relative d-block"
                       href={`/shop-details/${item?.id}`}
                     >
                       <Image
                         className=" border-gray1"
-                        src={item?.img}
+                        src={item?.poster}
+                        width={100}
+                        height={100}
                         alt="product"
                         style={{ width: "100%", height: "auto" }}
                       />
@@ -62,44 +59,19 @@ const ShopListView = ({activeTab}:propsType) => {
                   </h5>
                   <ul className="single-product-price d-flex mt-2 mb-15">
                     <li>
-                      {item?.oldPrice === false || (
-                        <span className="pr-2 d-inline-block">
-                          <del>${item?.oldPrice}.00</del>
-                        </span>
-                      )}
                       <span className="theme-color d-inline-block font600">
                         ${item?.price}.00
                       </span>
                     </li>
                   </ul>
-                  <div className="rating rating-shop d-flex mb-20">
-                    <ul className="d-flex mr-2">
-                      <GetRatting averageRating={item?.ratting} />
-                    </ul>
-                  </div>
-                  <p className="light-black-color5 font300 mb-40">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Alias porro dolor accusantium autem neque atque veritatis ex
-                    obcaecati fugiat iure culpa, tempora unde quisquam
-                    perspiciatis, accusamus minus ullam eius? Cupiditate.
-                  </p>
                   <div className=" d-flex align-items-center mb-25">
                     <div className="pro-list-btn d-inline-block">
                       <Link
                         href="#"
-                        onClick={()=>handleAddToCart(item)}
+                        onClick={() => handleAddToCart(item)}
                         className="web-btn h2-theme-border1 d-inline-block rounded-0 text-capitalize white h2-theme-bg position-relative over-hidden pl-35 pr-35 ptb-17"
                       >
-                        add to cart
-                      </Link>
-                    </div>
-                    <div className="pro-wishlist d-inline-block ml-10">
-                      <Link
-                        href="#"
-                        onClick={()=>handleAddToWishlist(item)}
-                        className="web-btn h2-theme-border1 d-inline-block rounded-0 text-capitalize white h2-theme-bg position-relative over-hidden plr-16 ptb-15"
-                      >
-                        <span className="icon-heart"></span>
+                        {("To'liq ma'lumot olish")}
                       </Link>
                     </div>
                   </div>

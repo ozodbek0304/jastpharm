@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Scrollbar, A11y, Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
@@ -7,16 +7,39 @@ import "swiper/css/effect-fade";
 import { sliderOneData } from "@/data/headernav/slider-one-data";
 import Link from "next/link";
 import useResponsive from "@/hooks/use-responsive";
+import api from "@/utils/api";
+import { useTranslation } from "react-i18next";
+
+export interface HomeCarouselItem {
+  id: string
+  name: string
+  image: string
+  slug: string
+  description: string
+}
 
 const HomeOneSlider = () => {
 
   const { isDesktop } = useResponsive()
+  const { t } = useTranslation()
+
+  const [data, setData] = useState<HomeCarouselItem[]>([])
+
+  const getData = async () => {
+    const resp = await api.get(`common/area-home/`)
+
+    setData(resp.data);
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <>
       <div className="slider-area over-hidden slider1">
         <div className="slider-active">
-          <Swiper
+          {data.length && <Swiper
             modules={[Scrollbar, A11y, Autoplay, EffectFade]}
             spaceBetween={0}
             loop={true}
@@ -30,11 +53,11 @@ const HomeOneSlider = () => {
             }}
             effect={"fade"}
           >
-            {sliderOneData.map((item, i) => (
+            {data.map((item, i) => (
               <SwiperSlide key={i}>
                 <div
                   className="single-slider slider-height d-flex align-items-center"
-                  style={{ backgroundImage: `url(${item.img})` }}
+                  style={{ backgroundImage: `url(${item.image})`, }}
                   data-overlay="6"
                 >
                   <div className="slider-content z-index1 position-absolute mt--12 container" style={isDesktop ? { transform: 'translateX(-50%)', left: '50%' } : {}}>
@@ -43,16 +66,15 @@ const HomeOneSlider = () => {
                       data-delay="1s"
                       className="light-black-color2 mb-1 text-capitalize pb-25 font500 font-pt"
                     >
-                      {item.heading} <br /> {item.afterBr}
+                      {item.name}
                     </h2>
                     <p
                       className="light-black-color2 font300 pb-25"
                       data-animation="fadeInLeft"
                       data-delay="1.5s"
                     >
-                      {item.title}
+                      {item.description}
                       <br />
-                      <span className="font500">{item.titleBr}</span>
                     </p>
                     <Link
                       data-animation="fadeInUp"
@@ -60,13 +82,13 @@ const HomeOneSlider = () => {
                       href="/shop"
                       className="web-btn  d-inline-block text-uppercase white theme-bg position-relative over-hidden pl-30 pr-30 ptb-17"
                     >
-                      Shop Collection
+                      {t("To'plamni ko'rish")}
                     </Link>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper>}
         </div>
       </div>
     </>

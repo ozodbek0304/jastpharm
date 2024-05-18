@@ -1,21 +1,35 @@
 "use client";
-import React from "react";
-import { A11y, Autoplay, EffectFade, Pagination, Scrollbar } from "swiper";
+import React, { useEffect, useState } from "react";
+import { A11y, Autoplay, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import brandOne from "../../../public/assets/images/brand/brand1.png";
-import brandTwo from "../../../public/assets/images/brand/brand2.png";
-import brandThree from "../../../public/assets/images/brand/brand3.png";
-import brandFour from "../../../public/assets/images/brand/brand4.png";
-import brandFive from "../../../public/assets/images/brand/brand5.png";
-import brandSix from "../../../public/assets/images/brand/brand6.png";
 import Image from "next/image";
 import Link from "next/link";
-import { sliderOneData } from "@/data/headernav/slider-one-data";
 import { useTranslation } from "react-i18next";
+import api from "@/utils/api";
+
+interface PartnerItemType {
+  id: number,
+  name: string,
+  image: string,
+  url: string,
+  order: number
+}
+
 const BrandLogos = () => {
-  
+
   const { t } = useTranslation()
+  const [data, setData] = useState<PartnerItemType[]>([])
+
+  const getData = async () => {
+    const resp = await api.get(`common/partners/`)
+
+    setData(resp.data);
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <>
@@ -31,7 +45,7 @@ const BrandLogos = () => {
           <div className="mlr--55">
             <div className="row brand-active d-flex align-items-center ">
               <Swiper
-                modules={[Scrollbar, A11y, Autoplay, EffectFade]}
+                modules={[Scrollbar, A11y, Autoplay]}
                 spaceBetween={0}
                 loop={true}
                 observeParents={true}
@@ -42,7 +56,6 @@ const BrandLogos = () => {
                   delay: 4000,
                   disableOnInteraction: true,
                 }}
-                effect={"fade"}
               // breakpoints={{
               //   0: {
               //     slidesPerView: 1,
@@ -64,21 +77,21 @@ const BrandLogos = () => {
               //   },
               // }}
               >
-                {sliderOneData?.map((item, i) => (
+                {data?.map((item, i) => (
                   <SwiperSlide key={i}>
                     <div className="row">
                       {
-                        sliderOneData?.slice(0, 6)?.map((el, j) => (
-                          <div key={j} className={`text-center brand-img-div col-md-4 p-0 ${(i + 1) % 3 === 0 ? 'border-start' : 'border-end'} ${(i >= 0 && i < 3) ? 'border-bottom' : ''}`}>
+                        data?.slice(0, 6)?.map((el, j) => (
+                          <div key={j} className={`text-center brand-img-div col-md-4 p-0 ${(i + 1) % 3 === 0 ? 'border-start' : 'border-end'} ${(j >= 0 && j < 3) ? 'border-bottom' : ''}`}>
                             <div className="p-5">
-                              <Link href="#" className="d-block">
+                              <Link href={item.url} target="_blank" className="d-block">
                                 <Image
                                   className="d-inline-block brand-img"
-                                  src={item.img}
+                                  src={el.image}
                                   alt="brand-img"
                                   width={160}
                                   height={120}
-                                  style={{ width: '100%' }}
+                                  style={{ width: '100%', height: 'auto', maxHeight: '80px', objectFit: 'contain' }}
                                 />
                               </Link>
                             </div>

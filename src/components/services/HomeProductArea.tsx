@@ -26,19 +26,19 @@ const HomeProductArea = () => {
                   <div className="popular-product">
                     <div className="row product-active">
                       <div className="col-xl-4 col-lg-6  col-md-6 col-sm-6 col-12 plr-14">
-                        <GridProductView start={0} end={2} />
+                        {/* <GridProductView start={0} end={2} /> */}
                       </div>
 
                       <div className="col-xl-4 col-lg-6  col-md-6  col-sm-6 col-12 plr-14">
-                        <GridProductView start={2} end={4} />
+                        {/* <GridProductView start={2} end={4} /> */}
                       </div>
 
                       <div className="col-xl-4 col-lg-6  col-md-6  col-sm-6 col-12 plr-14">
-                        <GridProductView start={4} end={6} />
+                        {/* <GridProductView start={4} end={6} /> */}
                       </div>
-                     
+
                     </div>
-                  </div> 
+                  </div>
                 </div>
               </div>
             </div>

@@ -2,10 +2,11 @@ import GridProductView from "@/sheardComponent/GridProductView";
 import React from "react";
 
 interface propsType {
-  activeTab: number
+  activeTab: number,
+  data: any[]
 }
 
-const ShopGridView = ({ activeTab }: propsType) => {
+const ShopGridView = ({ activeTab, data }: propsType) => {
   return (
     <>
       <div
@@ -15,17 +16,14 @@ const ShopGridView = ({ activeTab }: propsType) => {
         aria-labelledby="home-tab"
       >
         <div className="popular-product">
-          <div className="row shop-page-product-active">
-            <div className="col-xl-4 col-lg-6  col-md-6  col-sm-12 col-12 plr-14">
-              <GridProductView start={0} end={5} />
-            </div>
-            <div className="col-xl-4 col-lg-6  col-md-6  col-sm-12 col-12 plr-14">
-              <GridProductView start={5} end={10} />
-            </div>
-            <div className="col-xl-4 col-lg-6  col-md-6  col-sm-12 col-12 plr-14">
-              <GridProductView start={10} end={15} />
-            </div>
-
+          <div className="row shop-page-product-active align-items-stretch">
+            {
+              data.map((el,i) => (
+                <div key={i} className="col-xl-4 col-lg-6  col-md-6 col-sm-6 col-12 plr-14">
+                  <GridProductView data={el} start={0} end={5} />
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>

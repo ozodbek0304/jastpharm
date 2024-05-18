@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { Scrollbar, A11y, Autoplay, EffectFade, Pagination, Navigation } from "swiper";
+import React, { useEffect, useState } from "react";
+import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
@@ -8,9 +8,22 @@ import { sliderOneData } from "@/data/headernav/slider-one-data";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import api from "@/utils/api";
+import { HomeCarouselItem } from "./HomeOneSlider";
 const HomeCategrorSlider = () => {
 
     const { t } = useTranslation()
+    const [data, setData] = useState<HomeCarouselItem[]>([])
+
+    const getData = async () => {
+        const resp = await api.get(`common/categories/`)
+
+        setData(resp.data);
+    }
+
+    useEffect(() => {
+        getData()
+    }, [])
 
     return (
         <>
@@ -54,16 +67,16 @@ const HomeCategrorSlider = () => {
                             },
                         }}
                     >
-                        {sliderOneData.map((item, i) => (
+                        {data.map((item, i) => (
                             <SwiperSlide key={i}>
                                 <div className="banner mb-30 transition-3 position-relative over-hidden ">
                                     <Link href="/shop" className="d-block">
-                                        <Image height={220} width={250} style={{ width: "100%", height: '350px', objectFit: 'cover' }} className="img-zoom transition-3 width100" src={item.img} alt="banner-img" />
+                                        <Image height={220} width={250} style={{ width: "100%", height: '350px', objectFit: 'cover' }} className="img-zoom transition-3 width100" src={item.image} alt="banner-img" />
                                     </Link>
                                     <div className="banner-content position-absolute transfY transfY50 pl-50 sohalar-card">
 
                                         <h3 className="text-white font500 pb-1">
-                                            <Link href="/shop" className="text-white">Xirurgiya</Link>
+                                            <Link href="/shop" className="text-white">{item.name}</Link>
                                         </h3>
                                     </div>
                                 </div>

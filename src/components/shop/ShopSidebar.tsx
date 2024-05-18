@@ -1,19 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { productData } from "@/data/product-data";
 import Link from "next/link";
-import RangeComp from "@/utils/RangeComp";
 import { useTranslation } from "react-i18next";
+import api from "@/utils/api";
 const ShopSidebar = () => {
   const [sliderValues, setSliderValues] = useState([25]);
 
   const { t } = useTranslation()
+  const [data, setData] = useState<any[]>([])
 
-  const handleSliderChange = (newValues: number[]) => {
-    setSliderValues(newValues);
-  };
+  const getData = async () => {
+    const resp = await api.get(`common/categories/`)
+
+    setData(resp.data);
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <>
@@ -27,149 +34,15 @@ const ShopSidebar = () => {
                     {t("Barcha kategoriyalar")}
                   </h6>
                   <ul>
-                    <li className="pb-15 d-block">
-                      <Link href="/shop">
-                        Accessories<span> (2)</span>
-                      </Link>
-                      <span className="accordion"></span>
-                      <ul className="panel bg-transparent over-hidden">
-                        <li>
-                          <Link className="pb-15 pt-20 d-block" href="#">
-                            Floor
+                    {
+                      data.map((el, i) => (
+                        <li key={i} className="pb-15 d-block">
+                          <Link href={`/shop?category=${el.slug}`}>
+                            {el.name}
                           </Link>
                         </li>
-                        <li>
-                          <Link className="pb-2 d-block" href="#">
-                            Outdoor
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="pb-15 d-block">
-                      <Link href="/shop">
-                        Clothing <span>(8)</span>
-                      </Link>
-                      <span className="accordion"></span>
-                      <ul className="panel bg-transparent over-hidden">
-                        <li>
-                          <Link className="pb-15 pt-20 d-block" href="#">
-                            Man
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-15 d-block" href="#">
-                            Women
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-2 d-block" href="#">
-                            children
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="pb-15 d-block">
-                      <Link href="/shop">
-                        Interior <span>(3)</span>
-                      </Link>
-                      <span className="accordion"></span>
-                      <ul className="panel bg-transparent over-hidden">
-                        <li>
-                          <Link className="pb-15 pt-20 d-block" href="#">
-                            Man
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-15 d-block" href="#">
-                            Women
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-2 d-block" href="#">
-                            children
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="pb-15 d-block">
-                      <Link href="/shop">
-                        Lights <span>(4)</span>
-                      </Link>
-                      <span className="accordion"></span>
-                      <ul className="panel bg-transparent over-hidden">
-                        <li>
-                          <Link className="pb-15 pt-20 d-block" href="#">
-                            Bathroom Lights
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-2 d-block" href="#">
-                            Ceiling lights
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-15 pt-2 d-block" href="#">
-                            Tables lamp
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-2 d-block" href="#">
-                            Wall lights
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="pb-15 d-block">
-                      <Link href="/shop">
-                        Wheel <span>(9)</span>
-                      </Link>
-                      <span className="accordion"></span>
-                      <ul className="panel bg-transparent over-hidden">
-                        <li>
-                          <Link className="pb-15 pt-20 d-block" href="#">
-                            Man
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-15 d-block" href="#">
-                            Women
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-2 d-block" href="#">
-                            children
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="pb-15 d-block">
-                      <Link href="/shop">
-                        Tires <span>(11)</span>
-                      </Link>
-                      <span className="accordion"></span>
-                      <ul className="panel bg-transparent over-hidden">
-                        <li>
-                          <Link className="pb-15 pt-20 d-block" href="#">
-                            Bathroom Lights
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-2 d-block" href="#">
-                            Ceiling lights
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-15 pt-2 d-block" href="#">
-                            Tables lamp
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="pb-2 d-block" href="#">
-                            Wall lights
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
+                      ))
+                    }
                   </ul>
                 </div>
               </div>
@@ -182,9 +55,9 @@ const ShopSidebar = () => {
                 {t("Ommabop mahsulotlar")}
               </h6>
               <div className="side-product mb-50">
-                {productData?.slice(6, 10)?.map((item) => (
+                {productData?.slice(6, 10)?.map((item, i) => (
                   <div
-                    key={item?.id}
+                    key={i}
                     className="side-pro-wrapper d-flex align-items-start mb-15"
                   >
                     <div className="side-pro-img border-gray1 mr-10">

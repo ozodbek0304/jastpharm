@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 
 import Description from "./Description";
-import Additionalinfo from "./Additionalinfo";
-import Reviews from "./Reviews";
+import { useTranslation } from "react-i18next";
 
-const ProductDescription = () => {
+const ProductDescription = ({ data }: any) => {
   const [activeTab, setactiveTab] = useState<number>(1);
+  const { t } = useTranslation()
+
+
   const tabs = [
     {
       id: 1,
-      title: "Description",
+      title: t("To'liq tavsifi"),
     }
   ];
 
   const tabContent = [
     {
       id: 1,
-      content: <Description />,
+      content: <Description data={data} />,
     }
   ];
 

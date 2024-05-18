@@ -21,21 +21,6 @@ const Pagination = () => {
           </Link>
         </li>
         <li className="page-item">
-          <Link className="page-link" href="#">
-            2
-          </Link>
-        </li>
-        <li className="page-item">
-          <Link className="page-link" href="#">
-            3
-          </Link>
-        </li>
-        <li className="page-item">
-          <Link className="page-link" href="#">
-            4
-          </Link>
-        </li>
-        <li className="page-item">
           <Link className="page-link next" href="#">
             {t("Keyingi")} <i className="fas fa-angle-right"></i>
           </Link>
