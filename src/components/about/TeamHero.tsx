@@ -4,6 +4,7 @@ import Image from "next/image";
 import useResponsive from "@/hooks/use-responsive";
 import api from "@/utils/api";
 import parse from 'html-react-parser'
+import Preloader from "@/utils/Preloader";
 
 const TeamHero = () => {
 
@@ -35,7 +36,7 @@ const TeamHero = () => {
               </div>
             </div>
           </div>
-        ) : <></>
+        ) : <Preloader />
       }
     </>
   );
