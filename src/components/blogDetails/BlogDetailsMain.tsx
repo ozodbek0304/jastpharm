@@ -3,7 +3,6 @@ import { blogData } from "@/data/blog-data";
 import { blogDataType, idType } from "@/interFace/interFace";
 import React from "react";
 import BlogContent from "./BlogContent";
-import BlogForm from "./BlogForm";
 import BlogSidebar from "./BlogSidebar";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
 
@@ -22,7 +21,6 @@ const BlogDetailsMain = ({ id }: idType) => {
                 <div className="row">
                   <BlogContent fileterData={fileterData} />
                 </div>
-                {/* <BlogForm /> */}
               </div>
               <BlogSidebar />
             </div>

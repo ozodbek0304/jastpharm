@@ -1,7 +1,4 @@
 import React from "react";
-import imgOne from "../../../public/assets/images/product/rc-img2.jpg";
-import imgTwo from "../../../public/assets/images/product/rc-img3.jpg";
-import imgThree from "../../../public/assets/images/product/rc-img1.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { productData } from "@/data/product-data";
@@ -42,46 +39,6 @@ const BlogSidebar = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
-
-            <div className="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
-              <div className="sidebar-widget mt-25">
-                <h5 className="mb-20 title font600 sidebar-title d-inline-block position-relative pb-1">
-                  Popular tags
-                </h5>
-                <ul className="shop-tag">
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Small</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Fashion</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Magenta</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Grey</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Clothing</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Grey</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Small</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">large</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Yellows</Link>
-                  </li>
-                  <li className="pb-10 font13 d-inline-block">
-                    <Link href="#">Magenta</Link>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>

@@ -115,40 +115,6 @@ const BlogContent = ({ fileterData }: propsType) => {
           </div>
         </div>
         <div className="blog-footer blog-content pr-50 d-sm-flex justify-content-between pt-50">
-          <ul className="post-tag pb-20">
-            <li className="d-inline-block pr-6">
-              <Link
-                className="light-black-color2 border-gray1 d-block mr-1 hvr2"
-                href="#"
-              >
-                Mask
-              </Link>
-            </li>
-            <li className="d-inline-block pr-6">
-              <Link
-                className="light-black-color2 border-gray1 d-block mr-1 hvr2"
-                href="#"
-              >
-                Covid -19
-              </Link>
-            </li>
-            <li className="d-inline-block pr-6">
-              <Link
-                className="light-black-color2 border-gray1 d-block mr-1 hvr2"
-                href="#"
-              >
-                Sanitizer
-              </Link>
-            </li>
-            <li className="d-inline-block">
-              <Link
-                className="light-black-color2 border-gray1 d-block mr-1 hvr2"
-                href="#"
-              >
-                Facemask
-              </Link>
-            </li>
-          </ul>
           <ul className="social-link pb-20 d-flex align-items-center">
             <li className="mr-1">
               <Link className="text-white fb-bg d-block" href="https://www.facebook.com/">
