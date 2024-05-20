@@ -22,7 +22,7 @@ const BlogDetailsMain = ({ id }: idType) => {
                 <div className="row">
                   <BlogContent fileterData={fileterData} />
                 </div>
-                <BlogForm />
+                {/* <BlogForm /> */}
               </div>
               <BlogSidebar />
             </div>

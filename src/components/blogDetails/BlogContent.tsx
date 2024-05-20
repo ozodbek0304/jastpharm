@@ -62,15 +62,6 @@ const BlogContent = ({ fileterData }: propsType) => {
             maiores in officiis aspernatur incidunt consequatur laboriosam
             quibusdam. Nesciunt possimus qui incidunt distinctio cumque?.
           </p>
-          <blockquote className="blockquote mb-30">
-            <p className="mb-0">
-              Web pageMany desktop publishing packages and web page editors now
-              use Lorem Ipsum as their default model text, and a search for
-              ‘lorem ipsum’ will uncover many web sites still in their
-              infancy.Ipsum as their default model Ipsum as their default model.
-              will uncover many web sites still in their infancy
-            </p>
-          </blockquote>
         </div>
         <div className="blog-content blog-content2 pr-50 mt--15">
           <div className="blog-content-img">
@@ -122,18 +113,6 @@ const BlogContent = ({ fileterData }: propsType) => {
               </Swiper>
             </div>
           </div>
-          <p className="mt-15">
-            eaque similique enim quibusdam officiis non pariatur aspernatur odit
-            tempora rerum dolorem veritatis. Voluptas, natus molestias.Lorem
-            ipsum dolor sit amet consectetur, adipisicing elit. Vitae error
-            quaerat corporis, incidunt et ipsa omnis amet? Voluptatum quae amet
-            doloribus perferendis necessitatibus Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Vitae error quaerat corporis,
-            incidunt et ipsa omnis amet? Voluptatum quae amet doloribus
-            perferendis necess esse a! Quo, ipsa! Ipsa suscipit laudantium
-            facilis, sunt minus,ipsum dolor sit amet consectetur, adipisicing
-            elit. Vitae error quaerat corporis, incidunt et ipsa om.{" "}
-          </p>
         </div>
         <div className="blog-footer blog-content pr-50 d-sm-flex justify-content-between pt-50">
           <ul className="post-tag pb-20">
@@ -142,7 +121,7 @@ const BlogContent = ({ fileterData }: propsType) => {
                 className="light-black-color2 border-gray1 d-block mr-1 hvr2"
                 href="#"
               >
-                Mask 
+                Mask
               </Link>
             </li>
             <li className="d-inline-block pr-6">
@@ -178,17 +157,12 @@ const BlogContent = ({ fileterData }: propsType) => {
             </li>
             <li className="mr-1">
               <Link className="text-white tw-bg d-block" href="https://twitter.com/">
-                <i className="fab fa-twitter"></i>
-              </Link>
-            </li>
-            <li className="mr-1">
-              <Link className="text-white lnkd-bg d-block" href="https://bd.linkedin.com/">
-                <i className="fab fa-linkedin-in"></i>
+                <i className="fab fa-telegram"></i>
               </Link>
             </li>
             <li>
               <Link className="text-white gg-bg d-block" href="https://myaccount.google.com/">
-                <i className="fab fa-google-plus-g"></i>
+                <i className="fa-brands fa-instagram"></i>
               </Link>
             </li>
           </ul>
