@@ -6,6 +6,7 @@ import HomeOfferProductSlider from "./HomeOfferProductSlider";
 import BrandLogos from "./BrandLogos";
 import HomeCategrorSlider from "./HomeCategorySlider";
 import HomeContact from "./HomeContact";
+import HomeBlogs from "./HomeBlogs";
 
 const HomeMain = () => {
 
@@ -15,6 +16,7 @@ const HomeMain = () => {
       <HomeProductArea />
       <HomeOfferProductSlider />
       <HomeCategrorSlider />
+      <HomeBlogs />
       <BrandLogos />
       <HomeContact />
     </>

@@ -25,14 +25,14 @@ const TeamHero = () => {
     <>
       {
         data ? (
-          <div className="category-lineup-area">
+          <div className="category-lineup-area fadeInUp animated mb-35">
             <div className="container">
               <div className="row">
-                <Image src={data.image} width={1200} height={isMobile ? 250 : 480} style={{ objectFit: 'cover', objectPosition: 'center' }} alt="product" />
-
-                <div className="category-wrapper category-wrapper1 mt-15">
+                <p className="team-description" >
                   {parse(data?.description)}
-                </div>
+                </p>
+
+                <Image src={data.image} width={1200} height={isMobile ? 250 : 480} style={{ objectFit: 'cover', objectPosition: 'center' }} alt="product" />
               </div>
             </div>
           </div>
