@@ -37,7 +37,8 @@ const navMenuData: MenuItem[] = [
     ]
   },
   { id: 5, hasDropdown: false, lastItem: "mr-0", label: "Xizmatlar", link: "/services", translateKey: 'services' },
-  { id: 6, hasDropdown: false, lastItem: "mr-0", label: "Aloqa", link: "/contact", translateKey: 'contact' },
+  { id: 6, hasDropdown: false, lastItem: "mr-0", label: "Blog", link: "/blog", translateKey: 'blog' },
+  { id: 7, hasDropdown: false, lastItem: "mr-0", label: "Aloqa", link: "/contact", translateKey: 'contact' },
 
 ];
 
