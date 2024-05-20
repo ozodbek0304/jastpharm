@@ -1,31 +1,48 @@
 "use client";
-import { blogData } from "@/data/blog-data";
-import { blogDataType, idType } from "@/interFace/interFace";
-import React from "react";
+import { idType } from "@/interFace/interFace";
+import React, { useEffect, useState } from "react";
 import BlogContent from "./BlogContent";
 import BlogSidebar from "./BlogSidebar";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
+import { BlogType } from "@/sheardComponent/BlogCard";
+import api from "@/utils/api";
+
+export interface BlogDetailType extends BlogType {
+  blog_gallery: { image: string }[]
+  similar: BlogType[]
+  body: string
+}
 
 const BlogDetailsMain = ({ id }: idType) => {
-  const fileterData: blogDataType | any = blogData.find(
-    (item) => item.id == id
-  );
+
+  const [data, setData] = useState<BlogDetailType | null>(null)
+
+  const getData = async () => {
+    const resp = await api.get(`common/blogs/${id}/`)
+
+    setData(resp.data);
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <>
-      <Breadcrumb pageTitle="Blog Details" />
+      <Breadcrumb pageTitle={data?.title || ''} />
       <div className="blog-details-area mt-100 mb-100">
-        <div className="container">
+        {data ? <div className="container">
           <div className="product-wrapper">
             <div className="row">
               <div className="col-xl-9  col-lg-9  col-md-12  col-sm-12 col-12">
                 <div className="row">
-                  <BlogContent fileterData={fileterData} />
+                  <BlogContent fileterData={data} />
                 </div>
               </div>
-              <BlogSidebar />
+              <BlogSidebar data={data.similar} />
             </div>
           </div>
-        </div>
+        </div> : ''}
       </div>
     </>
   );

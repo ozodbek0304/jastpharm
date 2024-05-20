@@ -1,5 +1,5 @@
 "use client";
-import { blogDataType } from "@/interFace/interFace";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Scrollbar, A11y, Autoplay, Navigation } from "swiper";
@@ -8,11 +8,12 @@ import "swiper/css/bundle";
 import React from "react";
 import bannerImg from "../../../public/assets/images/banner/banner-img.jpg";
 import bannerImgTwo from "../../../public/assets/images/banner/banner-img2.jpg";
-interface propsType {
-  fileterData: blogDataType | any;
-}
+import { BlogDetailType } from "./BlogDetailsMain";
+import parse from 'html-react-parser'
 
-const BlogContent = ({ fileterData }: propsType) => {
+
+
+const BlogContent = ({ fileterData }: { fileterData: BlogDetailType }) => {
   const sliderData = [
     {
       id: 1,
@@ -34,36 +35,24 @@ const BlogContent = ({ fileterData }: propsType) => {
         <div className="blog-content pr-50">
           <Link href="/blog-details" className="d-block mb-30">
             <Image
-              src={fileterData?.img}
+              src={fileterData.image}
               style={{ width: "100%", height: "auto" }}
               alt="blog-details-img"
+              height={400}
+              width={1200}
             />
           </Link>
           <h3 className="font600 light-black-color3 pb-15">
-            {fileterData?.title}
+            {fileterData.title}
           </h3>
           <p>
-            sit amet consectetur adipisicing elit. A placeat, sint ab non
-            ratione eligendi qui facilis numquam magnam eius iusto perferendis
-            minima molestiae perspiciatis laborum saepe quo consectetur aliquid!
+            {fileterData.description}
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius in
-            ipsam ratione facere vero iste repudiandae beatae quasi, voluptate
-            mollitia iusto harum error reiciendis eligendi molestiae eum?
-            Assumenda nesciunt odio, maxime ratione sint possimus quae, numquam
-            laborum cum, voluptatem, aliquam obcaecati excepturi quidem ex
-            praesentium commodi aperiam quis non voluptates iusto distinctio
-            doloribus enim necessitatibus! Quae vel alias sequi?
-          </p>
-          <p>
-            velit veritatis voluptate ratione earum odio, porro, iste explicabo
-            optio , hic voluptas eligendi cupiditate, itaque ab quas eveniet
-            maiores in officiis aspernatur incidunt consequatur laboriosam
-            quibusdam. Nesciunt possimus qui incidunt distinctio cumque?.
+            {parse(fileterData.body)}
           </p>
         </div>
-        <div className="blog-content blog-content2 pr-50 mt--15">
+        <div className="blog-content blog-content2 pr-50 mt-25">
           <div className="blog-content-img">
             <div className="row blog-details-img-active">
               <Swiper
@@ -96,13 +85,15 @@ const BlogContent = ({ fileterData }: propsType) => {
                   },
                 }}
               >
-                {sliderData?.map((item, index) => (
-                  <SwiperSlide key={item.id}>
+                {fileterData.blog_gallery?.map((item, index) => (
+                  <SwiperSlide key={index}>
                     <div className="pl-15 pr-15">
                       <Link href="/blog-details">
                         <Image
                           className="width100"
-                          src={item.img}
+                          src={item.image}
+                          height={400}
+                          width={1200}
                           style={{ width: "100%", height: "auto" }}
                           alt="banner-img"
                         />

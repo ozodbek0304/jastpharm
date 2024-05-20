@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { productData } from "@/data/product-data";
 import { useTranslation } from "react-i18next";
-const BlogSidebar = () => {
+import { BlogType } from "@/sheardComponent/BlogCard";
+const BlogSidebar = ({ data }: { data: BlogType[] }) => {
 
   const { t } = useTranslation()
 
@@ -18,14 +19,14 @@ const BlogSidebar = () => {
                   {t("Oxirgi postlar")}
                 </h5>
                 <div className="side-product mb-15">
-                  {productData?.slice(6, 9).map((item) => (
+                  {data.map((item) => (
                     <div
                       key={item?.id}
                       className="side-pro-wrapper d-flex align-items-start mb-15"
                     >
                       <div className="side-pro-img border-gray1 mr-10">
-                        <Link href={`/shop-details/${item?.id}`}>
-                          <Image src={item?.img} className="img-fluid" alt="" />
+                        <Link href={`/shop-details/${item?.slug}`}>
+                          <Image src={item?.image} className="img-fluid" alt="" width={300} height={300} />
                         </Link>
                       </div>
                       <div className="side-pro-text">
@@ -33,7 +34,7 @@ const BlogSidebar = () => {
                           <Link href={`/blog-details/${item?.id}`}> {item?.title} </Link>
                         </h6>
                         <span>
-                          Lorem ipsum, dolor sit amet consectetur adipisicing.
+                          {item.description}
                         </span>
                       </div>
                     </div>

@@ -12,9 +12,9 @@ const BlogMain = () => {
     return (
         <>
             <Breadcrumb pageTitle={t('Blog')} />
-            <div className="blog-area pt-120 ">
+            <div className="blog-area pt-20">
                 <div className="container">
-                    <div className="row">
+                    <div className="row align-items-stretch">
                         <BlogCard start={0} end={6} />
                     </div>
                 </div>
