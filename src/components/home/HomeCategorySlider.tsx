@@ -70,13 +70,13 @@ const HomeCategrorSlider = () => {
                         {data.map((item, i) => (
                             <SwiperSlide key={i}>
                                 <div className="banner mb-30 transition-3 position-relative over-hidden ">
-                                    <Link href="/shop" className="d-block">
+                                    <Link href={`/shop/${item.slug}`} className="d-block">
                                         <Image height={220} width={250} style={{ width: "100%", height: '350px', objectFit: 'cover' }} className="img-zoom transition-3 width100" src={item.image} alt="banner-img" />
                                     </Link>
                                     <div className="banner-content position-absolute transfY transfY50 pl-50 sohalar-card">
 
                                         <h3 className="text-white font500 pb-1">
-                                            <Link href="/shop" className="text-white">{item.name}</Link>
+                                            <Link href={`/shop/${item.slug}`} className="text-white">{item.name}</Link>
                                         </h3>
                                     </div>
                                 </div>

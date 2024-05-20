@@ -6,17 +6,22 @@ import { productData } from "@/data/product-data";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import api from "@/utils/api";
+import useQueryParam from "@/utils/useQueryParams";
+import { useParams } from "next/navigation";
 const ShopSidebar = () => {
   const [sliderValues, setSliderValues] = useState([25]);
+  const { getParams } = useQueryParam()
 
   const { t } = useTranslation()
   const [data, setData] = useState<any[]>([])
+  const params = useParams()
 
   const getData = async () => {
     const resp = await api.get(`common/categories/`)
 
     setData(resp.data);
   }
+
 
   useEffect(() => {
     getData()
@@ -36,8 +41,8 @@ const ShopSidebar = () => {
                   <ul>
                     {
                       data.map((el, i) => (
-                        <li key={i} className="pb-15 d-block">
-                          <Link href={`/shop?category=${el.slug}`}>
+                        <li key={i} className={`pb-15 d-block ${params?.slug === el.slug ? 'category-nav-active' : ''}`}>
+                          <Link href={`/shop/${el.slug}`}>
                             {el.name}
                           </Link>
                         </li>

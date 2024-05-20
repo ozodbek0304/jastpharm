@@ -23,12 +23,11 @@ const CategoryLineUp = () => {
 
   const getData = async () => {
     const resp = await api.get(`common/our-history/`)
-
+    showItems()
     setData(resp.data);
   }
 
   useEffect(() => {
-    showItems()
     getData()
   }, [])
 
@@ -58,17 +57,17 @@ const CategoryLineUp = () => {
             <div className={`col-md-12 fade ${timer > 4 ? "show" : ""}`}>
               <div className="category-wrapper category-wrapper1 mt-15">
                 <div className="category-wrapper category-wrapper1 mt-15 row gy-4 p-0 mx-auto">
-                  {brandData.slice(0, 5).map((item) => (
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={item.id}>
-                      <div className="text-center brand-img-div">
-                        <Link href="#" className="d-block">
-                          <Image
-                            className="d-inline-block brand-img"
-                            src={item.img}
-                            alt="brand-img"
-                            height={300}
-                          />
-                        </Link>
+                  {data?.images.map((item: { image: string }, i: number) => (
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
+                      <div className="text-center brand-img-div" style={{ border: '1px solid #c3cccc' }}>
+                        <Image
+                          className="d-inline-block brand-img"
+                          src={item.image}
+                          alt="brand-img"
+                          width={200}
+                          height={300}
+                          style={{ width: 'auto', height: 'auto' }}
+                        />
                       </div>
                     </div>
                   ))}

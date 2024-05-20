@@ -6,9 +6,11 @@ import ShopListView from "./ShopListView";
 import Pagination from "@/utils/Pagination";
 import api from "@/utils/api";
 import useQueryParam from "@/utils/useQueryParams";
+import { useParams } from "next/navigation";
 
 const ShopArea = () => {
   const [activeTab, setactiveTab] = useState<number>(1);
+  const param = useParams()
 
   const tab = [
     {
@@ -25,14 +27,14 @@ const ShopArea = () => {
   const [data, setData] = useState<any[]>([])
 
   const getData = async () => {
-    const resp = await api.get(`common/products/?category__slug=${query.getParams().category || ''}`)
+    const resp = await api.get(`common/products/?category__slug=${param?.slug || ''}`)
 
     setData(resp.data.results);
   }
 
   useEffect(() => {
     getData()
-  }, [activeTab])
+  }, [param?.slug])
 
 
   return (

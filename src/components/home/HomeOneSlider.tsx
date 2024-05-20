@@ -9,6 +9,7 @@ import Link from "next/link";
 import useResponsive from "@/hooks/use-responsive";
 import api from "@/utils/api";
 import { useTranslation } from "react-i18next";
+import Preloader from "@/utils/Preloader";
 
 export interface HomeCarouselItem {
   id: string
@@ -26,7 +27,7 @@ const HomeOneSlider = () => {
   const [data, setData] = useState<HomeCarouselItem[]>([])
 
   const getData = async () => {
-    const resp = await api.get(`common/area-home/`)
+    const resp = await api.get(`common/banner/`)
 
     setData(resp.data);
   }
@@ -37,9 +38,9 @@ const HomeOneSlider = () => {
 
   return (
     <>
-      <div className="slider-area over-hidden slider1">
+      <div className="slider-area over-hidden slider1" style={data.length ? {} : { height: '1000px' }}>
         <div className="slider-active">
-          {data.length && <Swiper
+          {data.length ? <Swiper
             modules={[Scrollbar, A11y, Autoplay, EffectFade]}
             spaceBetween={0}
             loop={true}
@@ -60,35 +61,37 @@ const HomeOneSlider = () => {
                   style={{ backgroundImage: `url(${item.image})`, }}
                   data-overlay="6"
                 >
-                  <div className="slider-content z-index1 position-absolute mt--12 container" style={isDesktop ? { transform: 'translateX(-50%)', left: '50%' } : {}}>
-                    <h2
-                      data-animation="fadeInLeft"
-                      data-delay="1s"
-                      className="light-black-color2 mb-1 text-capitalize pb-25 font500 font-pt"
-                    >
-                      {item.name}
-                    </h2>
-                    <p
-                      className="light-black-color2 font300 pb-25"
-                      data-animation="fadeInLeft"
-                      data-delay="1.5s"
-                    >
-                      {item.description}
-                      <br />
-                    </p>
-                    <Link
-                      data-animation="fadeInUp"
-                      data-delay="1.7s"
-                      href="/shop"
-                      className="web-btn  d-inline-block text-uppercase white theme-bg position-relative over-hidden pl-30 pr-30 ptb-17"
-                    >
-                      {t("To'plamni ko'rish")}
-                    </Link>
+                  <div className="slider-content z-index1 position-absolute w-100" style={isDesktop ? { transform: 'translateX(-50%)', left: '50%' } : {}}>
+                    <div className="container">
+                      <h2
+                        data-animation="fadeInLeft"
+                        data-delay="1s"
+                        className="light-black-color2 mb-1 text-capitalize pb-25 font500 font-pt hero-title"
+                      >
+                        {item.name}
+                      </h2>
+                      <p
+                        className="light-black-color2 font300 pb-25"
+                        data-animation="fadeInLeft"
+                        data-delay="1.5s"
+                      >
+                        {item.description}
+                        <br />
+                      </p>
+                      <Link
+                        data-animation="fadeInUp"
+                        data-delay="1.7s"
+                        href="/shop"
+                        className="web-btn  d-inline-block text-uppercase white theme-bg position-relative over-hidden pl-30 pr-30 ptb-17"
+                      >
+                        {t("To'plamni ko'rish")}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
-          </Swiper>}
+          </Swiper> : <Preloader />}
         </div>
       </div>
     </>

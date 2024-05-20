@@ -295,6 +295,12 @@
     background: radial-gradient(circle, rgba(14, 22, 242, 0.28) 0%, #ffffff 100%);
 }
 
+.handpick-items-area-team {
+    background: rgba(56, 56, 86, 0.7);
+    background: -webkit-radial-gradient(circle, rgba(56, 56, 86, 0.7) 0%, #ffffff 100%);
+    background: radial-gradient(circle, rgba(56, 56, 86, 0.7) 0%, #ffffff 100%);
+}
+
 
 .sohalar-card {
     background: rgba(255, 255, 255, 0);
@@ -315,4 +321,18 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     padding: 10px;
     border-radius: 12px;
+}
+
+
+.slider-content {
+    backdrop-filter: grayscale(100%) brightness(75%);
+    padding: 50px 30px;
+
+    & h2 {
+        color: white !important;
+    }
+
+    & p {
+        color: white !important;
+    }
 }
