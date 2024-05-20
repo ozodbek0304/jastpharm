@@ -40,7 +40,7 @@ const ServiceList = () => {
     ]
 
     return (
-        <div className='mx-auto py-4 d-flex flex-column gap-2' style={{ maxWidth: '800px' }}>
+        <div className='mx-auto py-4 d-flex flex-column gap-4 px-3' style={{ maxWidth: '1000px' }}>
             {
                 data.map((el, i) => <ServiceItem data={el} order={i + 1} key={i} />)
             }

@@ -1,19 +1,35 @@
 import React from 'react';
 import { ServiceItemType } from './ServiceList';
+import useResponsive from '@/hooks/use-responsive';
 
 const ServiceItem = ({ data, order }: { data: ServiceItemType, order: number }) => {
+
+    const { isMobile } = useResponsive()
+
     return (
         <div
             style={{
-                 display: 'flex',
-                padding: '20px',
+                border: '1px solid #0d6efd',
+                display: 'flex',
+                width: isMobile ? '100%' : '70%',
                 marginLeft: order % 2 !== 0 ? '0' : 'auto',
-                justifyContent: order % 2 !== 0 ? 'flex-start' : 'flex-end'
+                borderRadius: '24px',
+                overflow: 'hidden'
             }}>
-            <p className='d-flex align-items-center gap-2 m-0 p-0'>
-                <i className='far fa-check-circle h2-theme-color'></i>
-                {data.title}
-            </p>
+            <div className='d-flex align-items-center gap-2 m-0 p-0'>
+                <p style={{
+                    padding: '20px',
+                    backgroundColor: '#0d6efd',
+                    height: '100%',
+                    fontSize: '24px',
+                    color: 'white'
+                }} className='m-0 d-flex align-items-center'>
+                    {order}
+                </p>
+                <p style={{ padding: '20px', }} className='m-0'>
+                    {data.title}
+                </p>
+            </div>
         </div>
     );
 }
