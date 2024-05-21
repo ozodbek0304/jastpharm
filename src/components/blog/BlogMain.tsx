@@ -15,7 +15,7 @@ const BlogMain = () => {
             <div className="blog-area pt-20">
                 <div className="container">
                     <div className="row align-items-stretch">
-                        <BlogCard start={0} end={6} />
+                        <BlogCard />
                     </div>
                 </div>
             </div>
