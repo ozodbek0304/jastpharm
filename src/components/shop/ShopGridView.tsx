@@ -18,8 +18,8 @@ const ShopGridView = ({ activeTab, data }: propsType) => {
         <div className="popular-product">
           <div className="row shop-page-product-active align-items-stretch">
             {
-              data.map((el,i) => (
-                <div key={i} className="col-xl-4 col-lg-6  col-md-6 col-sm-6 col-12 plr-14">
+              data.map((el, i) => (
+                <div key={i} className="col-xl-3 col-lg-4  col-md-4 col-sm-6 col-6 plr-14 mb-20">
                   <GridProductView data={el} start={0} end={5} />
                 </div>
               ))

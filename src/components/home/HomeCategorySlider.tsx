@@ -37,15 +37,14 @@ const HomeCategrorSlider = () => {
                         </div>
                     </div>
                     <Swiper
-                        modules={[Autoplay, Navigation]}
+                        modules={[Autoplay]}
                         spaceBetween={30}
                         loop={true}
                         slidesPerView={3}
                         autoplay={{
                             delay: 3000,
-                            // disableOnInteraction: true,
+                            disableOnInteraction: true,
                         }}
-                        navigation
                         breakpoints={{
                             0: {
                                 slidesPerView: 1,
