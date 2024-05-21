@@ -7,8 +7,8 @@ import ShopDetailsContent from './ShopDetailsContent';
 const ShopDetailsMain = ({ data }: any) => {
     return (
         <>
-            <Breadcrumb pageTitle='Mahsulot nomi' />
-            <ShopDetailsContent data={data}/>
+            <Breadcrumb pageTitle={data?.title || ''} />
+            <ShopDetailsContent data={data} />
         </>
     );
 };
