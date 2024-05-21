@@ -2,6 +2,7 @@
 
 import ShopDetailsMain from '@/components/shop-details/ShopDetailsMain';
 import Wrapper from '@/layout/DefaultWrapper';
+import Preloader from '@/utils/Preloader';
 import api from '@/utils/api';
 import React, { useEffect, useState } from 'react';
 
@@ -22,11 +23,11 @@ const ShopDetailsPage = ({ params }: { params: { id: string } }) => {
 
     return (
         <>
-            <Wrapper>
+            {data?.id ? <Wrapper>
                 <main>
-                    <ShopDetailsMain data={data}/>
+                    <ShopDetailsMain data={data} />
                 </main>
-            </Wrapper>
+            </Wrapper> : <Preloader />}
         </>
     );
 };

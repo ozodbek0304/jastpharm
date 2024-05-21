@@ -4,11 +4,6 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 
-interface propsType {
-  start?: number | undefined;
-  end?: number | undefined;
-}
-
 export interface BlogType {
   id: number
   slug: string
@@ -17,7 +12,12 @@ export interface BlogType {
   image: string
 }
 
-const BlogCard = ({ start, end }: propsType) => {
+interface propsType {
+  start?: number | undefined;
+  end?: number | undefined;
+  data?: BlogType[]
+}
+const BlogCard = ({ start, end, data: oldData }: propsType) => {
 
   const [data, setData] = useState<BlogType[]>([])
 
@@ -28,7 +28,11 @@ const BlogCard = ({ start, end }: propsType) => {
   }
 
   useEffect(() => {
-    getData()
+    if (oldData) {
+      setData(oldData)
+    } else {
+      getData()
+    }
   }, [])
 
   return (

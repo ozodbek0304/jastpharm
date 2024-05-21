@@ -7,6 +7,7 @@ import Pagination from "@/utils/Pagination";
 import api from "@/utils/api";
 import useQueryParam from "@/utils/useQueryParams";
 import { useParams } from "next/navigation";
+import Preloader from "@/utils/Preloader";
 
 const ShopArea = () => {
   const [activeTab, setactiveTab] = useState<number>(1);
@@ -39,7 +40,7 @@ const ShopArea = () => {
 
   return (
     <>
-      <div className="product-area shop-product mt-20 mb-100">
+      {data.length ? <div className="product-area shop-product mt-20 mb-100">
         <div className="container">
           <div className="product-content single-product-tab-content"></div>
           <div className="product-wrapper mt-1">
@@ -67,7 +68,7 @@ const ShopArea = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> : <Preloader />}
     </>
   );
 };
