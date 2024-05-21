@@ -2,7 +2,7 @@ import React from 'react';
 import { ServiceItemType } from './ServiceList';
 import useResponsive from '@/hooks/use-responsive';
 
-const ServiceItem = ({ data, order }: { data: ServiceItemType, order: number }) => {
+const ServiceItem = ({ data }: { data: ServiceItemType }) => {
 
     const { isMobile } = useResponsive()
 
@@ -12,7 +12,7 @@ const ServiceItem = ({ data, order }: { data: ServiceItemType, order: number }) 
                 border: '1px solid #0d6efd',
                 display: 'flex',
                 width: isMobile ? '100%' : '70%',
-                marginLeft: order % 2 !== 0 ? '0' : 'auto',
+                marginLeft: data.order % 2 !== 0 ? '0' : 'auto',
                 borderRadius: '24px',
                 overflow: 'hidden'
             }}>
@@ -24,7 +24,7 @@ const ServiceItem = ({ data, order }: { data: ServiceItemType, order: number }) 
                     fontSize: '24px',
                     color: 'white'
                 }} className='m-0 d-flex align-items-center'>
-                    {order}
+                    {data.order}
                 </p>
                 <p style={{ padding: '20px', }} className='m-0'>
                     {data.title}

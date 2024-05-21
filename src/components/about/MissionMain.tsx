@@ -1,12 +1,27 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
 import useResponsive from "@/hooks/use-responsive";
+import api from "@/utils/api";
+import parse from 'html-react-parser'
 
 const MissionMain = () => {
 
   const { isMobile } = useResponsive()
+  const [data, setData] = useState<any>(null)
+
+  const getData = async () => {
+    const resp = await api.get(`common/mission/`)
+
+    setData(resp.data)
+    console.log(resp.data);
+
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <>
@@ -15,13 +30,12 @@ const MissionMain = () => {
           <div className="row">
             <Breadcrumb pageTitle='ourMission' />
 
-            <Image src={"https://medol.uz//data/uploads/module/pages/144/original/63baf330b6056.jpg"} width={1200} height={isMobile ? 200 : 300} style={{ objectFit: 'cover' }} alt="product" />
+            <Image src={data?.image} width={1200} height={isMobile ? 200 : 300} style={{ objectFit: 'cover' }} alt="product" />
 
             <div className="category-wrapper category-wrapper1 mt-15">
-              Наша история началась в 2011 году, когда возникали большие трудности в ведении бизнеса с иностранными партнерами. Несмотря на все преграды, компания уверенными шагами внедряла новые технологии и обучала врачей Узбекистана. Оглядываясь назад, и, смотря на сегодняшние достижения врачей, мы с гордостью говорим, что мы не зря старались и верили в их результат.
-              Сегодня врачи в области кардиохирургии делают операции по установки стентов, и людям не приходиться выезжать в соседние страны для получения медицинского обслуживания. В Узбекистане растет и развивается сеть лабораторий VITROS, где функционирует наше оборудование от Johnson & Johnson, и мы рады, что население Узбекистана могут пройти диагностику на мировом оборудовании и получить точный и достоверный результат.
-              Еще одним нашим достижением является внедрение и бесперебойные поставки шовного хирургического материала ETHICON, мы гордимся, что наши хирурги, как хирурги других стран, пользуются и работают самыми популярными и качественными нитями. К 2022 году мы выросли по количеству компаний, входящих в состав группы компании MEDOL. На сегодняшний день успешно функционирует 4 организации, имеющих свою миссию, цель и сферу деятельности.
-              Сегодня MEDOL продолжает расти и развиваться. Мы гордимся пройденным путем и достигнутыми результатами, и, в то же время, четко видим новые цели и направления движения. Наша сила и наша обязанность – в создании эффективной команды, дистрибуции, обеспечивающей новыми технологиями в сфере медицины и возможностью лечения и получения качественной медицинской помощи в Узбекистане.
+              {
+                parse(data?.description || '')
+              }
             </div>
 
           </div>

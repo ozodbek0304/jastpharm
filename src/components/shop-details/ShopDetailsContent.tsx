@@ -11,6 +11,7 @@ import Link from "next/link";
 import { StaticImageData } from "next/image";
 import parse from 'html-react-parser';
 import { useTranslation } from "react-i18next";
+import FullScreenImg from "./ModalView";
 
 
 // interface for selectImg
@@ -25,6 +26,7 @@ const ShopDetailsContent = ({ data }: any) => {
   const fileterData: ProductType | any = data
   const previewImg = ''
   const [selectImg, setselectImg] = useState(previewImg);
+  const [fullScreen, setFullScreen] = useState<boolean>(false)
 
   const { t } = useTranslation()
 
@@ -83,17 +85,25 @@ const ShopDetailsContent = ({ data }: any) => {
                           role="tabpanel"
                           aria-labelledby="v-pills-home-tab"
                         >
-                          <div className="product-img border-gray2">
+                          <div
+                            className="product-img border-gray2">
                             <Image
-                              style={{ width: "100%", height: "100%" }}
-                              width={700}
-                              height={700}
+                              style={{ width: "100%", height: "100%", objectFit: 'contain' }}
+                              width={1000}
+                              height={1000}
                               src={selectImg}
                               alt="product"
                             />
+                            <span className="ml-auto d-block p-2 text-end">
+                              <i className="fa-solid fa-expand" style={{ cursor: 'pointer' }} onClick={() => setFullScreen(true)}></i>
+                            </span>
                           </div>
                         </div>
                       </div>
+
+                      {fullScreen && <FullScreenImg url={selectImg} onClose={() => setFullScreen(false)} />}
+                      {fullScreen && <div className="product-img-detail-overlay" onClick={() => setFullScreen(false)}></div>}
+
                     </div>
                   </div>
                 </div>
