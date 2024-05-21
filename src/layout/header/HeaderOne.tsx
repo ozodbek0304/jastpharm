@@ -9,10 +9,12 @@ import Menu from "./Menu";
 import SidebarMenu from "./SidebarMenu";
 import OverlyDiv from "@/utils/OverlyDiv";
 import { useTranslation } from "react-i18next";
+import useResponsive from "@/hooks/use-responsive";
 
 const HeaderOne = () => {
 
   const { i18n, t } = useTranslation()
+  const { isMobile } = useResponsive()
 
   const { changeLanguage, language } = i18n
 
@@ -125,7 +127,7 @@ const HeaderOne = () => {
           </div>
         </div>
       </header>
-      <div className="header-blur"></div>
+      {!isMobile && <div className="header-blur"></div>}
       {/* mobile menu */}
 
       <SidebarMenu />
