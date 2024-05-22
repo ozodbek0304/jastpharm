@@ -75,7 +75,7 @@ const CategoryLineUp = () => {
                       <div className="category-wrapper category-wrapper1 mt-15 row gy-4 p-0 mx-auto">
                         {item?.images.map((el: { image: string }, j: number) => (
                           <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={j}>
-                            <div className="text-center brand-img-div" style={{ border: '1px solid #c3cccc' }}>
+                            <div className="text-center brand-img-div bg-white" style={{ border: '1px solid #c3cccc' }}>
                               <Image
                                 className="d-inline-block brand-img"
                                 src={el.image}

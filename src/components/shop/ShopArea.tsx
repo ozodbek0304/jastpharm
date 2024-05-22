@@ -10,7 +10,7 @@ import { useParams } from "next/navigation";
 import Preloader from "@/utils/Preloader";
 
 const ShopArea = () => {
-  const [activeTab, setactiveTab] = useState<number>(1);
+  const [activeTab, setactiveTab] = useState<boolean>(false);
   const param = useParams()
 
   const tab = [
@@ -30,6 +30,7 @@ const ShopArea = () => {
   const getData = async () => {
     const resp = await api.get(`common/products/?category__slug=${param?.slug || ''}`)
 
+    setactiveTab(true)
     setData(resp.data.results);
   }
 
@@ -40,7 +41,7 @@ const ShopArea = () => {
 
   return (
     <>
-      {data.length ? <div className="product-area shop-product mt-20 mb-100">
+      {activeTab ? <div className="product-area shop-product mt-20 mb-100">
         <div className="container">
           <div className="product-content single-product-tab-content"></div>
           <div className="product-wrapper mt-1">
@@ -50,7 +51,7 @@ const ShopArea = () => {
               </div>
               <div className="col-xl-9  col-lg-8  col-md-12  col-sm-12 col-12 mt-25">
                 <div className="tab-content" id="myTabContent">
-                  <ShopGridView data={data} activeTab={activeTab} />
+                  <ShopGridView data={data} activeTab={1} />
                 </div>
                 <div className="pagination-area mt-50 over-hidden position-relative">
                   <div className="row">

@@ -365,6 +365,17 @@
     left: 50%;
 }
 
+.full-view .product-img-detail {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    background-color: white;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
 .product-img-detail-overlay {
     position: fixed;
     z-index: 1000;

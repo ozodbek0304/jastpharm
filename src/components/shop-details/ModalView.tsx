@@ -28,10 +28,18 @@ const FullScreenImg = ({ url, onClose }: propTypes) => {
     };
   }, [handleEscKey]);
 
+
+  useEffect(() => {
+
+    window.scrollTo(0, 0)
+  }, []);
+
+
+
   return (
     <div>
       <div
-        className="tab-pane fade show active position-relative"
+        className="tab-pane fade show active position-relative full-view"
         id="v-pills-home"
         role="tabpanel"
         aria-labelledby="v-pills-home-tab"
@@ -46,8 +54,8 @@ const FullScreenImg = ({ url, onClose }: propTypes) => {
           </span>
           <Image
             style={{ width: "100%", height: "100%", objectFit: 'contain' }}
-            width={1400}
-            height={1400}
+            width={600}
+            height={600}
             src={url}
             alt="product"
           />

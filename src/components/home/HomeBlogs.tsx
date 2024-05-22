@@ -11,7 +11,7 @@ const HomeBlogs = () => {
 
   return (
     <>
-      <div className="blog-area pb-20">
+      <div className="blog-area pb-20 bgimg-4">
         <div className="container">
           <div className="row">
             <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">

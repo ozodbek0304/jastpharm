@@ -42,7 +42,7 @@ const BlogCard = ({ start, end, data: oldData }: propsType) => {
           key={item.id}
           className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 plr-20"
         >
-          <div className="single-blog mb-30">
+          <div className="single-blog mb-30 bg-white">
             <div className="blog-img position-relative transition-3 mt-25">
               <div className="over-hidden">
                 <Link href={`/blog-details/${item?.slug}`}>

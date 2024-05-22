@@ -28,7 +28,7 @@ const HomeProductArea = () => {
 
   return (
     <>
-      <div className="product-area">
+      <div className="product-area bgimg-2">
         <div className="container">
           <div className="product-content single-product-tab-content pt-25 pb-25">
             <div className="row">

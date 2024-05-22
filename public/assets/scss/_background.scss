@@ -1,0 +1,25 @@
+.bgimg-1 {
+    background-image: url('../images/bg/bgimg-1.jpeg');
+    backdrop-filter: blur(10px);
+}
+
+.bgimg-2 {
+    background-image: url('../images/bg/bgimg-2.png');
+    backdrop-filter: blur(10px);
+}
+
+.bgimg-3 {
+    background-image: url('../images/bg/bgimg-3.jpeg');
+    backdrop-filter: blur(10px);
+}
+
+.bgimg-4 {
+    background-image: url('../images/bg/bgimg-4.jpeg');
+    backdrop-filter: blur(10px);
+    background-position: center;
+}
+
+body {
+    background-image: url('../images/bg/bgimg-2.png');
+    backdrop-filter: blur(7px);
+}
