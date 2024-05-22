@@ -66,7 +66,7 @@ const HomeCategrorSlider = () => {
                             },
                         }}
                     >
-                        {data.map((item, i) => (
+                        {[...data, ...data].map((item, i) => (
                             <SwiperSlide key={i}>
                                 <div className="banner mb-30 transition-3 position-relative over-hidden ">
                                     <Link href={`/shop/${item.slug}`} className="d-block">
