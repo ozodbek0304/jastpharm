@@ -34,7 +34,7 @@ const BlogDetailsMain = ({ id }: idType) => {
         {data ? <div className="container">
           <div className="product-wrapper">
             <div className="row">
-              <div className="col-xl-9  col-lg-9  col-md-12  col-sm-12 col-12">
+              <div className="col-xl-8  col-lg-8  col-md-12  col-sm-12 col-12">
                 <div className="row">
                   <BlogContent fileterData={data} />
                 </div>

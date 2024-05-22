@@ -10,8 +10,8 @@ const ContactMain = () => {
     return (
         <>
             <Breadcrumb pageTitle='contact' />
-            <HomeContact />
             <ContactMap />
+            <HomeContact />
         </>
     );
 };
