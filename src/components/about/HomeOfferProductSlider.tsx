@@ -43,7 +43,7 @@ const HomeOfferProductSlider = () => {
           <div className="row handpick-items-active pt-30 pl-20 mlr-1">
             {data.map((item, i) => (
               <div key={i} className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 position-relative">
-                <div className="single-handpick-item d-flex align-items-center mb-35 d-flex flex-column">
+                <div className="single-handpick-item single-blog d-flex align-items-center mb-35 d-flex flex-column">
                   <div className="single-handpick-item-img position-relative">
                     <Image
                       src={item?.image}
@@ -51,12 +51,13 @@ const HomeOfferProductSlider = () => {
                       width={200}
                       height={200}
                       style={{ objectFit: 'cover' }}
+                      className="img-zoom"
                     />
                   </div>
-                  <div className="blog-shadow blog-shadow-team position-absolute transition-5 light-theme-bg"></div>
+                  <div className=" blog-shadow-team position-absolute transition-5 light-theme-bg"></div>
 
                   <div>
-                    <div className="single-product-info mt-10 transition-3 text-center">
+                    <div className="single-product-info single-blog-info mt-10 transition-3 text-center">
                       <h6 className="light-black-color2">
                         {item.full_name}
                       </h6>

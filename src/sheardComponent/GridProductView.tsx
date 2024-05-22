@@ -21,8 +21,8 @@ const GridProductView = ({ data }: propsType) => {
     <>
       <div key={data.id} className={`single-product h-100`}>
         <Link href={`/shop-details/${data.slug}`} className="single-product-img position-relative over-hidden h-100">
-          <div className="position-relative d-block">
-            <Image src={data.poster} width={180} height={220} style={{ width: 'auto', height: 'auto' }} className="w-100" alt="product" />
+          <div className="position-relative d-block over-hidden">
+            <Image src={data.poster} width={180} height={220} style={{ width: 'auto', height: 'auto' }} className="w-100 img-zoom" alt="product" />
           </div>
 
 
