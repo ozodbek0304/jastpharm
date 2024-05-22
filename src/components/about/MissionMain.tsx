@@ -15,8 +15,6 @@ const MissionMain = () => {
     const resp = await api.get(`common/mission/`)
 
     setData(resp.data)
-    console.log(resp.data);
-
   }
 
   useEffect(() => {
@@ -30,7 +28,7 @@ const MissionMain = () => {
           <div className="row">
             <Breadcrumb pageTitle='ourMission' />
 
-            <Image src={data?.image} width={1200} height={isMobile ? 200 : 300} style={{ objectFit: 'cover' }} alt="product" />
+            <img src={data?.image} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} alt="product" />
 
             <div className="category-wrapper category-wrapper1 mt-15">
               {
