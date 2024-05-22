@@ -5,9 +5,14 @@ import { productData } from "@/data/product-data";
 import CountUp from 'react-countup';
 import useIntersectionObserver from "@/utils/useScrollHeight";
 import { useTranslation } from "react-i18next";
-import { HomeCarouselItem } from "./HomeOneSlider";
 import api from "@/utils/api";
 
+interface StatsItemType {
+  id: 1,
+  experience: number,
+  clients: number,
+  manufacturers: number
+}
 
 const HomeOfferProductSlider = () => {
   const [client, setClient] = useState(false)
@@ -16,10 +21,10 @@ const HomeOfferProductSlider = () => {
   const { t } = useTranslation()
   useIntersectionObserver(setActiveId);
 
-  const [data, setData] = useState<HomeCarouselItem[]>([])
+  const [data, setData] = useState<StatsItemType | null>(null)
 
   const getData = async () => {
-    const resp = await api.get(`common/banner/`)
+    const resp = await api.get(`common/statistic/`)
 
     setData(resp.data);
   }
@@ -27,8 +32,6 @@ const HomeOfferProductSlider = () => {
   useEffect(() => {
     getData()
   }, [])
-
-  console.log(activeId);
 
 
   useEffect(() => {
@@ -62,7 +65,7 @@ const HomeOfferProductSlider = () => {
                 <div className="single-handpick-item d-flex justify-content-center align-items-center mb-20 mt-20 mx-auto">
                   <div className="single-product-info transition-3 text-center">
                     <h1 className="theme-color d-inline-block font600" style={{ fontSize: 60 }}>
-                      {client && <CountUp start={0} end={14} duration={2.75} />} +
+                      {client && <CountUp start={0} end={data?.experience || 0} duration={2.75} />} {t("yil")}
                     </h1>
                     <h4 className="light-black-color2 mb-2ht">
                       {t("tajriba")}
@@ -72,7 +75,7 @@ const HomeOfferProductSlider = () => {
                 <div className="single-handpick-item d-flex justify-content-center align-items-center mb-20 mt-20 mx-auto">
                   <div className="single-product-info transition-3 text-center">
                     <h1 className="theme-color d-inline-block font600" style={{ fontSize: 60 }}>
-                      {client && <CountUp start={0} end={20} duration={2.75} />} +
+                      {client && <CountUp start={0} end={data?.clients || 0} duration={2.75} />} +
                     </h1>
                     <h4 className="light-black-color2 mb-2ht">
                       {t("doimiy mijozlar")}
@@ -82,7 +85,7 @@ const HomeOfferProductSlider = () => {
                 <div className="single-handpick-item d-flex justify-content-center align-items-center mb-20 mt-20 mx-auto">
                   <div className="single-product-info transition-3 text-center">
                     <h1 className="theme-color d-inline-block font600" style={{ fontSize: 60 }}>
-                      {client && <CountUp start={0} end={109} duration={2.75} />} +
+                      {client && <CountUp start={0} end={data?.manufacturers || 0} duration={2.75} />} +
                     </h1>
                     <h4 className="light-black-color2 mb-2ht">
                       {t("global ishlab chiqaruvchilar")}

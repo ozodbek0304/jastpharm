@@ -41,18 +41,37 @@ const CategoryLineUp = () => {
           <div className="row pt-20 gy-5">
             {
               data.map((item: any, i: number) => (
-                <>
-                  <div key={i} className={`col-md-5 fade ${timer > 0 ? "show" : ""}`}>
-                    <Image src={item?.image} width={1200} height={isMobile ? 200 : 300} alt="product" style={{ objectFit: 'cover' }} />
-                  </div>
-                  <div key={i} className={`col-md-7 fade ${timer > 1 ? "show" : ""}`}>
-                    <div className="category-wrapper category-wrapper1">
-                      {item?.body && parse(item?.body)}
+                i % 2 === 0 ? (
+                  <>
+                    <div key={i} className={`col-md-5 fade ${timer > 0 ? "show" : ""}`}>
+                      <Image src={item?.image} width={1200} height={isMobile ? 200 : 300} alt="product" style={{ objectFit: 'cover' }} />
                     </div>
-                  </div>
+                    <div key={i} className={`col-md-7 fade ${timer > 1 ? "show" : ""}`}>
+                      <div className="category-wrapper category-wrapper1">
+                        {item?.body && parse(item?.body)}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div key={i} className={`col-md-7 fade ${timer > 1 ? "show" : ""}`}>
+                      <div className="category-wrapper category-wrapper1">
+                        {item?.body && parse(item?.body)}
+                      </div>
+                    </div>
+                    <div key={i} className={`col-md-5 fade ${timer > 0 ? "show" : ""}`}>
+                      <Image src={item?.image} width={1200} height={isMobile ? 200 : 300} alt="product" style={{ objectFit: 'cover' }} />
+                    </div>
+                  </>
+                )
+              ))
+            }
+            {data.some((el: any) => el.images.length > 0) ? <h2 className="text-center">{t("Galareya")}</h2> : ""}
+            {
+              data.map((item: any, i: number) => (
+                <>
                   <div key={i} className={`col-md-12 fade ${timer > 4 ? "show" : ""}`}>
                     <div className="category-wrapper category-wrapper1 mt-15">
-                      {item?.images?.length ? <h2 className="text-center">{t("Galareya")}</h2> : ""}
                       <div className="category-wrapper category-wrapper1 mt-15 row gy-4 p-0 mx-auto">
                         {item?.images.map((el: { image: string }, j: number) => (
                           <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={j}>
