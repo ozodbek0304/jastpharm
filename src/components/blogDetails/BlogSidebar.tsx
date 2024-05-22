@@ -15,7 +15,7 @@ const BlogSidebar = ({ data }: { data: BlogType[] }) => {
           <div className="row">
             <div className="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
               <div className="sidebar-widget ">
-                <h5 className="title font600 sidebar-title d-inline-block position-relative mb-25 pb-1">
+                <h5 className="title font600 sidebar-title d-inline-block position-relative mb-15 pb-1">
                   {t("Oxirgi postlar")}
                 </h5>
                 <div className="side-product mb-15">
@@ -26,16 +26,18 @@ const BlogSidebar = ({ data }: { data: BlogType[] }) => {
                     >
                       <div className="side-pro-img border-gray1 mr-10">
                         <Link href={`/shop-details/${item?.slug}`}>
-                          <Image src={item?.image} className="img-fluid" alt="" width={300} height={300} />
+                          <Image src={item?.image} className="img-fluid" alt="" width={300} height={300} style={{ objectFit: 'cover' }} />
                         </Link>
                       </div>
                       <div className="side-pro-text">
                         <h6 className="pb-10">
-                          <Link href={`/blog-details/${item?.id}`}> {item?.title} </Link>
+                          <Link href={`/blog-details/${item?.slug}`}> {item?.title} </Link>
                         </h6>
-                        <span>
-                          {item.description}
-                        </span>
+                        <div style={{ fontSize: '12px', maxHeight: '36px', overflowY: 'hidden' }}>
+                          <span style={{ lineHeight: '12px' }}>
+                            {item.description}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   ))}

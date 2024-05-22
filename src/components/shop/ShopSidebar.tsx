@@ -49,7 +49,7 @@ const ShopSidebar = () => {
                       data.map((el, i) => (
                         <li key={i} className={`pb-15 d-block ${params?.slug === el.slug ? 'category-nav-active' : ''}`}>
                           <Link href={`/shop/${el.slug}`}>
-                            {el.name}
+                            {el.name} {el.product_count > 0 ? `(${el.product_count})` : ""}
                           </Link>
                         </li>
                       ))

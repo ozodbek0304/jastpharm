@@ -32,11 +32,11 @@ const BlogContent = ({ fileterData }: { fileterData: BlogDetailType }) => {
   return (
     <>
       <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
-        <div className="blog-content pr-50">
-          <Link href="/blog-details" className="d-block mb-30">
+        <div className="blog-content pr-10">
+          <Link href="#" className="d-block mb-30">
             <Image
               src={fileterData.image}
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "100%", height: "100%", objectFit: 'cover' }}
               alt="blog-details-img"
               height={400}
               width={1200}

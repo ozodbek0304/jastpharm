@@ -84,7 +84,7 @@ const BrandLogos = () => {
                         data?.slice(0, 6)?.map((el, j) => (
                           <div key={j} className={`text-center brand-img-div col-md-4 p-0 ${(i + 1) % 3 === 0 ? 'border-start' : 'border-end'} ${(j >= 0 && j < 3) ? 'border-bottom' : ''}`}>
                             <div className="p-5">
-                              <Link href={item.url} target="_blank" className="d-block">
+                              <Link href={el.url} target="_blank" className="d-block">
                                 <Image
                                   className="d-inline-block brand-img"
                                   src={el.image}

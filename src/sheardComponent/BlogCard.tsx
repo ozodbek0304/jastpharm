@@ -10,6 +10,7 @@ export interface BlogType {
   title: string
   description: string
   image: string
+  date: string
 }
 
 interface propsType {
@@ -61,9 +62,7 @@ const BlogCard = ({ start, end, data: oldData }: propsType) => {
                     href="#"
                     className="web-btn border-white01 d-inline-block text-capitalize white-bg theme-color position-relative over-hidden pl-35 pr-35 ptb-12"
                   >
-                    <span> {'12'} </span>
-                    <span> {'May'}</span>
-                    <span> {'2024'}</span>
+                    <span> {item.date.split('-').reverse().join('/')} </span>
                   </Link>
                 </div>
               </div>
@@ -115,9 +114,7 @@ const BlogCard = ({ start, end, data: oldData }: propsType) => {
                       href="#"
                       className="web-btn border-white01 d-inline-block text-capitalize white-bg theme-color position-relative over-hidden pl-35 pr-35 ptb-12"
                     >
-                      <span> {'12'} </span>
-                      <span> {'May'}</span>
-                      <span> {'2024'}</span>
+                      <span> {item.date.split('-').reverse().join('/')} </span>
                     </Link>
                   </div>
                 </div>
