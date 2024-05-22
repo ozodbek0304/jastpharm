@@ -50,7 +50,7 @@ const HomeOfferProductSlider = () => {
                       alt="offer-product-img"
                       width={200}
                       height={200}
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'cover', width: '200px', height: '200px' }}
                       className="img-zoom"
                     />
                   </div>

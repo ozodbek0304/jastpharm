@@ -1,14 +1,11 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import useResponsive from "@/hooks/use-responsive";
 import api from "@/utils/api";
 import parse from 'html-react-parser'
 import Preloader from "@/utils/Preloader";
 
 const TeamHero = () => {
 
-  const { isMobile } = useResponsive()
   const [data, setData] = useState<any>(null)
 
   const getData = async () => {
@@ -32,7 +29,7 @@ const TeamHero = () => {
                   {parse(data?.description)}
                 </p>
 
-                <Image src={data.image} width={1200} height={isMobile ? 250 : 480} style={{ objectFit: 'cover', objectPosition: 'center' }} alt="product" />
+                <img src={data.image}  style={{ objectFit: 'cover', objectPosition: 'top', width: '100%', height: 'auto' }} alt="product" />
               </div>
             </div>
           </div>
