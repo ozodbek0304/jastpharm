@@ -59,7 +59,7 @@
 
 .hvr2 {
 	&:hover {
-		color: #ff5b30;
+		color: #0d6efd;
 	}
 }
 
@@ -339,13 +339,13 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				background: #ff5b30;
+				background: #0d6efd;
 			}
 		}
 
 		span {
 			color: #fff;
-			background: #ff5b30;
+			background: #0d6efd;
 			border-radius: 50%;
 		}
 
@@ -513,7 +513,7 @@
 		h6 {
 			a {
 				&:hover {
-					color: #ff5b30;
+					color: #0d6efd;
 				}
 			}
 		}
@@ -521,7 +521,7 @@
 
 	.title {
 		&:hover {
-			color: #ff5b30;
+			color: #0d6efd;
 		}
 	}
 
@@ -531,7 +531,7 @@
 				li {
 					a {
 						&:hover {
-							color: #ff5b30;
+							color: #0d6efd;
 						}
 					}
 				}
@@ -909,8 +909,8 @@ html {
 	&:hover {
 		.page-link {
 			color: #fff;
-			background-color: #ff5b30;
-			border-color: #ff5b30;
+			background-color: #0d6efd;
+			border-color: #0d6efd;
 		}
 	}
 
@@ -919,7 +919,7 @@ html {
 			.page-link {
 				background: transparent;
 				border-color: transparent;
-				color: #ff5b30;
+				color: #0d6efd;
 			}
 		}
 	}
@@ -929,7 +929,7 @@ html {
 			.page-link {
 				background: transparent;
 				border-color: transparent;
-				color: #ff5b30;
+				color: #0d6efd;
 			}
 		}
 	}
@@ -1100,7 +1100,7 @@ html {
 .product-review-tab-area {
 	.nav-pills {
 		.nav-link.active {
-			color: #ff5b30;
+			color: #0d6efd;
 			background: transparent;
 		}
 
@@ -1124,7 +1124,7 @@ html {
 
 	.title {
 		&::before {
-			background: #ff5b30;
+			background: #0d6efd;
 		}
 	}
 }
@@ -1133,7 +1133,7 @@ html {
 	.nav-pills {
 		.show {
 			>.nav-link {
-				color: #ff5b30;
+				color: #0d6efd;
 				background: transparent;
 			}
 		}
