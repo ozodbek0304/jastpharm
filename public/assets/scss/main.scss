@@ -29,6 +29,7 @@
     16. loader
 
 -----------------------------------------------------------------------------------*/
+@import './background';
 @import 'variables';
 @import 'mixins';
 @import 'common';
@@ -50,7 +51,6 @@
 @import './default';
 @import 'product';
 @import './responsive';
-@import './background'
 
 
 

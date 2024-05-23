@@ -12,6 +12,7 @@ import { StaticImageData } from "next/image";
 import parse from 'html-react-parser';
 import { useTranslation } from "react-i18next";
 import FullScreenImg from "./ModalView";
+import ApplicationModal from "./ApplicationModal";
 
 
 // interface for selectImg
@@ -27,6 +28,7 @@ const ShopDetailsContent = ({ data }: any) => {
   const previewImg = ''
   const [selectImg, setselectImg] = useState(previewImg);
   const [fullScreen, setFullScreen] = useState<boolean>(false)
+  const [application, setApplication] = useState<boolean>(false)
 
   const { t } = useTranslation()
 
@@ -43,7 +45,7 @@ const ShopDetailsContent = ({ data }: any) => {
 
   return (
     <>
-      {data && <div className="product-details-area pro-top-thamb pro-bottom-thamb pt-80">
+      {data && <div className="product-details-area pro-top-thamb pro-bottom-thamb pt-0">
         <div className="container">
           <div className="product-details-content">
             <div
@@ -51,6 +53,7 @@ const ShopDetailsContent = ({ data }: any) => {
               id="myTabContent2"
             >
               <div className="row">
+                {application && <ApplicationModal data={data} id={1} closeModal={() => setApplication(false)} />}
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                   <div className="product-left-img-tab mt-20">
                     <div className="d-flex align-items-start img-preview-box">
@@ -86,7 +89,7 @@ const ShopDetailsContent = ({ data }: any) => {
                           aria-labelledby="v-pills-home-tab"
                         >
                           <div
-                            className="product-img border-gray2">
+                            className="product-img border-gray2 bg-white">
                             <Image
                               style={{ width: "100%", height: "100%", objectFit: 'contain' }}
                               width={1000}
@@ -126,13 +129,12 @@ const ShopDetailsContent = ({ data }: any) => {
                         </ul>
                       </div>
                       <div className="all-info d-sm-flex align-items-center mt-35">
-                        <div className="pro-list-btn d-inline-block mr-10 mb-15">
-                          <Link
-                            href="/shopping-cart"
+                        <div className="pro-list-btn d-inline-block mr-10 mb-15" onClick={() => setApplication(true)}>
+                          <span
                             className="web-btn h2-theme-border1 d-inline-block rounded-0 text-capitalize white h2-theme-bg position-relative over-hidden pl-35 pr-35 ptb-17"
                           >
                             {t("To'liq malumot olish")}
-                          </Link>
+                          </span>
                         </div>
                       </div>
                       <ul className="review-cat d-sm-flex align-items-center pt-20 pb-15">
