@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import LineUpLinks from "../Home-three/LineUpLinks";
 import Image from "next/image";
 import BrandLogos from "./BrandLogos";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
