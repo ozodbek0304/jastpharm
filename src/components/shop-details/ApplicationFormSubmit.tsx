@@ -1,8 +1,9 @@
 "use client";
 import api from "@/utils/api";
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
-import { toast } from "react-toastify";
+
 const ApplicationFormSubmit = ({ product, closeModal }: { product: number, closeModal: any }) => {
 
     const { t } = useTranslation()
@@ -22,6 +23,7 @@ const ApplicationFormSubmit = ({ product, closeModal }: { product: number, close
 
         try {
             await api.post(`common/application/`, values)
+            window.scrollTo(0, 0)
 
             toast.success("Ariza muvaffaqiyatli jo'natildi")
             closeModal()
@@ -41,6 +43,7 @@ const ApplicationFormSubmit = ({ product, closeModal }: { product: number, close
         <>
             <form onSubmit={handleSubmit} id="send-application">
                 <div className="contact-form">
+                    <Toaster />
                     <div className="position-relative">
                         <label>{t("Ism")}</label>
                         <div className="full_name">

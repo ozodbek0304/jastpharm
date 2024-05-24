@@ -1,6 +1,5 @@
 "use client";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
 import { ProductType } from "@/interFace/interFace";
 interface CartState {
   cartProducts: ProductType[];
@@ -21,7 +20,6 @@ export const wishlistSlice = createSlice({
 
       if (productIndex >= 0) {
         state.cartProducts[productIndex].totalCard! += 1;
-        toast.info("Increase Product wishlist Quantity");
       } else {
      
 
@@ -34,7 +32,6 @@ export const wishlistSlice = createSlice({
         const capitalizedCategoryName =
           payload.title.charAt(0).toUpperCase() +
           payload.title.slice(1);
-        toast.success(`${capitalizedCategoryName} added to wishlist`);
       }
     },
     remove_wishlist_product: (
@@ -44,7 +41,6 @@ export const wishlistSlice = createSlice({
       state.cartProducts = state.cartProducts.filter(
         (item) => item.id !== payload.id
       );
-      toast.error(`remove from your wishlist`);
     },
 
     clear_wishlist: (state) => {
@@ -67,7 +63,6 @@ export const wishlistSlice = createSlice({
           state.cartProducts[cartIndex].totalCard = totalCard - 1;
         } else {
           // Display an error message using your toast library
-          toast.error(`Quantity cannot be less than 1`);
         }
       }
     }

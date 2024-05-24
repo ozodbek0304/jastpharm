@@ -3,10 +3,10 @@
 import './globals.css';
 import '../style/index.scss';
 import AppProvider from '@/contextApi/AppProvider';
-import { ToastContainer } from 'react-toastify';
 import ReduxProvider from '@/redux/ReduxProvider';
 import initI18next from './i18next-init';
 import { appWithTranslation } from 'next-i18next';
+import { Toaster } from 'react-hot-toast';
 
 initI18next();
 
@@ -25,11 +25,15 @@ const RootLayout = ({ children }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body suppressHydrationWarning={true}>
+
+        <div>
+          <Toaster position='top-center' />
+        </div>
         <ReduxProvider>
           <AppProvider>
             {children}
           </AppProvider>
-          <ToastContainer
+          {/* <ToastContainer
             position="top-left"
             autoClose={1000}
             hideProgressBar={false}
@@ -40,7 +44,7 @@ const RootLayout = ({ children }: any) => {
             draggable
             pauseOnHover
             theme="light"
-          />
+          /> */}
         </ReduxProvider>
       </body>
     </html>

@@ -1,7 +1,7 @@
 "use client";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ProductType } from "@/interFace/interFace";
-import { toast } from "react-toastify";
+
 interface CartState {
   cartProducts: ProductType[];
 }
@@ -19,14 +19,12 @@ export const cartSlice = createSlice({
 
       if (productIndex >= 0) {
         state.cartProducts[productIndex].totalCard! += 1;
-        toast.info("Increase Product Quantity");
       } else {
         const tempProduct = {
           ...payload,
           totalCard: 1,
         };
         state.cartProducts.push(tempProduct);
-        toast.success(`${payload.title} added to cart`);
       }
     },
     remove_cart_product: (
@@ -36,7 +34,6 @@ export const cartSlice = createSlice({
       state.cartProducts = state.cartProducts.filter(
         (item) => item.id !== payload.id
       );
-      toast.error(`remove from your cart`);
     },
 
     clear_cart: (state) => {
@@ -58,9 +55,7 @@ export const cartSlice = createSlice({
     
         if (totalCard > 1) {
           state.cartProducts[cartIndex].totalCard = totalCard - 1;
-          toast.error(`Quantity Decrease`);
         } else {
-          toast.error(`Quantity cannot be less than 1`);
         }
       }
     }

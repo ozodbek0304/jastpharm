@@ -1,88 +1,83 @@
 "use client";
-import { contact_schema } from "@/utils/validation-schema";
-import { useFormik } from "formik";
-import React from "react";
-import { toast } from "react-toastify";
-import ErrorMsgTwo from "./ErrorMsgTwo";
+import api from "@/utils/api";
+import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
+
+
 const ContactForm = () => {
 
   const { t } = useTranslation()
+  const [loading, setLoading] = useState<boolean>(false)
 
-  const {
-    handleSubmit,
-    handleBlur,
-    handleChange,
-    errors,
-    touched,
-    values,
-    resetForm,
-  } = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-    validationSchema: contact_schema,
-    onSubmit: async (values) => {
-      try {
-        toast.success("Message Send Successfully");
-        resetForm();
-      } catch (error) { }
-    },
-  });
+  const handleSubmit = async (event: any) => {
+    event.preventDefault()
+    setLoading(true)
+
+    const form: any = document.getElementById('send-application')
+    const formData: any = new FormData(form)
+
+    const values = {}
+    for (const [key, value] of formData) {
+      Object.assign(values, { [key]: value })
+    }
+
+    try {
+      await api.post(`common/application/`, values)
+      window.scrollTo(0, 0)
+
+      setLoading(false)
+      return toast.success("Ariza muvaffaqiyatli jo'natildi")
+    } catch (err: any) {
+      console.log(err)
+      if (err?.response?.data) {
+        toast.error(JSON.stringify(err?.response?.data))
+      } else {
+        toast.error("Xatolik")
+      }
+      setLoading(false)
+    }
+  }
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="send-application">
         <div className="contact-form">
+          <Toaster toastOptions={{ duration: 3000 }} />
           <div className="position-relative">
             <label>{t("Ism")}</label>
-            <div className="name">
+            <div className="full_name">
               <input
                 type="text"
                 className="form-control primary-bg2 border-0 mt-2 py-2"
-                name="name"
-                id="r-name"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                defaultValue={values.name}
+                name="full_name"
                 required
               />
             </div>
-            {touched.name && <ErrorMsgTwo errors={errors.name} />}
           </div>
 
           <div className="position-relative">
             <label className="mt-25">{t("Telefon")}</label>
-            <div className="email">
+            <div className="phone">
               <input
-                type="email"
+                type="tel"
                 className="form-control primary-bg2 border-0 mt-2  py-2"
-                name="email"
-                id="r-email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                defaultValue={values.email}
+                name="phone"
                 required
               />
             </div>
-            {touched.email && <ErrorMsgTwo errors={errors.email} />}
           </div>
           <div className="position-relative">
             <label className="mt-25">{t("Xabaringiz")}</label>
             <textarea
-              name="message"
+              name="text"
+              rows={4}
               className="form-control primary-bg2 border-0 mt-2 pt-30 pb-30"
-              id="message"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              defaultValue={values.message}
               required
             ></textarea>
-            {touched.message && <ErrorMsgTwo errors={errors.message} />}
           </div>
         </div>
-        <button className="web-btn h2-theme-border1 d-inline-block text-capitalize white mt-40 rounded-0 h2-theme-color h2-theme-bg position-relative over-hidden pl-60 pr-60 ptb-17">
+        <button disabled={loading} type="submit" className="web-btn h2-theme-border1 d-inline-block text-capitalize white mt-40 rounded-0 h2-theme-color h2-theme-bg position-relative over-hidden pl-60 pr-60 ptb-17">
           {t("Yuborish")}
         </button>
       </form>
