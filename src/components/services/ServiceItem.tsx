@@ -9,7 +9,7 @@ const ServiceItem = ({ data }: { data: ServiceItemType }) => {
     return (
         <div
             style={{
-                border: '1px solid #0d6efd',
+                border: '1px solid #2135B0',
                 display: 'flex',
                 width: isMobile ? '100%' : '70%',
                 marginLeft: data.order % 2 !== 0 ? '0' : 'auto',
@@ -19,7 +19,7 @@ const ServiceItem = ({ data }: { data: ServiceItemType }) => {
             <div className='d-flex align-items-center gap-2 m-0 p-0'>
                 <p style={{
                     padding: '20px',
-                    backgroundColor: '#0d6efd',
+                    backgroundColor: '#2135B0',
                     height: '100%',
                     fontSize: '24px',
                     color: 'white'

@@ -19,7 +19,7 @@ const Menu = () => {
                 : `${item?.lastItem ? "mr-0" : ""}`
                 }`}
               href={item?.link}
-              style={pathName?.split('/')?.[1] === item.link.replace('/', '') ? { color: '#4c80fa' } : {}}
+              style={pathName?.split('/')?.[1] === item.link.replace('/', '') ? { color: '#2135B0' } : {}}
               legacyBehavior
             >
               <a>{t(item.translateKey)}</a>

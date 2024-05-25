@@ -7,7 +7,7 @@
 	li {
 		a {
 			&:hover {
-				color: #4c80fa;
+				color: #2135B0;
 				padding-left: 15px;
 			}
 		}
@@ -21,7 +21,7 @@
 				content: "__";
 				left: 0;
 				top: -50%;
-				color: #4c80fa;
+				color: #2135B0;
 				display: none;
 				top: 0;
 				content: "\e921";
@@ -40,7 +40,7 @@
 		li {
 			a {
 				&::before {
-					color: #0d6efd;
+					color: #2135B0;
 				}
 			}
 		}
@@ -49,7 +49,7 @@
 		li {
 			a {
 				&:hover {
-					color: #0d6efd;
+					color: #2135B0;
 				}
 			}
 		}
@@ -58,14 +58,14 @@
 		li {
 			a {
 				&:hover {
-					color: #0d6efd;
+					color: #2135B0;
 				}
 			}
 		}
 		p {
 			a {
 				&:hover {
-					color: #0d6efd;
+					color: #2135B0;
 				}
 			}
 		}
@@ -73,18 +73,18 @@
 	.social-link {
 		li {
 			a.active {
-				color: #0d6efd;
+				color: #2135B0;
 			}
 		}
 	}
 	.footer-address {
 		li.footer-mail {
 			a {
-				color: #0d6efd;
+				color: #2135B0;
 			}
 		}
 		a.footer-phone {
-			color: #0d6efd;
+			color: #2135B0;
 			font-weight: 400;
 		}
 	}
@@ -151,11 +151,11 @@
 			line-height: 1;
 			text-transform: uppercase;
 			&:hover {
-				color: #4c80fa;
+				color: #2135B0;
 			}
 		}
 		a.c-theme {
-			color: #4c80fa;
+			color: #2135B0;
 			margin: 0 5px;
 		}
 	}
@@ -167,7 +167,7 @@
 			line-height: 1;
 			text-transform: uppercase;
 			&:hover {
-				color: #4c80fa;
+				color: #2135B0;
 			}
 		}
 		color: #222222;
@@ -192,7 +192,7 @@
 .footer2.footer-area {
 	p {
 		a.c-theme {
-			color: #0d6efd;
+			color: #2135B0;
 		}
 	}
 }
@@ -304,7 +304,7 @@
 		}
 		& .s-ser-icon {
 			& i {
-				color: #0d6efd;
+				color: #2135B0;
 			}
 		}
 	}
