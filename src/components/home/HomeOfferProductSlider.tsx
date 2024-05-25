@@ -44,14 +44,14 @@ const HomeOfferProductSlider = () => {
   return (
     <>
       <div
-        className="handpick-items-area pt-40 pb-40"
+        className="handpick-items-area pt-40 pb-30"
         data-wow-duration="1s"
       >
         <div className="container scroll-target" id="stats-active" >
           <div className="row">
             <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
               <div className="section-title text-center">
-                <h3 className="font-pt light-black-color2 pb-1">
+                <h3 className="font-pt light-black-color2 pb-2">
                   {t("our_stats")}
                 </h3>
               </div>

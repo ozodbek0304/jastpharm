@@ -5,12 +5,13 @@ import '../style/index.scss';
 import AppProvider from '@/contextApi/AppProvider';
 import ReduxProvider from '@/redux/ReduxProvider';
 import initI18next from './i18next-init';
-import { appWithTranslation } from 'next-i18next';
+import { appWithTranslation, useTranslation } from 'next-i18next';
 import { Toaster } from 'react-hot-toast';
 
 initI18next();
 
 const RootLayout = ({ children }: any) => {
+  const { t } = useTranslation()
   return (
     <html lang="en">
       <head>
@@ -21,8 +22,8 @@ const RootLayout = ({ children }: any) => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <title>Stepmeds - React Next Js</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{t("JasPharm - Onlayn tibbiy xizmatlar kompaniyasi")}</title>
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body suppressHydrationWarning={true}>
 

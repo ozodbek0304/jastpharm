@@ -27,11 +27,11 @@ const HomeCategrorSlider = () => {
 
     return (
         <>
-            <div className="slider-area over-hidden slider1 mt-3">
+            <div className="slider-area over-hidden slider1 mt-60">
                 <div className="slider-active row">
                     <div className="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12 pb-15">
                         <div className="section-title text-center">
-                            <h3 className="font-pt light-black-color2 pb-1">
+                            <h3 className="font-pt light-black-color2 pb-3">
                                 {t("Mavjud sohalar")}
                             </h3>
                         </div>
