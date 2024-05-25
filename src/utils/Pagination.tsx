@@ -22,7 +22,7 @@ const Pagination = () => {
         </li>
         <li className="page-item">
           <Link className="page-link next" href="#">
-            {t("Keyingi")} <i className="fas fa-angle-right"></i>
+            <i className="fas fa-angle-right"></i>
           </Link>
         </li>
       </ul>

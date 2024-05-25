@@ -1,6 +1,6 @@
 "use client";
 import React, { createContext, useState, } from "react";
-import {AppContextType} from "@/interFace/interFace";
+import { AppContextType } from "@/interFace/interFace";
 export const AppContext = createContext<AppContextType | undefined>(undefined);
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [sideMenuOpen, setSideMenuOpen] = useState<boolean>(false);

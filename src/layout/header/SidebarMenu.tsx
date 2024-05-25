@@ -41,8 +41,6 @@ const SidebarMenu = () => {
     return setOpen(false)
   }
 
-  console.log(language);
-
 
   return (
     <>

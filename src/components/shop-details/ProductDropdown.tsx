@@ -41,7 +41,7 @@ const ProductDropdown = ({ data, products, onChange }: Props) => {
                 </p>
             </div>
 
-            <div className={`bg-white dropdown-list ${open ? 'dropdown-open' : 'dropdown-close'}`}>
+            <div className={`bg-white dropdown-list-2 ${open ? 'dropdown-open' : 'dropdown-close'}`}>
                 {
                     products.map((el, i) => (
                         <div

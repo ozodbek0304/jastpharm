@@ -4,13 +4,13 @@ import Link from "next/link";
 import React from "react";
 
 const MobileMenuThree = () => {
-    const {toggleSideMenu} = useGlobalContext()
+  const { toggleSideMenu } = useGlobalContext()
   return (
     <>
       <div className="side-mobile-menu bg-white pt-20 pb-30 pl-40 pr-40 pb-100 hm3">
         <div className="close-icon d-flex justify-content-end mt-0">
           <Link onClick={toggleSideMenu} className="close-menu d-block" href="">
-            <span className="icon-clear"></span>
+            <i className="fa-solid fa-xmark" style={{ fontSize: '20px' }}></i>
           </Link>
         </div>
 
@@ -62,10 +62,10 @@ const MobileMenuThree = () => {
           </li>
           <li className="mb-20 primary-color">
             <Link href="mailto:contact@example.com">
-            <span className="mr-1">
-              <i className="far fa-envelope"></i>
-            </span>
-           
+              <span className="mr-1">
+                <i className="far fa-envelope"></i>
+              </span>
+
             </Link>
           </li>
           <li className="mb-15">
@@ -77,7 +77,7 @@ const MobileMenuThree = () => {
             </Link>
           </li>
         </ul>
-         <SocialTwo/>
+        <SocialTwo />
       </div>
     </>
   );
