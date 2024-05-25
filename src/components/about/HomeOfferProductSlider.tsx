@@ -6,6 +6,7 @@ import { productData } from "@/data/product-data";
 import Link from "next/link";
 import api from "@/utils/api";
 import { useTranslation } from "react-i18next";
+import useResponsive from "@/hooks/use-responsive";
 
 export interface TeamMemberType {
   id: number
@@ -16,6 +17,7 @@ export interface TeamMemberType {
 
 const HomeOfferProductSlider = () => {
   const [data, setData] = useState<TeamMemberType[]>([])
+  const { isMobile } = useResponsive()
 
   const { t } = useTranslation()
 
@@ -34,15 +36,15 @@ const HomeOfferProductSlider = () => {
         className="fadeInUp animated mb-35"
         data-wow-duration="1s"
       >
-        <div className="container">
+        <div className="container over-hidden">
           <div>
             <h1 className="text-center">
               {t("Bizning jamoa")}
             </h1>
           </div>
-          <div className="row handpick-items-active pt-30 pl-20 mlr-1">
+          <div className={`row handpick-items-active pt-30 ${isMobile ? "" : "pl-20 mlr-1"}`}>
             {data.map((item, i) => (
-              <div key={i} className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 position-relative">
+              <div key={i} className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 position-relative">
                 <div className="single-handpick-item single-blog d-flex align-items-center mb-35 d-flex flex-column">
                   <div className="single-handpick-item-img position-relative">
                     <Image
@@ -50,7 +52,7 @@ const HomeOfferProductSlider = () => {
                       alt="offer-product-img"
                       width={200}
                       height={200}
-                      style={{ objectFit: 'cover', width: '200px', height: '200px' }}
+                      style={{ objectFit: 'cover', width: isMobile ? '150px' : '200px', height: isMobile ? '150px !important' : '200px', objectPosition: 'center' }}
                       className="img-zoom"
                     />
                   </div>

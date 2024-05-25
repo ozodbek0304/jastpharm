@@ -6,7 +6,6 @@ import FooterLinksTwo from "./components/FooterLinksTwo";
 import { useTranslation } from "react-i18next";
 
 
-
 const FooterTwo = () => {
 
   const { t } = useTranslation()
@@ -17,7 +16,7 @@ const FooterTwo = () => {
         <div className="footer-area footer2 pt-60 footer-bg">
           <div className="footer-top">
             <div className="container">
-              <div className="row d-flex border-b-gray1 pb-0">
+              <div className="row d-flex border-b-gray1 pb-40">
                 <div className="col-xxl-5 col-xl-5  col-lg-6  col-md-12  col-sm-12 col-12 pl-0">
                   <div className="row">
                     <div className="col-xl-6  col-lg-6  col-md-6 col-sm-6 col-12 ">
@@ -55,7 +54,7 @@ const FooterTwo = () => {
                           <li className="footer-mail mt-28">
                             <span>
                               {t("Yordam kerakmi?")}{" "}
-                              <Link href="mailto:contact@example.com">info@texnomed.uz</Link>
+                              <Link href="mailto:contact@example.com">info@example.com</Link>
                             </span>
                           </li>
                         </ul>
@@ -67,6 +66,15 @@ const FooterTwo = () => {
                           {t('header_address')} <br />
                         </p>
                         <Socials />
+                        <div className="copyright-text d-sm-flex justify-content-center align-items-center mt-50">
+                          <p className="mb-0">
+                            © {new Date().getFullYear()}
+                            <Link href="#" className="c-theme">
+                              JastPharm
+                            </Link>
+                            {t("Barcha huquqlar himoyalangan.")}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -76,14 +84,7 @@ const FooterTwo = () => {
           </div>
           <div className="footer-bottom pt-25 pb-25">
             <div className="container">
-              <div className="d-flex align-items-center justify-content-between">
-                <p className="mb-0">
-                  © {new Date().getFullYear()}
-                  <Link href="#" className="c-theme">
-                    JastPharm
-                  </Link>
-                  {t("Barcha huquqlar himoyalangan.")}
-                </p>
+              <div className="d-flex align-items-center justify-content-center">
                 <div className="d-flex gap-1 align-items-center">
                   <span>
                     {t("Sayt ishlab chiquvchi")}
