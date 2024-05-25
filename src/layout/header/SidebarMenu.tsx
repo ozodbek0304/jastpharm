@@ -58,7 +58,7 @@ const SidebarMenu = () => {
             </div>
 
             <div className="col-2 position-relative">
-              <span onClick={() => setOpen(!open)}>UZ</span>
+              <span onClick={() => setOpen(!open)}>{language.toUpperCase()}</span>
               {open && <ul className="d-flex gap-1 col-6 flex-column" style={{ position: 'absolute', zIndex: 10, padding: '10px', backgroundColor: 'white', width: '50px', left: 0 }}>
                 <li onClick={() => handleChangeLanguage('ru')} style={{ color: language === 'ru' ? 'blue' : 'black', cursor: 'pointer', textAlign: 'center' }}>
                   RU
