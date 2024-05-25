@@ -14,7 +14,7 @@ import useResponsive from "@/hooks/use-responsive";
 const HeaderOne = () => {
 
   const { i18n, t } = useTranslation()
-  const { isMobile } = useResponsive()
+  const { isDesktop } = useResponsive()
 
   const { changeLanguage, language } = i18n
 
@@ -127,7 +127,7 @@ const HeaderOne = () => {
           </div>
         </div>
       </header>
-      {!isMobile && <div className="header-blur"></div>}
+      {isDesktop && <div className="header-blur"></div>}
       {/* mobile menu */}
 
       <SidebarMenu />

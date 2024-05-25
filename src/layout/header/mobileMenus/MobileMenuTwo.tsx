@@ -11,7 +11,7 @@ const MobileMenuTwo = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-6">
-              <Link href="/home-two">
+              <Link href="/">
                 <div className="logo">
                   <Image src={logoThumb} alt="" height={40} />
                 </div>
