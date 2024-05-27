@@ -21,6 +21,7 @@ const initI18next = () => {
             react: {
                 useSuspense: false,
             },
+            lng: 'ru',
         });
 };
 
