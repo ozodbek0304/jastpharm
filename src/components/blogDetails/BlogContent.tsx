@@ -105,25 +105,6 @@ const BlogContent = ({ fileterData }: { fileterData: BlogDetailType }) => {
             </div>
           </div>
         </div>
-        <div className="blog-footer blog-content pr-50 d-sm-flex justify-content-between pt-50">
-          <ul className="social-link pb-20 d-flex align-items-center">
-            <li className="mr-1">
-              <Link className="text-white fb-bg d-block" href="https://www.facebook.com/">
-                <i className="fab fa-facebook-f"></i>
-              </Link>
-            </li>
-            <li className="mr-1">
-              <Link className="text-white tw-bg d-block" href="https://twitter.com/">
-                <i className="fab fa-telegram"></i>
-              </Link>
-            </li>
-            <li>
-              <Link className="text-white gg-bg d-block" href="https://myaccount.google.com/">
-                <i className="fa-brands fa-instagram"></i>
-              </Link>
-            </li>
-          </ul>
-        </div>
       </div>
     </>
   );

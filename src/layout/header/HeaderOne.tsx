@@ -46,11 +46,11 @@ const HeaderOne = () => {
       }
     }
 
-    if (header) {
-      scrollTop >= 40
-        ? header.classList.add("header-sticky")
-        : header.classList.remove("header-sticky");
-    }
+    // if (header) {
+    //   scrollTop >= 40
+    //     ? header.classList.add("header-sticky")
+    //     : header.classList.remove("header-sticky");
+    // }
   };
 
   return (

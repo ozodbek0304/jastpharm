@@ -9,7 +9,7 @@ const HomeContact = () => {
 
     return (
         <>
-            <div className="contact-area bg-white">
+            <div className="contact-area bgimg-3">
                 <div className="container">
                     <div className="row pb-100">
                         <div className="col-xl-6  col-lg-6  col-md-12  col-sm- col-">

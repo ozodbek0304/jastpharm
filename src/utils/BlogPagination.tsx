@@ -16,7 +16,6 @@ const BlogPagination = () => {
                   <li className="page-item">
                     <Link className="page-link prev" href="#">
                       <i className="fas fa-angle-left"></i>
-                      Prev
                     </Link>
                   </li>
                   <li className="page-item">
@@ -26,7 +25,7 @@ const BlogPagination = () => {
                   </li>
                   <li className="page-item">
                     <Link className="page-link next" href="#">
-                      Next <i className="fas fa-angle-right"></i>
+                      <i className="fas fa-angle-right"></i>
                     </Link>
                   </li>
                 </ul>
