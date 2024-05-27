@@ -18,6 +18,11 @@ const initI18next = () => {
                 // Fayllarni yuklashda qo'lini tiklash
                 allowMultiLoading: false,
             },
+            detection: {
+                // Tilni aniqlash tartibini belgilash
+                order: ['localStorage'],
+                caches: ['localStorage'], // Tanlangan tilni saqlash uchun cache turlari
+            },
             react: {
                 useSuspense: false,
             },
