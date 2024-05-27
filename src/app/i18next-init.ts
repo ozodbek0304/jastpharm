@@ -10,7 +10,7 @@ const initI18next = () => {
         .use(LanguageDetector)
         .use(initReactI18next)
         .init({
-            fallbackLng: 'uz',
+            fallbackLng: 'ru',
             supportedLngs: ['ru', 'en', 'uz'],
             backend: {
                 // Fayllarni qayerdan olishni belgilash

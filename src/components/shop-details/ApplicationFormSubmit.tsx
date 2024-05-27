@@ -77,8 +77,11 @@ const ApplicationFormSubmit = ({ product, closeModal }: { product: number, close
                         ></textarea>
                     </div>
                 </div>
-                <button disabled={loading} type="submit" className="web-btn h2-theme-border1 d-inline-block text-capitalize white mt-40 rounded-0 h2-theme-color h2-theme-bg position-relative over-hidden pl-60 pr-60 ptb-17">
-                    {t("Yuborish")}
+                <button type="submit" className={` h2-theme-border1 d-inline-block text-capitalize white mt-40 rounded-0 h2-theme-color h2-theme-bg position-relative over-hidden pl-60 pr-60 ${loading ? "ptb-10" : "ptb-17"}`} style={{ minWidth: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {loading ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="28" height="28" style={{ shapeRendering: 'auto', display: 'block', background: 'transparent' }}><g><circle stroke-dasharray="188.49555921538757 64.83185307179586" r="40" stroke-width="13" stroke="#ffffff" fill="none" cy="50" cx="50">
+                        <animateTransform keyTimes="0;1" values="0 50 50;360 50 50" dur="0.8620689655172413s" repeatCount="indefinite" type="rotate" attributeName="transform"></animateTransform>
+                    </circle><g></g></g>
+                    </svg> : t("Yuborish")}
                 </button>
             </form>
         </>
