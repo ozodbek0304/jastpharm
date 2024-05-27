@@ -10,6 +10,7 @@ const initI18next = () => {
         .use(LanguageDetector)
         .use(initReactI18next)
         .init({
+            lng: localStorage.getItem('i18nextLng') || 'ru',
             fallbackLng: 'ru',
             supportedLngs: ['ru', 'en', 'uz'],
             backend: {
@@ -21,7 +22,6 @@ const initI18next = () => {
             react: {
                 useSuspense: false,
             },
-            lng: 'ru',
         });
 };
 
