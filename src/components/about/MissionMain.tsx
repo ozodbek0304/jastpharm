@@ -5,6 +5,7 @@ import Breadcrumb from "@/sheardComponent/Breadcrumb";
 import useResponsive from "@/hooks/use-responsive";
 import api from "@/utils/api";
 import parse from 'html-react-parser'
+import Preloader from "@/utils/Preloader";
 
 const MissionMain = () => {
 
@@ -24,13 +25,15 @@ const MissionMain = () => {
   return (
     <>
       <div className="category-lineup-area">
+        {!data && <Preloader />}
         <div className="container">
           <div className="row">
             <Breadcrumb pageTitle='ourMission' />
 
+
             <img src={data?.image} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} alt="product" />
 
-            <div className="category-wrapper category-wrapper1 mt-15">
+            <div className="category-wrapper category-wrapper1 mt-15" style={{ textAlign: 'justify' }}>
               {
                 parse(data?.description || '')
               }

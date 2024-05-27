@@ -6,12 +6,13 @@ import { brandData } from "./PartnersMain";
 import api from "@/utils/api";
 import parse from 'html-react-parser'
 import { useTranslation } from "react-i18next";
+import Preloader from "@/utils/Preloader";
 
 const CategoryLineUp = () => {
 
   const { isMobile } = useResponsive()
   const [timer, setTimer] = useState(0)
-  const [data, setData] = useState<any>([])
+  const [data, setData] = useState<any[]>([])
 
   const { t } = useTranslation()
 
@@ -37,16 +38,16 @@ const CategoryLineUp = () => {
   return (
     <>
       <div className="category-lineup-area">
-        <div className="container">
+        {data.length ? <div className="container">
           <div className="row pt-20 gy-5">
             {
               data.map((item: any, i: number) => (
                 i % 2 === 0 ? (
                   <>
-                    <div key={i} className={`col-md-5 fade ${timer > 0 ? "show" : ""}`}>
+                    <div key={i} className={`col-md-5`}>
                       <Image src={item?.image} width={1200} height={isMobile ? 200 : 300} alt="product" style={{ objectFit: 'cover' }} />
                     </div>
-                    <div key={i} className={`col-md-7 fade ${timer > 1 ? "show" : ""}`}>
+                    <div key={i} className={`col-md-7`}>
                       <div className="category-wrapper category-wrapper1">
                         {item?.body && parse(item?.body)}
                       </div>
@@ -54,12 +55,12 @@ const CategoryLineUp = () => {
                   </>
                 ) : (
                   <>
-                    <div key={i} className={`col-md-7 fade ${timer > 1 ? "show" : ""}`}>
+                    <div key={i} className={`col-md-7`}>
                       <div className="category-wrapper category-wrapper1">
                         {item?.body && parse(item?.body)}
                       </div>
                     </div>
-                    <div key={i} className={`col-md-5 fade ${timer > 0 ? "show" : ""}`}>
+                    <div key={i} className={`col-md-5`}>
                       <Image src={item?.image} width={1200} height={isMobile ? 200 : 300} alt="product" style={{ objectFit: 'cover' }} />
                     </div>
                   </>
@@ -94,7 +95,7 @@ const CategoryLineUp = () => {
               ))
             }
           </div>
-        </div>
+        </div> : <Preloader />}
       </div>
       .
     </>

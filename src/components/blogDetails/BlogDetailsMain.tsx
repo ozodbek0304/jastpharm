@@ -6,6 +6,7 @@ import BlogSidebar from "./BlogSidebar";
 import Breadcrumb from "@/sheardComponent/Breadcrumb";
 import { BlogType } from "@/sheardComponent/BlogCard";
 import api from "@/utils/api";
+import Preloader from "@/utils/Preloader";
 
 export interface BlogDetailType extends BlogType {
   blog_gallery: { image: string }[]
@@ -42,7 +43,7 @@ const BlogDetailsMain = ({ id }: idType) => {
               <BlogSidebar data={data.similar} />
             </div>
           </div>
-        </div> : ''}
+        </div> : <Preloader />}
       </div>
     </>
   );

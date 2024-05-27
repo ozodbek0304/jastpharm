@@ -13,6 +13,7 @@ import parse from 'html-react-parser';
 import { useTranslation } from "react-i18next";
 import FullScreenImg from "./ModalView";
 import ApplicationModal from "./ApplicationModal";
+import useResponsive from "@/hooks/use-responsive";
 
 
 // interface for selectImg
@@ -29,6 +30,7 @@ const ShopDetailsContent = ({ data }: any) => {
   const [selectImg, setselectImg] = useState(previewImg);
   const [fullScreen, setFullScreen] = useState<boolean>(false)
   const [application, setApplication] = useState<boolean>(false)
+  const { isMobile } = useResponsive()
 
   const { t } = useTranslation()
 
@@ -97,9 +99,9 @@ const ShopDetailsContent = ({ data }: any) => {
                               src={selectImg}
                               alt="product"
                             />
-                            <span className="ml-auto d-block p-2 text-end">
+                            {!isMobile && <span className="ml-auto d-block p-2 text-end">
                               <i className="fa-solid fa-expand" style={{ cursor: 'pointer' }} onClick={() => setFullScreen(true)}></i>
-                            </span>
+                            </span>}
                           </div>
                         </div>
                       </div>

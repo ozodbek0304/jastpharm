@@ -13,6 +13,7 @@
 		}
 	}
 }
+
 .footer-widget {
 	li {
 		a {
@@ -27,6 +28,7 @@
 				content: "\e921";
 				font-family: "icomoon" !important;
 			}
+
 			&:hover {
 				&:before {
 					display: inline-block;
@@ -35,6 +37,7 @@
 		}
 	}
 }
+
 .footer2 {
 	.footer-widget {
 		li {
@@ -45,6 +48,7 @@
 			}
 		}
 	}
+
 	.footer-account {
 		li {
 			a {
@@ -54,6 +58,7 @@
 			}
 		}
 	}
+
 	.footer-area {
 		li {
 			a {
@@ -62,6 +67,7 @@
 				}
 			}
 		}
+
 		p {
 			a {
 				&:hover {
@@ -70,6 +76,7 @@
 			}
 		}
 	}
+
 	.social-link {
 		li {
 			a.active {
@@ -77,12 +84,14 @@
 			}
 		}
 	}
+
 	.footer-address {
 		li.footer-mail {
 			a {
 				color: #2135B0;
 			}
 		}
+
 		a.footer-phone {
 			color: #2135B0;
 			font-weight: 400;
@@ -93,6 +102,7 @@
 
 .subscribe-info {
 	width: 63%;
+
 	input {
 		height: 40px;
 		border-radius: 30px;
@@ -102,6 +112,7 @@
 		-o-border-radius: 30px;
 	}
 }
+
 .subscribe-btn {
 	.web-btn {
 		height: 40px;
@@ -112,6 +123,7 @@
 		-o-border-radius: 30px;
 	}
 }
+
 .save-info {
 	p {
 		font-size: 13px;
@@ -119,10 +131,12 @@
 		font-weight: 500;
 		color: #323232;
 		letter-spacing: .1px;
+
 		a {
 			border-bottom: 1px solid #a8a8a8;
 		}
 	}
+
 	input {
 		height: auto !important;
 	}
@@ -136,6 +150,7 @@
 		}
 	}
 }
+
 .footer-area {
 	p {
 		color: #222222;
@@ -144,21 +159,25 @@
 		line-height: 1;
 		text-transform: uppercase;
 		line-height: 1.5;
+
 		a {
 			color: #222222;
 			font-size: 13px;
 			font-weight: 500;
 			line-height: 1;
 			text-transform: uppercase;
+
 			&:hover {
 				color: #2135B0;
 			}
 		}
+
 		a.c-theme {
 			color: #2135B0;
 			margin: 0 5px;
 		}
 	}
+
 	li {
 		a {
 			color: #222222;
@@ -166,10 +185,12 @@
 			font-weight: 500;
 			line-height: 1;
 			text-transform: uppercase;
+
 			&:hover {
 				color: #2135B0;
 			}
 		}
+
 		color: #222222;
 		font-size: 13px;
 		font-weight: 500;
@@ -177,11 +198,13 @@
 		text-transform: uppercase;
 	}
 }
+
 .office-time {
 	span {
 		font-size: 12px;
 	}
 }
+
 .single-service {
 	span {
 		&::before {
@@ -189,6 +212,7 @@
 		}
 	}
 }
+
 .footer2.footer-area {
 	p {
 		a.c-theme {
@@ -196,35 +220,44 @@
 		}
 	}
 }
+
 .footer3.footer-area {
 	p {
 		color: #fff;
 		line-height: 1.7;
+
 		a {
 			color: #fff;
+
 			&:hover {
 				color: #3dbebd;
 			}
 		}
+
 		a.c-theme {
 			color: #3dbebd;
 		}
 	}
+
 	li {
 		a {
 			color: #fff;
+
 			&:hover {
 				color: #3dbebd;
 			}
 		}
+
 		color: #fff;
 	}
 }
+
 .footer3 {
 	.footer-social-link {
 		li {
 			a {
 				color: #3dbebd;
+
 				span {
 					width: 17px;
 					height: 16px;
@@ -237,17 +270,20 @@
 			}
 		}
 	}
+
 	.footer-address {
 		li.footer-mail {
 			a {
 				color: #3dbebd;
 			}
 		}
+
 		a.footer-phone {
 			color: #3dbebd;
 			font-size: 13px;
 		}
 	}
+
 	.footer-widget {
 		li {
 			a {
@@ -259,6 +295,7 @@
 			}
 		}
 	}
+
 	.footer-top {
 		li {
 			a {
@@ -266,12 +303,15 @@
 				padding-left: 0;
 			}
 		}
+
 		.footer-social-link {
 			li {
 				a {
 					margin-bottom: 25px;
+
 					&:hover {
 						color: #fff;
+
 						span {
 							background: #fff;
 						}
@@ -281,14 +321,18 @@
 		}
 	}
 }
+
 .s-ser-icon {
 	& i {
 		font-size: 23px;
 	}
 }
+
 .footer-area {
 	&:is(.footer2) {
-		background-color: $black;
+		// background-color: $black;
+		background-image: url('/assets/images/bg/bg-red.jpg');
+
 		& ul {
 			& li {
 				& a {
@@ -296,18 +340,22 @@
 				}
 			}
 		}
+
 		& p {
 			color: $white;
 		}
+
 		& span {
 			color: $white;
 		}
+
 		& .s-ser-icon {
 			& i {
 				color: #2135B0;
 			}
 		}
 	}
+
 	&:is(.footer3) {
 		& .s-ser-icon {
 			& i {
@@ -316,22 +364,26 @@
 		}
 	}
 }
+
 .f-social {
-    & a {
+	& a {
 		display: inline-block;
 		color: #bdbdbd;
 		font-size: 24px;
 		margin-right: 20px;
 	}
 }
+
 .footer-padding-left {
-    padding-left: 108px;
+	padding-left: 108px;
 }
+
 @media (max-width: 1200px) {
 	.footer-padding-left {
 		padding-left: 70px;
 	}
 }
+
 @media (max-width: 992px) {
 	.footer-padding-left {
 		padding-left: 0;

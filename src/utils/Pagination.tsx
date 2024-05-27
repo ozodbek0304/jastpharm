@@ -12,7 +12,7 @@ const Pagination = () => {
         <li className="page-item">
           <Link className="page-link prev" href="#">
             <i className="fas fa-angle-left"></i>
-            {" "}{t("Oldingi")}
+            {" "}
           </Link>
         </li>
         <li className="page-item">
