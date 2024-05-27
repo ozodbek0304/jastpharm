@@ -22,15 +22,15 @@ const HomeContact = () => {
                                 </div>
                                 <div className="c-contact d-sm-flex">
                                     <span className="primary-color pr-1">{t("Manzil")} : </span>
-                                    <p>1234 Heaven Stress, Beverly Hill, Melbourne, USA.</p>
+                                    <p>{t("header_address")}</p>
                                 </div>
                                 <div className="c-email d-sm-flex">
                                     <span className="primary-color pr-1">{t("Email")} : </span>
-                                    <p>Contact@homesstheme.com</p>
+                                    <p>info@jastpharm.uz</p>
                                 </div>
                                 <div className="c-number d-sm-flex">
                                     <span className="primary-color pr-1">{t("Tel")} : </span>
-                                    <p>71 411 54 54</p>
+                                    <p>{" "}71 411 54 54</p>
                                 </div>
                                 <div className="c-social-link d-sm-flex align-items-center mt-15">
                                     <span className="primary-color d-inline-block pr-10">

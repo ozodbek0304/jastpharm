@@ -54,7 +54,7 @@ const FooterTwo = () => {
                           <li className="footer-mail mt-28">
                             <span>
                               {t("Yordam kerakmi?")}{" "}
-                              <Link href="mailto:contact@example.com">info@example.com</Link>
+                              <Link href="mailto:info@texnomed.uz">info@texnomed.uz</Link>
                             </span>
                           </li>
                         </ul>

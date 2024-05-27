@@ -15,7 +15,7 @@ const FooterLinksTwo = () => {
       </li>
       <li>
         <Link href="/contact" className="position-relative d-inline-block">
-          {t("Jamoa")}
+          {t("ourTeam")}
         </Link>
       </li>
       <li>
