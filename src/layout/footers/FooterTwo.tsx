@@ -70,7 +70,7 @@ const FooterTwo = () => {
                           <p className="mb-0">
                             © {new Date().getFullYear()}
                             <Link href="#" className="c-theme text-white">
-                              JastPharm
+                              JasPharm
                             </Link>
                             {t("Barcha huquqlar himoyalangan.")}
                           </p>

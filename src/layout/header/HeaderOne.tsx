@@ -65,7 +65,7 @@ const HeaderOne = () => {
               </li>
               <li className="d-flex align-items-center gap-2 border-r-gray1 px-4">
                 <i className="fa-regular fa-envelope"></i>
-                <a href="https://kun.uz">info@jastpharm.uz</a>
+                <a href="https://kun.uz">info@jaspharm.uz</a>
               </li>
               <li className="d-flex align-items-center gap-2 px-4">
                 <i className="fa-solid fa-location-dot"></i>

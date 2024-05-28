@@ -26,7 +26,7 @@ const HomeContact = () => {
                                 </div>
                                 <div className="c-email d-sm-flex">
                                     <span className="primary-color pr-1">{t("Email")} : </span>
-                                    <p>info@jastpharm.uz</p>
+                                    <p>info@jaspharm.uz</p>
                                 </div>
                                 <div className="c-number d-sm-flex">
                                     <span className="primary-color pr-1">{t("Tel")} : </span>
