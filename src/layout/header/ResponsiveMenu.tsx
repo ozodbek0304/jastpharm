@@ -41,7 +41,7 @@ const ResponsiveMenu = () => {
             <span className="mr-1">
               <i className="fas fa-map-marker-alt"></i>
             </span>
-            {t("header_address")}
+            <a href="map:https://maps.app.goo.gl/j11ED3KvTLkqSD638">{t("header_address")}</a>
           </li>
           <li className="mb-20 primary-color">
             <Link href="mailto:contact@example.com">

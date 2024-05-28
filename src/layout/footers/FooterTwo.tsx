@@ -43,7 +43,7 @@ const FooterTwo = () => {
                           <li>
                             <Link
                               className="footer-phone text-white"
-                              href="tell:+01500123994"
+                              href="tel:+998931231177"
                             >
                               <span className="mr-2">
                                 <small className="first-num">+998</small>
@@ -54,7 +54,7 @@ const FooterTwo = () => {
                           <li className="footer-mail mt-28">
                             <span>
                               {t("Yordam kerakmi?")}{" "}
-                              <Link className="text-white" href="mailto:info@texnomed.uz">info@texnomed.uz</Link>
+                              <Link className="text-white" href="mailto:info@jaspharm.uz">info@jaspharm.uz</Link>
                             </span>
                           </li>
                         </ul>
@@ -63,7 +63,7 @@ const FooterTwo = () => {
                     <div className="col-xl-6  col-lg-6  col-md-6  col-sm-6 col-12 pl-xl-0">
                       <div className="footer-widget pb-30 f-link ml--3">
                         <p className="font500">
-                          {t('header_address')} <br />
+                          <a href="map:https://maps.app.goo.gl/j11ED3KvTLkqSD638">{t("header_address")}</a> <br />
                         </p>
                         <Socials />
                         <div className="copyright-text d-sm-flex justify-content-center align-items-center mt-50">

@@ -61,15 +61,15 @@ const HeaderOne = () => {
             <ul className="d-flex align-items-center">
               <li className="d-flex align-items-center gap-2 border-r-gray1 px-4">
                 <i className="fa-solid fa-phone"></i>
-                <a href="https://kun.uz">+998 (97) 170-09-41</a>
+                <a href="tel:+998931231177">+998 (97) 170-09-41</a>
               </li>
               <li className="d-flex align-items-center gap-2 border-r-gray1 px-4">
                 <i className="fa-regular fa-envelope"></i>
-                <a href="https://kun.uz">info@jaspharm.uz</a>
+                <a href="mailto:info@jaspharm.uz">info@jaspharm.uz</a>
               </li>
               <li className="d-flex align-items-center gap-2 px-4">
                 <i className="fa-solid fa-location-dot"></i>
-                <a href="https://kun.uz">{t("header_address")}</a>
+                <a href="map:https://maps.app.goo.gl/j11ED3KvTLkqSD638">{t("header_address")}</a>
               </li>
             </ul>
 
